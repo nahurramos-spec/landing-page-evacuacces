@@ -1,0 +1,373 @@
+{
+  "date": "2026-11-23T01:00:14.736Z",
+  "browser": "157.0.8103.79",
+  "results": [
+    {
+      "name": "Entrada a los siete recorridos",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Preferencias múltiples, alto contraste, texto 200 %, persistencia",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Alerta HU-06: confirmación actualiza estado y ocupa ≥40 % de pantalla",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Síntesis de voz solicitada y transcripción / fallback visibles; vibración alternativa",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Ruta sin escaleras, avance, bloqueo ascensores y recálculo",
+      "status": "APROBADA"
+    },
+    {
+      "name": "PPE: cambio de ritmo recalcula ETA y advertencia de margen",
+      "status": "APROBADA"
+    },
+    {
+      "name": "SOS exitoso, fallo y reintento sin duplicación",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Tarjeta ampliada, envío, gestos y ficha de brigada compartida",
+      "status": "APROBADA"
+    },
+    {
+      "name": "HU-43 consulta y retorno al manual pendiente sin instrucciones físicas",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Chat con mensajes rápidos, texto, cola sin conexión y reintento",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Refugio lleno cambia alternativa a B; llegada única y contadores",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Llegada segura con modal, protección de duplicados",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Administración: asignación y reasignación a Carla, datos consistentes",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Rescate individual: confirmación modal, dashboard y prevención de duplicados",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Rescate múltiple de misiones reales seleccionadas",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Emisión sectorizada revisada antes de confirmar y estado compartido",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Estado de refugios y alternativa actualizados desde administración",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Sensor IoT manual resalta sector y abre emisión de alerta",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Prioridad por falta de señal: persona al inicio y ficha legible",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Brigadista: reasignación de sector con teclado y disponibilidad",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Sector despejado exige gesto y confirmación; alternativa de teclado",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Paquete externo: preparación simulada, cierre, expiración y reporte",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Descarga CSV genera archivo no vacío con personas y auditoría",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Reporte imprimible genera PDF real con el motor de Chrome",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Registro visitante QR: formulario validado y censo 66",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Navegación móvil, foco de teclado, modal Escape y reinicio",
+      "status": "APROBADA"
+    },
+    {
+      "name": "16 interfaces × Desktop / Mobile: capturas, overflow y auditoría axe",
+      "status": "APROBADA"
+    },
+    {
+      "name": "390, 768, 1024, 1440: landing y dashboards sin overflow",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Texto al 200 %: 17 interfaces a 390 y 1440 px sin desbordamiento de página",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Recursos locales: funciona bloqueando dominios externos",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Sin errores JavaScript ni recursos ausentes en las rutas ejercitadas",
+      "status": "APROBADA"
+    }
+  ],
+  "errors": [],
+  "failedResources": [],
+  "visual": [
+    {
+      "view": "acceso",
+      "width": 1440,
+      "path": "docs/evidencias/acceso-1440.png",
+      "reference": "docs/figma/2-67.png",
+      "overflow": []
+    },
+    {
+      "view": "perfil",
+      "width": 1440,
+      "path": "docs/evidencias/perfil-1440.png",
+      "reference": "docs/figma/2-91.png",
+      "overflow": []
+    },
+    {
+      "view": "alerta",
+      "width": 1440,
+      "path": "docs/evidencias/alerta-1440.png",
+      "reference": "docs/figma/2-235.png",
+      "overflow": []
+    },
+    {
+      "view": "contraste",
+      "width": 1440,
+      "path": "docs/evidencias/contraste-1440.png",
+      "reference": "docs/figma/2-259.png",
+      "overflow": []
+    },
+    {
+      "view": "ppe",
+      "width": 1440,
+      "path": "docs/evidencias/ppe-1440.png",
+      "reference": "docs/figma/2-187.png",
+      "overflow": []
+    },
+    {
+      "view": "ruta",
+      "width": 1440,
+      "path": "docs/evidencias/ruta-1440.png",
+      "reference": "docs/figma/2-307.png",
+      "overflow": []
+    },
+    {
+      "view": "mapa",
+      "width": 1440,
+      "path": "docs/evidencias/mapa-1440.png",
+      "reference": "docs/figma/2-331.png",
+      "overflow": []
+    },
+    {
+      "view": "sos",
+      "width": 1440,
+      "path": "docs/evidencias/sos-1440.png",
+      "reference": "docs/figma/2-499.png",
+      "overflow": []
+    },
+    {
+      "view": "comunicar",
+      "width": 1440,
+      "path": "docs/evidencias/comunicar-1440.png",
+      "reference": "docs/figma/2-571.png",
+      "overflow": []
+    },
+    {
+      "view": "misiones",
+      "width": 1440,
+      "path": "docs/evidencias/misiones-1440.png",
+      "reference": "docs/figma/2-883.png",
+      "overflow": []
+    },
+    {
+      "view": "mision",
+      "width": 1440,
+      "path": "docs/evidencias/mision-1440.png",
+      "reference": "docs/figma/2-907.png",
+      "overflow": []
+    },
+    {
+      "view": "admin",
+      "width": 1440,
+      "path": "docs/evidencias/admin-1440.png",
+      "reference": "docs/figma/2-1147.png",
+      "overflow": []
+    },
+    {
+      "view": "emitir",
+      "width": 1440,
+      "path": "docs/evidencias/emitir-1440.png",
+      "reference": "docs/figma/2-1195.png",
+      "overflow": []
+    },
+    {
+      "view": "solicitudes",
+      "width": 1440,
+      "path": "docs/evidencias/solicitudes-1440.png",
+      "reference": "docs/figma/2-1267.png",
+      "overflow": []
+    },
+    {
+      "view": "censo",
+      "width": 1440,
+      "path": "docs/evidencias/censo-1440.png",
+      "reference": "docs/figma/2-1435.png",
+      "overflow": []
+    },
+    {
+      "view": "qr",
+      "width": 1440,
+      "path": "docs/evidencias/qr-1440.png",
+      "reference": "docs/figma/2-1459.png",
+      "overflow": []
+    },
+    {
+      "view": "visitante",
+      "width": 1440,
+      "path": "docs/evidencias/visitante-1440.png",
+      "reference": "docs/figma/2-1483.png",
+      "overflow": []
+    },
+    {
+      "view": "acceso",
+      "width": 390,
+      "path": "docs/evidencias/acceso-390.png",
+      "reference": "docs/figma/2-79.png",
+      "overflow": []
+    },
+    {
+      "view": "perfil",
+      "width": 390,
+      "path": "docs/evidencias/perfil-390.png",
+      "reference": "docs/figma/2-103.png",
+      "overflow": []
+    },
+    {
+      "view": "alerta",
+      "width": 390,
+      "path": "docs/evidencias/alerta-390.png",
+      "reference": "docs/figma/2-247.png",
+      "overflow": []
+    },
+    {
+      "view": "contraste",
+      "width": 390,
+      "path": "docs/evidencias/contraste-390.png",
+      "reference": "docs/figma/2-271.png",
+      "overflow": []
+    },
+    {
+      "view": "ppe",
+      "width": 390,
+      "path": "docs/evidencias/ppe-390.png",
+      "reference": "docs/figma/2-199.png",
+      "overflow": []
+    },
+    {
+      "view": "ruta",
+      "width": 390,
+      "path": "docs/evidencias/ruta-390.png",
+      "reference": "docs/figma/2-319.png",
+      "overflow": []
+    },
+    {
+      "view": "mapa",
+      "width": 390,
+      "path": "docs/evidencias/mapa-390.png",
+      "reference": "docs/figma/2-343.png",
+      "overflow": []
+    },
+    {
+      "view": "sos",
+      "width": 390,
+      "path": "docs/evidencias/sos-390.png",
+      "reference": "docs/figma/2-511.png",
+      "overflow": []
+    },
+    {
+      "view": "comunicar",
+      "width": 390,
+      "path": "docs/evidencias/comunicar-390.png",
+      "reference": "docs/figma/2-583.png",
+      "overflow": []
+    },
+    {
+      "view": "misiones",
+      "width": 390,
+      "path": "docs/evidencias/misiones-390.png",
+      "reference": "docs/figma/2-895.png",
+      "overflow": []
+    },
+    {
+      "view": "mision",
+      "width": 390,
+      "path": "docs/evidencias/mision-390.png",
+      "reference": "docs/figma/2-919.png",
+      "overflow": []
+    },
+    {
+      "view": "admin",
+      "width": 390,
+      "path": "docs/evidencias/admin-390.png",
+      "reference": "docs/figma/2-1159.png",
+      "overflow": []
+    },
+    {
+      "view": "emitir",
+      "width": 390,
+      "path": "docs/evidencias/emitir-390.png",
+      "reference": "docs/figma/2-1207.png",
+      "overflow": []
+    },
+    {
+      "view": "solicitudes",
+      "width": 390,
+      "path": "docs/evidencias/solicitudes-390.png",
+      "reference": "docs/figma/2-1279.png",
+      "overflow": []
+    },
+    {
+      "view": "censo",
+      "width": 390,
+      "path": "docs/evidencias/censo-390.png",
+      "reference": "docs/figma/2-1447.png",
+      "overflow": []
+    },
+    {
+      "view": "qr",
+      "width": 390,
+      "path": "docs/evidencias/qr-390.png",
+      "reference": "docs/figma/2-1471.png",
+      "overflow": []
+    },
+    {
+      "view": "visitante",
+      "width": 390,
+      "path": "docs/evidencias/visitante-390.png",
+      "reference": "docs/figma/2-1495.png",
+      "overflow": []
+    }
+  ],
+  "axe": []
+}

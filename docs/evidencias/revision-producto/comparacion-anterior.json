@@ -1,0 +1,515 @@
+{
+  "method": "Error absoluto medio RGB (0–255) y cantidad de píxeles con diferencia máxima de canal >30. Implementación escalada a la referencia. No es un porcentaje de fidelidad; los estados, controles y contenido funcional adicional también producen diferencias.",
+  "metrics": [
+    {
+      "view": "acceso",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 5,
+      "pixelsOver30": 29339,
+      "pixelCount": 655360
+    },
+    {
+      "view": "perfil",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 8.92,
+      "pixelsOver30": 49636,
+      "pixelCount": 655360
+    },
+    {
+      "view": "alerta",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 1.82,
+      "pixelsOver30": 13094,
+      "pixelCount": 655360
+    },
+    {
+      "view": "contraste",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 2.15,
+      "pixelsOver30": 21281,
+      "pixelCount": 655360
+    },
+    {
+      "view": "ppe",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 17.87,
+      "pixelsOver30": 69441,
+      "pixelCount": 655360
+    },
+    {
+      "view": "ruta",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 3.33,
+      "pixelsOver30": 20170,
+      "pixelCount": 655360
+    },
+    {
+      "view": "mapa",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 7.98,
+      "pixelsOver30": 42709,
+      "pixelCount": 655360
+    },
+    {
+      "view": "sos",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 40.59,
+      "pixelsOver30": 124061,
+      "pixelCount": 655360
+    },
+    {
+      "view": "comunicar",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 6.96,
+      "pixelsOver30": 38514,
+      "pixelCount": 655360
+    },
+    {
+      "view": "misiones",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 10.8,
+      "pixelsOver30": 48288,
+      "pixelCount": 655360
+    },
+    {
+      "view": "mision",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 25.66,
+      "pixelsOver30": 88874,
+      "pixelCount": 655360
+    },
+    {
+      "view": "admin",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 8.42,
+      "pixelsOver30": 54664,
+      "pixelCount": 655360
+    },
+    {
+      "view": "emitir",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 7.8,
+      "pixelsOver30": 46042,
+      "pixelCount": 655360
+    },
+    {
+      "view": "solicitudes",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 19.95,
+      "pixelsOver30": 64006,
+      "pixelCount": 655360
+    },
+    {
+      "view": "censo",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 19.89,
+      "pixelsOver30": 73014,
+      "pixelCount": 655360
+    },
+    {
+      "view": "qr",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 15.06,
+      "pixelsOver30": 54506,
+      "pixelCount": 655360
+    },
+    {
+      "view": "visitante",
+      "width": 1440,
+      "referenceSize": [
+        1024,
+        640
+      ],
+      "implementationSize": [
+        1440,
+        900
+      ],
+      "meanAbsoluteChannelError": 30.25,
+      "pixelsOver30": 100675,
+      "pixelCount": 655360
+    },
+    {
+      "view": "acceso",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 14.59,
+      "pixelsOver30": 36187,
+      "pixelCount": 329160
+    },
+    {
+      "view": "perfil",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 15.62,
+      "pixelsOver30": 36157,
+      "pixelCount": 329160
+    },
+    {
+      "view": "alerta",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 32.86,
+      "pixelsOver30": 57722,
+      "pixelCount": 329160
+    },
+    {
+      "view": "contraste",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 23.36,
+      "pixelsOver30": 56695,
+      "pixelCount": 329160
+    },
+    {
+      "view": "ppe",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 15.72,
+      "pixelsOver30": 40742,
+      "pixelCount": 329160
+    },
+    {
+      "view": "ruta",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 13.29,
+      "pixelsOver30": 31454,
+      "pixelCount": 329160
+    },
+    {
+      "view": "mapa",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 20.87,
+      "pixelsOver30": 48590,
+      "pixelCount": 329160
+    },
+    {
+      "view": "sos",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 43.61,
+      "pixelsOver30": 72552,
+      "pixelCount": 329160
+    },
+    {
+      "view": "comunicar",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 9.81,
+      "pixelsOver30": 24714,
+      "pixelCount": 329160
+    },
+    {
+      "view": "misiones",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 24.17,
+      "pixelsOver30": 48709,
+      "pixelCount": 329160
+    },
+    {
+      "view": "mision",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 19.4,
+      "pixelsOver30": 42494,
+      "pixelCount": 329160
+    },
+    {
+      "view": "admin",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 7.83,
+      "pixelsOver30": 24433,
+      "pixelCount": 329160
+    },
+    {
+      "view": "emitir",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 11.12,
+      "pixelsOver30": 29643,
+      "pixelCount": 329160
+    },
+    {
+      "view": "solicitudes",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 47.9,
+      "pixelsOver30": 79561,
+      "pixelCount": 329160
+    },
+    {
+      "view": "censo",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 25.63,
+      "pixelsOver30": 49754,
+      "pixelCount": 329160
+    },
+    {
+      "view": "qr",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 24.76,
+      "pixelsOver30": 46665,
+      "pixelCount": 329160
+    },
+    {
+      "view": "visitante",
+      "width": 390,
+      "referenceSize": [
+        390,
+        844
+      ],
+      "implementationSize": [
+        390,
+        844
+      ],
+      "meanAbsoluteChannelError": 42.13,
+      "pixelsOver30": 70012,
+      "pixelCount": 329160
+    }
+  ]
+}

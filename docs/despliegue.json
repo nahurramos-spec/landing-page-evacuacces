@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/nahurramos-spec/landing-page-evacuacces",
+  "branch": "main",
+  "pagesUrl": "https://nahurramos-spec.github.io/landing-page-evacuacces/",
+  "buildType": "workflow",
+  "configured": true,
+  "published": false,
+  "verified": false,
+  "status": "Pages configurado mediante API oficial; primer push y despliegue pendientes.",
+  "checks": []
+}

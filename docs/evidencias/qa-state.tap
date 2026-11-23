@@ -1,0 +1,154 @@
+TAP version 13
+# Subtest: Las sesiones anteriores conservan datos al trasladar los retratos
+ok 1 - Las sesiones anteriores conservan datos al trasladar los retratos
+  ---
+  duration_ms: 2.7888
+  type: 'test'
+  ...
+# Subtest: Censo inicial oficial: 65 = 3 + 12 + 5 + 45; ocupación A 3/8 y B 2/6
+ok 2 - Censo inicial oficial: 65 = 3 + 12 + 5 + 45; ocupación A 3/8 y B 2/6
+  ---
+  duration_ms: 0.2364
+  type: 'test'
+  ...
+# Subtest: Siete puntos de entrada conservan el censo y el rol
+ok 3 - Siete puntos de entrada conservan el censo y el rol
+  ---
+  duration_ms: 1.8715
+  type: 'test'
+  ...
+# Subtest: HU-02,03,06: confirmación sin audio; estado evacuando y sin doble conteo
+ok 4 - HU-02,03,06: confirmación sin audio; estado evacuando y sin doble conteo
+  ---
+  duration_ms: 0.4307
+  type: 'test'
+  ...
+# Subtest: HU-05: preferencias persistentes y recuperación ante almacenamiento corrupto
+ok 5 - HU-05: preferencias persistentes y recuperación ante almacenamiento corrupto
+  ---
+  duration_ms: 0.5263
+  type: 'test'
+  ...
+# Subtest: HU-07,17,18: progreso, exclusión de ascensores y desvío mismo nivel
+ok 6 - HU-07,17,18: progreso, exclusión de ascensores y desvío mismo nivel
+  ---
+  duration_ms: 0.747
+  type: 'test'
+  ...
+# Subtest: HU-08,12,36: necesidad, canal y tarjeta compartidos con ficha brigadista
+ok 7 - HU-08,12,36: necesidad, canal y tarjeta compartidos con ficha brigadista
+  ---
+  duration_ms: 0.409
+  type: 'test'
+  ...
+# Subtest: HU-10: llegada a refugio y salida segura idempotentes
+ok 8 - HU-10: llegada a refugio y salida segura idempotentes
+  ---
+  duration_ms: 0.6618
+  type: 'test'
+  ...
+# Subtest: HU-21: fallo de SOS, reintento y ausencia de solicitudes duplicadas
+ok 9 - HU-21: fallo de SOS, reintento y ausencia de solicitudes duplicadas
+  ---
+  duration_ms: 0.368
+  type: 'test'
+  ...
+# Subtest: HU-24,34: asignación, falta de disponibilidad y reasignación coherente
+ok 10 - HU-24,34: asignación, falta de disponibilidad y reasignación coherente
+  ---
+  duration_ms: 0.8567
+  type: 'test'
+  ...
+# Subtest: HU-25: ritmo cambia ETA; advertencia supera margen 5 min
+ok 11 - HU-25: ritmo cambia ETA; advertencia supera margen 5 min
+  ---
+  duration_ms: 0.5345
+  type: 'test'
+  ...
+# Subtest: HU-27: chat, mensaje pendiente, reintento y texto validado
+ok 12 - HU-27: chat, mensaje pendiente, reintento y texto validado
+  ---
+  duration_ms: 1.2748
+  type: 'test'
+  ...
+# Subtest: HU-29,39: refugio lleno / peligro, alternativa B y sin disponible
+ok 13 - HU-29,39: refugio lleno / peligro, alternativa B y sin disponible
+  ---
+  duration_ms: 0.5841
+  type: 'test'
+  ...
+# Subtest: HU-31,37: rescate individual y múltiple, misiones reales y no duplicados
+ok 14 - HU-31,37: rescate individual y múltiple, misiones reales y no duplicados
+  ---
+  duration_ms: 0.9681
+  type: 'test'
+  ...
+# Subtest: HU-40: CSV verificable, censo y auditoría reales de la sesión; escapa comillas
+ok 15 - HU-40: CSV verificable, censo y auditoría reales de la sesión; escapa comillas
+  ---
+  duration_ms: 1.173
+  type: 'test'
+  ...
+# Subtest: HU-41: cambio de sector y desconexión simulada
+ok 16 - HU-41: cambio de sector y desconexión simulada
+  ---
+  duration_ms: 0.526
+  type: 'test'
+  ...
+# Subtest: HU-42: sensor manual deja evento, sector y aviso de incendio
+ok 17 - HU-42: sensor manual deja evento, sector y aviso de incendio
+  ---
+  duration_ms: 0.215
+  type: 'test'
+  ...
+# Subtest: HU-33: alcance Piso 2 se conserva y confirmación es un evento auditable
+ok 18 - HU-33: alcance Piso 2 se conserva y confirmación es un evento auditable
+  ---
+  duration_ms: 0.2286
+  type: 'test'
+  ...
+# Subtest: HU-44: prioridad manual identifica a María sin sensor real
+ok 19 - HU-44: prioridad manual identifica a María sin sensor real
+  ---
+  duration_ms: 0.2163
+  type: 'test'
+  ...
+# Subtest: HU-45: paquete preparado, datos verificables y expiración al cerrar
+ok 20 - HU-45: paquete preparado, datos verificables y expiración al cerrar
+  ---
+  duration_ms: 0.3479
+  type: 'test'
+  ...
+# Subtest: HU-47: deslizador + confirmación, censo pendiente bloquea despeje, resultado verde coherente
+ok 21 - HU-47: deslizador + confirmación, censo pendiente bloquea despeje, resultado verde coherente
+  ---
+  duration_ms: 1.7847
+  type: 'test'
+  ...
+# Subtest: Visitante aumenta el censo una sola vez; validación de datos ficticios
+ok 22 - Visitante aumenta el censo una sola vez; validación de datos ficticios
+  ---
+  duration_ms: 0.5796
+  type: 'test'
+  ...
+# Subtest: El reducer no altera el estado original ante acciones válidas ni fallos
+ok 23 - El reducer no altera el estado original ante acciones válidas ni fallos
+  ---
+  duration_ms: 0.4133
+  type: 'test'
+  ...
+# Subtest: La llegada de un visitante solo modifica a la persona registrada
+ok 24 - La llegada de un visitante solo modifica a la persona registrada
+  ---
+  duration_ms: 0.3209
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 115.4549

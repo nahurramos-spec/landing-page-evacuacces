@@ -1,0 +1,1521 @@
+<frame id="2:21432" name="48 HU · 144 CA · Matriz de trazabilidad" x="24" y="50" width="2910" height="6467">
+  <text id="2:21433" name="EvacuAccess / Matriz de trazabilidad" x="32" y="32" width="2846" height="45" />
+  <text id="2:21434" name="48 historias oficiales · 144 criterios identificados · Desktop ↔ Mobil" x="32" y="89" width="2846" height="28" />
+  <text id="2:21435" name="D = comportamiento de interfaz demostrable. S = representación simulad" x="32" y="129" width="2846" height="23" />
+  <text id="2:21436" name="Fuente: EvacuAccess_48HU_144CA_Requisitos.md, sección 3.2 del informe." x="32" y="164" width="2846" height="20" />
+  <frame id="2:21437" name="Cabecera de matriz" x="32" y="196" width="2846" height="47">
+    <frame id="2:21438" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21439" name="HU" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21440" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21441" name="Rol" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21442" name="Celda" x="266" y="12" width="260" height="23">
+      <text id="2:21443" name="Funcionalidad / Flujo" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21444" name="Celda" x="538" y="12" width="220" height="23">
+      <text id="2:21445" name="Desktop + Wireframe" x="0" y="0" width="220" height="23" />
+    </frame>
+    <frame id="2:21446" name="Celda" x="770" y="12" width="220" height="23">
+      <text id="2:21447" name="Mobile + Wireframe" x="0" y="0" width="220" height="23" />
+    </frame>
+    <frame id="2:21448" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:21449" name="Acción" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21450" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21451" name="Resultado" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21452" name="Celda" x="1566" y="12" width="1170" height="23">
+      <text id="2:21453" name="Criterios representados y límites" x="0" y="0" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21454" name="HU-01 · Perfil de accesibilidad individual" x="32" y="255" width="2846" height="117">
+    <frame id="2:21455" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21456" name="HU-01" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21457" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21458" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21459" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21460" name="Perfil de accesibilidad individual
+Módulo A · F01–F03" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21461" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21462" name="D · perfil
+WF-D · perfil" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21463" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21464" name="M · perfil
+WF-M · perfil" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21465" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21466" name="Elegir condiciones independientes; guardar y editar" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21467" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21468" name="Preferencias visibles en la sesión" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21469" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21470" name="D · CA01: Opciones auditiva, visual o ambas, independientes." x="0" y="0" width="1170" height="23" />
+      <text id="2:21471" name="S · CA02: Aplicación de preferencias en sesión de prototipo; no autent" x="0" y="35" width="1170" height="23" />
+      <text id="2:21472" name="D · CA03: Edición posterior sin perder el registro de ejemplo." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21473" name="HU-02 · Alertas por vibración háptica" x="32" y="384" width="2846" height="117">
+    <frame id="2:21474" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21475" name="HU-02" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21476" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21477" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21478" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21479" name="Alertas por vibración háptica
+Módulo A · F01–F03" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21480" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21481" name="D · alerta
+WF-D · alerta" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21482" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21483" name="M · alerta
+WF-M · alerta" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21484" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21485" name="Recibir alerta; confirmar recepción" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21486" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:21487" name="Evacuando; vibración simulada detenida" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:21488" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21489" name="S · CA01: Patrón continuo descrito, sin vibración física." x="0" y="0" width="1170" height="23" />
+      <text id="2:21490" name="S · CA02: Activación en tiempo real y sin depender de audio: simulada." x="0" y="35" width="1170" height="23" />
+      <text id="2:21491" name="S · CA03: Detención al confirmar o finalizar: estado de demostración." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21492" name="HU-03 · Alertas estroboscópicas e indicadores visuales" x="32" y="513" width="2846" height="117">
+    <frame id="2:21493" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21494" name="HU-03" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21495" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21496" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21497" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:21498" name="Alertas estroboscópicas e indicadores visuales
+Módulo A · F01–F03" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:21499" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21500" name="D · alerta
+WF-D · alerta" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21501" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21502" name="M · alerta
+WF-M · alerta" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21503" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21504" name="Leer emergencia en alerta estática" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21505" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:21506" name="Tipo de evento y confirmación accesible" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:21507" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21508" name="P · CA01: Destellos omitidos por seguridad; frecuencia requiere valida" x="0" y="0" width="1170" height="23" />
+      <text id="2:21509" name="D · CA02: Tipo de emergencia en 36 px y alto contraste." x="0" y="35" width="1170" height="23" />
+      <text id="2:21510" name="P · CA03: No se superpone a aplicaciones ni a la pantalla de bloqueo d" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21511" name="HU-04 · Narración por síntesis de voz" x="32" y="642" width="2846" height="117">
+    <frame id="2:21512" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21513" name="HU-04" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21514" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21515" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21516" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21517" name="Narración por síntesis de voz
+Módulo A · F01–F03" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21518" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21519" name="D · voz
+WF-D · voz" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21520" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21521" name="M · voz
+WF-M · voz" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21522" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21523" name="Escuchar y repetir instrucción simulada" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21524" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21525" name="Transcripción direccional visible" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21526" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21527" name="S · CA01: Comando relativo simple mediante transcripción de voz simula" x="0" y="0" width="1170" height="23" />
+      <text id="2:21528" name="P · CA02: No se modifica ni sobrepasa el volumen del sistema operativo" x="0" y="35" width="1170" height="23" />
+      <text id="2:21529" name="S · CA03: Repetición solicitada con resultado visible; sin audio ni de" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21530" name="HU-05 · Modo mate y antiparpadeo" x="32" y="771" width="2846" height="117">
+    <frame id="2:21531" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21532" name="HU-05" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21533" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21534" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21535" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21536" name="Modo mate y antiparpadeo
+Módulo A · F01–F03" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21537" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21538" name="D · contraste
+WF-D · contraste" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21539" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21540" name="M · contraste
+WF-M · contraste" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21541" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:21542" name="Activar negro mate y amarillo" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21543" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21544" name="Alerta sin destellos" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21545" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21546" name="D · CA01: Fondo #000000 con texto #FFD600." x="0" y="0" width="1170" height="23" />
+      <text id="2:21547" name="D · CA02: Flujo de usuario con cambios instantáneos, sin destellos." x="0" y="35" width="1170" height="23" />
+      <text id="2:21548" name="P · CA03: Persistencia del modo en el dispositivo pendiente de impleme" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21549" name="HU-06 · Confirmación de recepción de alerta" x="32" y="900" width="2846" height="117">
+    <frame id="2:21550" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21551" name="HU-06" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21552" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21553" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21554" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:21555" name="Confirmación de recepción de alerta
+Módulo A · F01–F03" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:21556" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21557" name="D · alerta
+WF-D · alerta" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21558" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21559" name="M · alerta
+WF-M · alerta" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21560" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:21561" name="Pulsar Estoy enterado" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21562" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21563" name="Estado Evacuando" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21564" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21565" name="D · CA01: Botón de confirmación ≥40 % del área de referencia Desktop y" x="0" y="0" width="1170" height="23" />
+      <text id="2:21566" name="S · CA02: Actualización de estado mediante variables del prototipo, no" x="0" y="35" width="1170" height="23" />
+      <text id="2:21567" name="S · CA03: Retroalimentación háptica corta descrita; no ejecutada." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21568" name="HU-07 · Orientación direccional" x="32" y="1029" width="2846" height="117">
+    <frame id="2:21569" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21570" name="HU-07" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21571" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21572" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21573" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21574" name="Orientación direccional
+Módulo A · F01–F03" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21575" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21576" name="D · ruta
+WF-D · ruta" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21577" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21578" name="M · ruta
+WF-M · ruta" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21579" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:21580" name="Consultar flecha y continuar" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21581" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21582" name="De frente · Vía libre" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21583" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21584" name="S · CA01: Rumbo y posición precargados, no sensor en tiempo real." x="0" y="0" width="1170" height="23" />
+      <text id="2:21585" name="D · CA02: Vía libre y bloqueo con texto además de color." x="0" y="35" width="1170" height="23" />
+      <text id="2:21586" name="D · CA03: Flecha continua y estática, sin parpadeos ni transiciones en" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21587" name="HU-08 · Ayuda gestual / lengua de señas" x="32" y="1158" width="2846" height="117">
+    <frame id="2:21588" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21589" name="HU-08" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21590" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21591" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21592" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21593" name="Ayuda gestual / lengua de señas
+Módulo A · F01–F03" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21594" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21595" name="D · comunicar
+WF-D · comunicar" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21596" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21597" name="M · comunicar
+WF-M · comunicar" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21598" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:21599" name="Solicitar comunicación gestual" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21600" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21601" name="Necesidad enviada al brigadista" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21602" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21603" name="D · CA01: Solicitud etiquetada como comunicación gestual / señas." x="0" y="0" width="1170" height="23" />
+      <text id="2:21604" name="D · CA02: Tarjetas rápidas con texto e identificación visual accesible" x="0" y="35" width="1170" height="23" />
+      <text id="2:21605" name="S · CA03: Prioridad a brigadista con certificación de señas de demostr" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21606" name="HU-09 · Posicionamiento interior por balizas" x="32" y="1287" width="2846" height="117">
+    <frame id="2:21607" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21608" name="HU-09" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21609" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21610" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21611" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:21612" name="Posicionamiento interior por balizas
+Módulo A · F01–F03" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:21613" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21614" name="D · mapa
+WF-D · mapa" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21615" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21616" name="M · mapa
+WF-M · mapa" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21617" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21618" name="Consultar ubicación y baliza B-204" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21619" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21620" name="Mapa y orientación simulados" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21621" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21622" name="S · CA01: Baliza y posición interior de ejemplo; precisión &lt;2 m no val" x="0" y="0" width="1170" height="23" />
+      <text id="2:21623" name="S · CA02: Señal sonora / háptica de detección descrita, no física." x="0" y="35" width="1170" height="23" />
+      <text id="2:21624" name="S · CA03: Continuidad sin red representada con mapa offline; no existe" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21625" name="HU-10 · A salvo en zona segura" x="32" y="1416" width="2846" height="117">
+    <frame id="2:21626" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21627" name="HU-10" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21628" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21629" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21630" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21631" name="A salvo en zona segura
+Módulo A · F01–F03" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21632" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21633" name="D · seguro
+WF-D · seguro" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21634" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21635" name="M · seguro
+WF-M · seguro" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21636" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21637" name="Simular llegada QR / baliza al refugio" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21638" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:21639" name="Llegada confirmada y contadores actualizados" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:21640" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21641" name="S · CA01: Geofencing / QR sustituidos por acción simulada." x="0" y="0" width="1170" height="23" />
+      <text id="2:21642" name="S · CA02: Confirmación visible; voz y vibración prolongada simuladas." x="0" y="35" width="1170" height="23" />
+      <text id="2:21643" name="S · CA03: Variables del prototipo descuentan riesgo y actualizan estad" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21644" name="HU-11 · Cancelación de falsa alarma" x="32" y="1545" width="2846" height="117">
+    <frame id="2:21645" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21646" name="HU-11" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21647" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21648" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21649" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21650" name="Cancelación de falsa alarma
+Módulo A · F01–F03" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21651" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21652" name="D · falsa
+WF-D · falsa" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21653" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21654" name="M · falsa
+WF-M · falsa" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21655" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21656" name="Abrir cancelación y confirmar lectura" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21657" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21658" name="Emergencia cancelada" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21659" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21660" name="S · CA01: Fondo verde y descripción de 3 pulsos cortos; sin vibración " x="0" y="0" width="1170" height="23" />
+      <text id="2:21661" name="D · CA02: Mensaje EMERGENCIA CANCELADA - FALSA ALARMA." x="0" y="35" width="1170" height="23" />
+      <text id="2:21662" name="S · CA03: Interrupción del dictado y aviso verbal descritos; no audio " x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21663" name="HU-12 · Tarjetas de comunicación no verbal" x="32" y="1674" width="2846" height="117">
+    <frame id="2:21664" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21665" name="HU-12" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21666" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21667" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21668" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:21669" name="Tarjetas de comunicación no verbal
+Módulo A · F01–F03" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:21670" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21671" name="D · comunicar
+WF-D · comunicar" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21672" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21673" name="M · comunicar
+WF-M · comunicar" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21674" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:21675" name="Seleccionar y ampliar tarjeta" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21676" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21677" name="Tarjeta grande y necesidad enviada" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21678" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21679" name="D · CA01: Acceso con un toque desde la alerta y desde acción persisten" x="0" y="0" width="1170" height="23" />
+      <text id="2:21680" name="D · CA02: Texto claro en español; iconografía compartida." x="0" y="35" width="1170" height="23" />
+      <text id="2:21681" name="D · CA03: Tarjeta seleccionada ampliada para lectura por terceros." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21682" name="HU-13 · Mapa offline" x="32" y="1803" width="2846" height="117">
+    <frame id="2:21683" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21684" name="HU-13" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21685" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21686" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21687" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21688" name="Mapa offline
+Módulo A · F01–F03" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21689" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21690" name="D · offline
+WF-D · offline" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21691" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21692" name="M · offline
+WF-M · offline" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21693" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21694" name="Abrir sin conexión; continuar ruta" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21695" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:21696" name="Modo Offline y última sincronización visibles" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:21697" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21698" name="S · CA01: Descarga al iniciar sesión descrita, sin caché real." x="0" y="0" width="1170" height="23" />
+      <text id="2:21699" name="S · CA02: Recálculo local representado mediante rutas precargadas." x="0" y="35" width="1170" height="23" />
+      <text id="2:21700" name="D · CA03: Indicador explícito Modo Offline / Sin conexión." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21701" name="HU-14 · Notificación en smartwatch" x="32" y="1932" width="2846" height="117">
+    <frame id="2:21702" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21703" name="HU-14" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21704" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21705" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21706" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21707" name="Notificación en smartwatch
+Módulo A · F01–F03" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21708" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21709" name="D · reloj
+WF-D · reloj" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21710" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21711" name="M · reloj
+WF-M · reloj" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21712" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21713" name="Consultar disponibilidad y muestra" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21714" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21715" name="Vista previa WearOS / watchOS" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21716" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21717" name="S · CA01: Notificación prioritaria representada, sin push real." x="0" y="0" width="1170" height="23" />
+      <text id="2:21718" name="S · CA02: Vibración máxima e icono en reloj simulados." x="0" y="35" width="1170" height="23" />
+      <text id="2:21719" name="P · CA03: No se fuerza prioridad ni superposición sobre carátulas u ot" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21720" name="HU-15 · Tamaño de texto y contraste" x="32" y="2061" width="2846" height="117">
+    <frame id="2:21721" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21722" name="HU-15" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21723" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21724" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21725" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21726" name="Tamaño de texto y contraste
+Módulo A · F01–F03" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21727" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21728" name="D · texto200
+WF-D · texto200" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21729" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21730" name="M · texto200
+WF-M · texto200" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21731" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:21732" name="Abrir muestra 200 % y guardar" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21733" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:21734" name="Vista ampliada con contenido ajustado" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:21735" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21736" name="S · CA01: Muestra 100 % / 200 %; deslizador continuo y escalado global" x="0" y="0" width="1170" height="23" />
+      <text id="2:21737" name="P · CA02: Auditoría integral WCAG 2.1 AA pendiente; no se certifica co" x="0" y="35" width="1170" height="23" />
+      <text id="2:21738" name="S · CA03: Aplicación inmediata representada en vistas de ejemplo, no g" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21739" name="HU-16 · Historial personal de rutas y simulacros" x="32" y="2190" width="2846" height="117">
+    <frame id="2:21740" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21741" name="HU-16" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21742" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21743" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21744" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:21745" name="Historial personal de rutas y simulacros
+Módulo A · F01–F03" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:21746" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21747" name="D · historial
+WF-D · historial" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21748" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21749" name="M · historial
+WF-M · historial" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21750" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21751" name="Consultar registro y abrir trayectoria" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21752" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:21753" name="Fecha, tiempo, ruta y pausa de ejemplo" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:21754" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21755" name="D · CA01: Registro cronológico con fecha, 4 min 12 s y ruta." x="0" y="0" width="1170" height="23" />
+      <text id="2:21756" name="S · CA02: Mapa interactivo de una trayectoria precargada; no rastreo h" x="0" y="35" width="1170" height="23" />
+      <text id="2:21757" name="S · CA03: Pausa en intersección B-205 indicada textualmente; analítica" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21758" name="HU-17 · Ruta totalmente accesible sin escaleras" x="32" y="2319" width="2846" height="117">
+    <frame id="2:21759" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21760" name="HU-17" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21761" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21762" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21763" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:21764" name="Ruta totalmente accesible sin escaleras
+Módulo B · F04" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:21765" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21766" name="D · ruta
+WF-D · ruta" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21767" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21768" name="M · ruta
+WF-M · ruta" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21769" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:21770" name="Seguir ruta accesible" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21771" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21772" name="Trayecto sin escaleras visible" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21773" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21774" name="S · CA01: Exclusión de escalones representada en el trayecto; algoritm" x="0" y="0" width="1170" height="23" />
+      <text id="2:21775" name="S · CA02: Rampa de 6 % priorizada en datos de ejemplo; validación físi" x="0" y="35" width="1170" height="23" />
+      <text id="2:21776" name="S · CA03: Corredores y pasos amplios precargados; sin cálculo geométri" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21777" name="HU-18 · Ascensores bloqueados y reenrutamiento" x="32" y="2448" width="2846" height="117">
+    <frame id="2:21778" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21779" name="HU-18" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21780" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21781" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21782" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:21783" name="Ascensores bloqueados y reenrutamiento
+Módulo B · F04" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:21784" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21785" name="D · bloqueo
+WF-D · bloqueo" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21786" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21787" name="M · bloqueo
+WF-M · bloqueo" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21788" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:21789" name="Intentar ascensor; recalcular" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21790" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21791" name="Acción bloqueada y ruta a refugio" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21792" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21793" name="S · CA01: Ascensores 1 y 2 no disponibles al activar escenario." x="0" y="0" width="1170" height="23" />
+      <text id="2:21794" name="D · CA02: Intento de usar ascensor devuelve advertencia restrictiva vi" x="0" y="35" width="1170" height="23" />
+      <text id="2:21795" name="S · CA03: Desvío precargado al refugio del mismo nivel." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21796" name="HU-19 · Plan Personalizado de Evacuación" x="32" y="2577" width="2846" height="117">
+    <frame id="2:21797" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21798" name="HU-19" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21799" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21800" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21801" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:21802" name="Plan Personalizado de Evacuación
+Módulo B · F04" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:21803" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21804" name="D · ppe
+WF-D · ppe" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21805" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21806" name="M · ppe
+WF-M · ppe" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21807" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21808" name="Revisar necesidades y guardar PPE" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21809" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21810" name="PPE guardado y editable" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21811" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21812" name="S · CA01: Formulario con silla manual y requerimientos de movilidad de" x="0" y="0" width="1170" height="23" />
+      <text id="2:21813" name="P · CA02: Guardado en servidor y privacidad exclusiva de brigada requi" x="0" y="35" width="1170" height="23" />
+      <text id="2:21814" name="D · CA03: Vistas para consultar y actualizar el PPE de demostración." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21815" name="HU-20 · Congestión y rutas alternativas" x="32" y="2706" width="2846" height="117">
+    <frame id="2:21816" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21817" name="HU-20" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21818" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21819" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21820" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21821" name="Congestión y rutas alternativas
+Módulo B · F04" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21822" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21823" name="D · desvio
+WF-D · desvio" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21824" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21825" name="M · desvio
+WF-M · desvio" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21826" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21827" name="Detectar congestión; recalcular; despejar" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21828" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21829" name="Desvío y recuperación de vía libre" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21830" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21831" name="S · CA01: Corredor congestionado descrito y bloqueado en escenario." x="0" y="0" width="1170" height="23" />
+      <text id="2:21832" name="S · CA02: Ruta alternativa antes de llegar al tramo, mediante estado p" x="0" y="35" width="1170" height="23" />
+      <text id="2:21833" name="S · CA03: Acción Simular vía despejada recupera la ruta libre." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21834" name="HU-21 · SOS y ubicación interior" x="32" y="2835" width="2846" height="117">
+    <frame id="2:21835" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21836" name="HU-21" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21837" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21838" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21839" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21840" name="SOS y ubicación interior
+Módulo B · F04" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21841" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21842" name="D · sos
+WF-D · sos" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21843" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21844" name="M · sos
+WF-M · sos" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21845" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:21846" name="Pulsar SOS persistente" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21847" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:21848" name="Solicitud enviada o fallo con reintento" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:21849" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21850" name="D · CA01: SOS fijado fuera del área desplazable durante evacuación." x="0" y="0" width="1170" height="23" />
+      <text id="2:21851" name="S · CA02: Envío simulado de Edificio B, Piso 2 y Aula 204; sin coorden" x="0" y="35" width="1170" height="23" />
+      <text id="2:21852" name="D · CA03: Confirmación visual Solicitud enviada y alternativa de error" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21853" name="HU-22 · Anchos de puertas y pendientes" x="32" y="2964" width="2846" height="117">
+    <frame id="2:21854" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21855" name="HU-22" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21856" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21857" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21858" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21859" name="Anchos de puertas y pendientes
+Módulo B · F04" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21860" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21861" name="D · detalles
+WF-D · detalles" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21862" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21863" name="M · detalles
+WF-M · detalles" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21864" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21865" name="Consultar precaución y alternativa" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21866" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21867" name="Detalle técnico del tramo" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21868" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21869" name="S · CA01: Pasos ≥90 cm en datos de ejemplo; no validación del plano re" x="0" y="0" width="1170" height="23" />
+      <text id="2:21870" name="D · CA02: Advertencia textual y semántica de pendiente de 10 %, superi" x="0" y="35" width="1170" height="23" />
+      <text id="2:21871" name="D · CA03: Información ampliada de dificultad y alternativa accesible." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21872" name="HU-23 · Estado de puertas automáticas" x="32" y="3093" width="2846" height="117">
+    <frame id="2:21873" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21874" name="HU-23" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21875" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21876" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21877" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21878" name="Estado de puertas automáticas
+Módulo B · F04" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21879" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21880" name="D · detalles
+WF-D · detalles" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21881" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21882" name="M · detalles
+WF-M · detalles" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21883" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:21884" name="Revisar puerta y simular bloqueo" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21885" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21886" name="Estados y desvío visibles" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21887" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21888" name="S · CA01: Abierta, Cerrada y Bloqueada son estados de ejemplo; no exis" x="0" y="0" width="1170" height="23" />
+      <text id="2:21889" name="S · CA02: Falla de puerta y desvío representados por pantallas vincula" x="0" y="35" width="1170" height="23" />
+      <text id="2:21890" name="D · CA03: Advertencia de apertura manual pesada y solicitud de apoyo." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21891" name="HU-24 · Brigadista en camino" x="32" y="3222" width="2846" height="117">
+    <frame id="2:21892" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21893" name="HU-24" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21894" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21895" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21896" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21897" name="Brigadista en camino
+Módulo B · F04" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21898" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21899" name="D · asignado
+WF-D · asignado" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21900" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21901" name="M · asignado
+WF-M · asignado" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21902" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21903" name="Consultar asignación o reasignación" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21904" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21905" name="Nombre, foto y ETA visibles" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21906" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21907" name="D · CA01: Foto ficticia, nombre y rol del brigadista asignado." x="0" y="0" width="1170" height="23" />
+      <text id="2:21908" name="S · CA02: ETA de 2 min / 3 min de ejemplo, sin actualización temporal " x="0" y="35" width="1170" height="23" />
+      <text id="2:21909" name="S · CA03: Reasignación a Carla actualiza nombre y ETA; foto de Carla p" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21910" name="HU-25 · Tiempo de desplazamiento adaptado" x="32" y="3351" width="2846" height="117">
+    <frame id="2:21911" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21912" name="HU-25" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21913" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21914" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21915" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:21916" name="Tiempo de desplazamiento adaptado
+Módulo B · F04" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:21917" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21918" name="D · ppe
+WF-D · ppe" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21919" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21920" name="M · ppe
+WF-M · ppe" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21921" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21922" name="Revisar ritmo y ETA; consultar bloqueo" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21923" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:21924" name="Tiempo adaptado y advertencia" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:21925" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21926" name="S · CA01: Ritmo personal de 0,6 m/s precargado, sin motor de cálculo." x="0" y="0" width="1170" height="23" />
+      <text id="2:21927" name="S · CA02: Advertencia de 6 min frente a margen de ejemplo de 5 min; no" x="0" y="35" width="1170" height="23" />
+      <text id="2:21928" name="D · CA03: Tiempo dentro del margen presentado con verde y texto." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21929" name="HU-26 · Acompañantes y contactos de apoyo" x="32" y="3480" width="2846" height="117">
+    <frame id="2:21930" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21931" name="HU-26" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21932" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21933" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21934" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:21935" name="Acompañantes y contactos de apoyo
+Módulo B · F04" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:21936" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21937" name="D · ppe
+WF-D · ppe" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21938" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21939" name="M · ppe
+WF-M · ppe" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21940" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21941" name="Revisar dos contactos; guardar PPE" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21942" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:21943" name="2 contactos asociados en la muestra" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:21944" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21945" name="S · CA01: Se muestran hasta dos contactos ficticios; edición de datos " x="0" y="0" width="1170" height="23" />
+      <text id="2:21946" name="S · CA02: SMS automático descrito, sin envío externo." x="0" y="35" width="1170" height="23" />
+      <text id="2:21947" name="S · CA03: Push y posición inicial descritos; sin aplicación nativa ni " x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21948" name="HU-27 · Chat rápido de emergencia" x="32" y="3609" width="2846" height="117">
+    <frame id="2:21949" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21950" name="HU-27" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21951" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21952" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21953" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21954" name="Chat rápido de emergencia
+Módulo B · F04" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21955" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21956" name="D · chat
+WF-D · chat" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21957" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21958" name="M · chat
+WF-M · chat" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21959" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21960" name="Enviar respuesta rápida; simular fallo" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21961" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:21962" name="Mensaje enviado o pendiente de red" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:21963" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21964" name="D · CA01: Respuestas rápidas de un toque y tarjetas accesibles." x="0" y="0" width="1170" height="23" />
+      <text id="2:21965" name="P · CA02: Compresión de audio &lt;50 KB requiere implementación y medició" x="0" y="35" width="1170" height="23" />
+      <text id="2:21966" name="S · CA03: Cola y reintento representados en estado de red fallida; sin" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21967" name="HU-28 · Reporte de obstáculos" x="32" y="3738" width="2846" height="117">
+    <frame id="2:21968" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21969" name="HU-28" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21970" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21971" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21972" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21973" name="Reporte de obstáculos
+Módulo B · F04" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21974" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21975" name="D · obstaculo
+WF-D · obstaculo" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21976" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21977" name="M · obstaculo
+WF-M · obstaculo" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21978" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:21979" name="Seleccionar obstáculo y confirmar" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21980" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:21981" name="Obstáculo reportado; ruta alternativa" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:21982" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:21983" name="D · CA01: Opciones Escombros, Fuego, Aglomeración y Objeto caído." x="0" y="0" width="1170" height="23" />
+      <text id="2:21984" name="S · CA02: Ubicación de ejemplo asociada; actualización &lt;2 s no medida." x="0" y="35" width="1170" height="23" />
+      <text id="2:21985" name="S · CA03: Tramo bloqueado y desvío visibles; propagación a otros usuar" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:21986" name="HU-29 · Zona de Refugio Temporal" x="32" y="3867" width="2846" height="117">
+    <frame id="2:21987" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:21988" name="HU-29" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:21989" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:21990" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:21991" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:21992" name="Zona de Refugio Temporal
+Módulo B · F04" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:21993" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:21994" name="D · refugio
+WF-D · refugio" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21995" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:21996" name="M · refugio
+WF-M · refugio" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:21997" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:21998" name="Comparar disponibilidad y llegar" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:21999" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22000" name="Refugio confirmado o alternativa por aforo" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22001" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22002" name="P · CA01: Certificación cortafuego de refugios pendiente de validación" x="0" y="0" width="1170" height="23" />
+      <text id="2:22003" name="S · CA02: Ocupación 3/8 y 2/6, con alternativa ante refugio lleno." x="0" y="35" width="1170" height="23" />
+      <text id="2:22004" name="S · CA03: Ruta y cruce del umbral mediante acción QR / baliza simulada" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22005" name="HU-30 · Confirmación manual de salida segura" x="32" y="3996" width="2846" height="117">
+    <frame id="2:22006" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22007" name="HU-30" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22008" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22009" name="Usuario" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22010" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:22011" name="Confirmación manual de salida segura
+Módulo B · F04" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:22012" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22013" name="D · salida
+WF-D · salida" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22014" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22015" name="M · salida
+WF-M · salida" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22016" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22017" name="Ya estoy fuera → Sí, estoy a salvo" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22018" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22019" name="Evento personal cerrado en la muestra" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22020" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22021" name="D · CA01: Botón verde Ya estoy fuera / Fuera de peligro." x="0" y="0" width="1170" height="23" />
+      <text id="2:22022" name="D · CA02: Confirmación secundaria mediante overlay antes de registrar " x="0" y="35" width="1170" height="23" />
+      <text id="2:22023" name="S · CA03: Finalización del rastreo representada; no conexión a servido" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22024" name="HU-31 · Dashboard administrativo responsive" x="32" y="4125" width="2846" height="117">
+    <frame id="2:22025" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22026" name="HU-31" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22027" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22028" name="Administrador" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22029" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:22030" name="Dashboard administrativo responsive
+Módulo C · F05–F06" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:22031" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22032" name="D · admin
+WF-D · admin" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22033" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22034" name="M · admin
+WF-M · admin" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22035" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22036" name="Consultar contadores y supervisar" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22037" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22038" name="Estado operativo en Desktop / Mobile / Tablet" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22039" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22040" name="D · CA01: Cuatro contadores: riesgo, evacuando, refugio y evacuados." x="0" y="0" width="1170" height="23" />
+      <text id="2:22041" name="D · CA02: Adaptación del mismo panel a las tres resoluciones." x="0" y="35" width="1170" height="23" />
+      <text id="2:22042" name="S · CA03: Contadores con variables de prototipo; no WebSockets." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22043" name="HU-32 · Localización de personas en tiempo real" x="32" y="4254" width="2846" height="117">
+    <frame id="2:22044" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22045" name="HU-32" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22046" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22047" name="Brigadista" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22048" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:22049" name="Localización de personas en tiempo real
+Módulo C · F05–F06" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:22050" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22051" name="D · brigadas_b
+WF-D · brigadas_b" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22052" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22053" name="M · brigadas_b
+WF-M · brigadas_b" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22054" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22055" name="Consultar mapa y localización prioritaria" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22056" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22057" name="Personas y necesidades situadas en plano" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22058" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22059" name="S · CA01: Marcadores y leyenda sensorial / motora; coordenadas de mues" x="0" y="0" width="1170" height="23" />
+      <text id="2:22060" name="S · CA02: Posiciones precargadas, sin actualización ni verificación de" x="0" y="35" width="1170" height="23" />
+      <text id="2:22061" name="P · CA03: Parpadeo rojo omitido; prioridad estática con texto y borde." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22062" name="HU-33 · Alertas masivas o sectorizadas" x="32" y="4383" width="2846" height="117">
+    <frame id="2:22063" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22064" name="HU-33" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22065" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22066" name="Administrador" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22067" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22068" name="Alertas masivas o sectorizadas
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22069" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22070" name="D · emitir
+WF-D · emitir" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22071" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22072" name="M · emitir
+WF-M · emitir" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22073" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22074" name="Elegir evento y alcance; confirmar" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22075" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22076" name="Alerta emitida al alcance seleccionado" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22077" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22078" name="D · CA01: Alcance Todo el edificio / Piso 2 mediante selección interac" x="0" y="0" width="1170" height="23" />
+      <text id="2:22079" name="P · CA02: No se fuerzan háptica, sonido ni estado del sistema operativ" x="0" y="35" width="1170" height="23" />
+      <text id="2:22080" name="S · CA03: Confirmación de entrega al alcance seleccionado, sin mensaje" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22081" name="HU-34 · Asignación de brigadistas" x="32" y="4512" width="2846" height="117">
+    <frame id="2:22082" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22083" name="HU-34" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22084" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22085" name="Administrador" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22086" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22087" name="Asignación de brigadistas
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22088" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22089" name="D · asignar
+WF-D · asignar" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22090" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22091" name="M · asignar
+WF-M · asignar" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22092" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22093" name="Asignar por proximidad; simular 30 s" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22094" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:22095" name="Luis asignado o Carla reasignada" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:22096" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22097" name="S · CA01: Recomendación por mismo piso y distancia de ejemplo." x="0" y="0" width="1170" height="23" />
+      <text id="2:22098" name="S · CA02: Notificación de misión representada en la interfaz; sin push" x="0" y="35" width="1170" height="23" />
+      <text id="2:22099" name="S · CA03: Reasignación tras 30 s mediante evento manual simulado." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22100" name="HU-35 · Censo de visitantes mediante QR" x="32" y="4641" width="2846" height="117">
+    <frame id="2:22101" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22102" name="HU-35" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22103" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22104" name="Visitante / Admin" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22105" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:22106" name="Censo de visitantes mediante QR
+Módulo C · F07" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:22107" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22108" name="D · visitante
+WF-D · visitante" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22109" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22110" name="M · visitante
+WF-M · visitante" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22111" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22112" name="QR → Registro → Ingreso → Salida" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22113" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:22114" name="Censo 65 → 66 → 65" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:22115" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22116" name="S · CA01: QR sustituido por botón; formulario web sin instalación." x="0" y="0" width="1170" height="23" />
+      <text id="2:22117" name="D · CA02: Variables incrementan el censo y conservan necesidad de acce" x="0" y="35" width="1170" height="23" />
+      <text id="2:22118" name="S · CA03: Registro de salida decrementa censo; GPS no implementado." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22119" name="HU-36 · Necesidades de comunicación accesible" x="32" y="4770" width="2846" height="117">
+    <frame id="2:22120" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22121" name="HU-36" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22122" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22123" name="Brigadista" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22124" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:22125" name="Necesidades de comunicación accesible
+Módulo C · F05–F06" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:22126" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22127" name="D · mision
+WF-D · mision" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22128" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22129" name="M · mision
+WF-M · mision" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22130" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:22131" name="Revisar ficha y necesidades" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:22132" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22133" name="Texto, gestos y estímulos que evitar" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22134" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22135" name="D · CA01: Ficha destaca Usuario sordo y movilidad reducida." x="0" y="0" width="1170" height="23" />
+      <text id="2:22136" name="P · CA02: Protocolo de abordaje paso a paso pendiente de documento pro" x="0" y="35" width="1170" height="23" />
+      <text id="2:22137" name="D · CA03: Advertencia explícita de evitar destellos." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22138" name="HU-37 · Registro manual de rescates" x="32" y="4899" width="2846" height="117">
+    <frame id="2:22139" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22140" name="HU-37" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22141" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22142" name="Brigadista" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22143" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22144" name="Registro manual de rescates
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22145" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22146" name="D · rescate
+WF-D · rescate" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22147" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22148" name="M · rescate
+WF-M · rescate" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22149" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22150" name="Confirmar rescate individual o múltiple" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22151" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22152" name="Rescate registrado; contadores actualizados" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22153" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22154" name="D · CA01: Botón Marcar como Rescatado y confirmación." x="0" y="0" width="1170" height="23" />
+      <text id="2:22155" name="S · CA02: Descuento mediante variables de demostración; sin servidor c" x="0" y="35" width="1170" height="23" />
+      <text id="2:22156" name="S · CA03: Selección precargada de dos personas y resultado masivo; no " x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22157" name="HU-38 · Canal de voz Push-To-Talk" x="32" y="5028" width="2846" height="117">
+    <frame id="2:22158" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22159" name="HU-38" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22160" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22161" name="Brigadista / Admin" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22162" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22163" name="Canal de voz Push-To-Talk
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22164" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22165" name="D · ptt
+WF-D · ptt" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22166" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22167" name="M · ptt
+WF-M · ptt" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22168" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:22169" name="Mantener pulsado; finalizar" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:22170" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:22171" name="Transmitiendo · Simulación" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:22172" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22173" name="D · CA01: Control PTT en espacios autorizados Desktop y Mobile." x="0" y="0" width="1170" height="23" />
+      <text id="2:22174" name="P · CA02: QoS y latencia de red pendientes de implementación." x="0" y="35" width="1170" height="23" />
+      <text id="2:22175" name="P · CA03: Codec y compresión en redes 2G pendientes de pruebas." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22176" name="HU-39 · Estado de zonas de refugio" x="32" y="5157" width="2846" height="117">
+    <frame id="2:22177" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22178" name="HU-39" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22179" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22180" name="Administrador" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22181" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22182" name="Estado de zonas de refugio
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22183" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22184" name="D · zonas
+WF-D · zonas" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22185" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22186" name="M · zonas
+WF-M · zonas" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22187" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22188" name="Seleccionar Disponible / Lleno / En peligro" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22189" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22190" name="Estado actualizado y desvío mostrado" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22191" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22192" name="D · CA01: Cambiar estado mediante acciones de un toque." x="0" y="0" width="1170" height="23" />
+      <text id="2:22193" name="S · CA02: Inoperativa / En peligro deriva a Refugio B en estado de dem" x="0" y="35" width="1170" height="23" />
+      <text id="2:22194" name="D · CA03: Lleno / Saturado con advertencia textual y semántica." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22195" name="HU-40 · Reportes post-evento y auditoría" x="32" y="5286" width="2846" height="117">
+    <frame id="2:22196" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22197" name="HU-40" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22198" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22199" name="Administrador" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22200" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22201" name="Reportes post-evento y auditoría
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22202" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22203" name="D · reporte
+WF-D · reporte" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22204" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22205" name="M · reporte
+WF-M · reporte" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22206" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:22207" name="Cerrar evento y preparar reporte" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:22208" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22209" name="Resumen y vista PDF / Excel simulada" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22210" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22211" name="S · CA01: Vista de preparación PDF / Excel, sin archivos descargables " x="0" y="0" width="1170" height="23" />
+      <text id="2:22212" name="D · CA02: Desglose por edificio, piso y necesidad de accesibilidad." x="0" y="35" width="1170" height="23" />
+      <text id="2:22213" name="S · CA03: Gráfico de rescate 3 min frente a límite de ejemplo 5 min, s" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22214" name="HU-41 · Brigadistas activos por sector" x="32" y="5415" width="2846" height="117">
+    <frame id="2:22215" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22216" name="HU-41" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22217" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22218" name="Administrador" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22219" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22220" name="Brigadistas activos por sector
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22221" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22222" name="D · brigadas
+WF-D · brigadas" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22223" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22224" name="M · brigadas
+WF-M · brigadas" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22225" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22226" name="Consultar estados; arrastrar brigadista" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22227" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:22228" name="Sector de patrullaje actualizado" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:22229" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22230" name="S · CA01: Estados disponible, en misión y desconectado representados e" x="0" y="0" width="1170" height="23" />
+      <text id="2:22231" name="S · CA02: Arrastre del marcador B y acción equivalente accesible actua" x="0" y="35" width="1170" height="23" />
+      <text id="2:22232" name="S · CA03: Desconexión &gt;30 s descrita, no detección automática de red." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22233" name="HU-42 · Eventos de sensores IoT" x="32" y="5544" width="2846" height="117">
+    <frame id="2:22234" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22235" name="HU-42" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22236" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22237" name="Administrador" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22238" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22239" name="Eventos de sensores IoT
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22240" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22241" name="D · evento
+WF-D · evento" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22242" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22243" name="M · evento
+WF-M · evento" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22244" name="Celda" x="1002" y="12" width="260" height="23">
+      <text id="2:22245" name="Simular detección en Piso 2" x="0" y="0" width="260" height="23" />
+    </frame>
+    <frame id="2:22246" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22247" name="Sector resaltado y alerta disponible" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22248" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22249" name="P · CA01: Webhook / endpoint IoT no implementado." x="0" y="0" width="1170" height="23" />
+      <text id="2:22250" name="S · CA02: Activación por evento manual; umbral &lt;1 s no medido." x="0" y="35" width="1170" height="23" />
+      <text id="2:22251" name="S · CA03: Plano del sector y aviso destacados en rojo, sin sensores re" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22252" name="HU-43 · Manual de transferencia asistida" x="32" y="5673" width="2846" height="117">
+    <frame id="2:22253" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22254" name="HU-43" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22255" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22256" name="Brigadista" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22257" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22258" name="Manual de transferencia asistida
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22259" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22260" name="D · protocolo
+WF-D · protocolo" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22261" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22262" name="M · protocolo
+WF-M · protocolo" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22263" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22264" name="Consultar disponibilidad del manual" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22265" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:22266" name="Pendiente de protocolo validado" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:22267" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22268" name="P · CA01: Ilustraciones y manual offline requieren documento profesion" x="0" y="0" width="1170" height="23" />
+      <text id="2:22269" name="P · CA02: Número de brigadistas por técnica no inventado; pendiente de" x="0" y="35" width="1170" height="23" />
+      <text id="2:22270" name="P · CA03: Sugerencia de técnica según PPE pendiente de contenido aprob" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22271" name="HU-44 · Usuario inmóvil o sin señal" x="32" y="5802" width="2846" height="117">
+    <frame id="2:22272" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22273" name="HU-44" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22274" name="Celda" x="104" y="12" width="150" height="46">
+      <text id="2:22275" name="Administrador / Brigadista" x="0" y="0" width="150" height="46" />
+    </frame>
+    <frame id="2:22276" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22277" name="Usuario inmóvil o sin señal
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22278" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22279" name="D · solicitudes
+WF-D · solicitudes" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22280" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22281" name="M · solicitudes
+WF-M · solicitudes" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22282" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22283" name="Revisar prioridad por 120 s inmóvil" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22284" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:22285" name="María al inicio de solicitudes" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:22286" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22287" name="S · CA01: Advertencia de 120 s sin movimiento en datos precargados." x="0" y="0" width="1170" height="23" />
+      <text id="2:22288" name="D · CA02: Persona prioritaria situada al inicio de la lista." x="0" y="35" width="1170" height="23" />
+      <text id="2:22289" name="P · CA03: Parpadeo omitido por seguridad; se utiliza borde, texto y co" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22290" name="HU-45 · Servicios de emergencia externos" x="32" y="5931" width="2846" height="117">
+    <frame id="2:22291" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22292" name="HU-45" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22293" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22294" name="Administrador" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22295" name="Celda" x="266" y="12" width="260" height="69">
+      <text id="2:22296" name="Servicios de emergencia externos
+Módulo C · F05–F06" x="0" y="0" width="260" height="69" />
+    </frame>
+    <frame id="2:22297" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22298" name="D · externos
+WF-D · externos" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22299" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22300" name="M · externos
+WF-M · externos" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22301" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22302" name="Preparar paquete de emergencia" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22303" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22304" name="Paquete simulado y enlace expirado al cierre" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22305" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22306" name="P · CA01: Cifrado y envío de datos a Bomberos / SAMU no implementados." x="0" y="0" width="1170" height="23" />
+      <text id="2:22307" name="S · CA02: Enlace temporal solo descrito; no se genera URL operativa." x="0" y="35" width="1170" height="23" />
+      <text id="2:22308" name="S · CA03: Expiración visible en reporte; token seguro real pendiente." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22309" name="HU-46 · Roles y permisos" x="32" y="6060" width="2846" height="117">
+    <frame id="2:22310" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22311" name="HU-46" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22312" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22313" name="Administrador" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22314" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22315" name="Roles y permisos
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22316" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22317" name="D · roles
+WF-D · roles" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22318" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22319" name="M · roles
+WF-M · roles" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22320" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22321" name="Asignar / revocar; probar acceso restringido" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22322" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22323" name="Rol guardado o sesión cerrada simulada" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22324" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22325" name="D · CA01: Matriz de permisos y acciones de asignación / revocación." x="0" y="0" width="1170" height="23" />
+      <text id="2:22326" name="D · CA02: Brigadista con mapa y rescate, sin gestión global en su nave" x="0" y="35" width="1170" height="23" />
+      <text id="2:22327" name="S · CA03: Revocación representada como cierre de sesión, sin invalidac" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22328" name="HU-47 · Sector totalmente evacuado" x="32" y="6189" width="2846" height="117">
+    <frame id="2:22329" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22330" name="HU-47" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22331" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22332" name="Brigadista" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22333" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22334" name="Sector totalmente evacuado
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22335" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22336" name="D · sector
+WF-D · sector" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22337" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22338" name="M · sector
+WF-M · sector" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22339" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22340" name="Arrastrar deslizador de confirmación" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22341" name="Celda" x="1274" y="12" width="280" height="23">
+      <text id="2:22342" name="Sector despejado" x="0" y="0" width="280" height="23" />
+    </frame>
+    <frame id="2:22343" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22344" name="D · CA01: Acción de despeje con confirmación de seguridad." x="0" y="0" width="1170" height="23" />
+      <text id="2:22345" name="D · CA02: Disparador de arrastre del deslizador, no simple botón accid" x="0" y="35" width="1170" height="23" />
+      <text id="2:22346" name="S · CA03: Resultado verde Sector despejado; sin consola remota real." x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+  <frame id="2:22347" name="HU-48 · Observaciones post-simulacro" x="32" y="6318" width="2846" height="117">
+    <frame id="2:22348" name="Celda" x="12" y="12" width="80" height="23">
+      <text id="2:22349" name="HU-48" x="0" y="0" width="80" height="23" />
+    </frame>
+    <frame id="2:22350" name="Celda" x="104" y="12" width="150" height="23">
+      <text id="2:22351" name="Brigadista" x="0" y="0" width="150" height="23" />
+    </frame>
+    <frame id="2:22352" name="Celda" x="266" y="12" width="260" height="46">
+      <text id="2:22353" name="Observaciones post-simulacro
+Módulo C · F05–F06" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22354" name="Celda" x="538" y="12" width="220" height="46">
+      <text id="2:22355" name="D · observaciones
+WF-D · observaciones" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22356" name="Celda" x="770" y="12" width="220" height="46">
+      <text id="2:22357" name="M · observaciones
+WF-M · observaciones" x="0" y="0" width="220" height="46" />
+    </frame>
+    <frame id="2:22358" name="Celda" x="1002" y="12" width="260" height="46">
+      <text id="2:22359" name="Enviar observación o Sin novedades" x="0" y="0" width="260" height="46" />
+    </frame>
+    <frame id="2:22360" name="Celda" x="1274" y="12" width="280" height="46">
+      <text id="2:22361" name="Registro de auditoría de demostración" x="0" y="0" width="280" height="46" />
+    </frame>
+    <frame id="2:22362" name="Celda" x="1566" y="12" width="1170" height="93">
+      <text id="2:22363" name="S · CA01: Formulario breve con nota precargada al cierre del recorrido" x="0" y="0" width="1170" height="23" />
+      <text id="2:22364" name="S · CA02: Nota vinculada al Edificio B / SIM-2026-11; no archivo de se" x="0" y="35" width="1170" height="23" />
+      <text id="2:22365" name="D · CA03: Omitir / Sin novedades lleva a confirmación sin nota inventa" x="0" y="70" width="1170" height="23" />
+    </frame>
+  </frame>
+</frame>
+IMPORTANT: The design was too large to fit into context with get_design_context. Instead you have received a sparse metadata response, you MUST call get_design_context on the IDs of the sublayers to get the full code. Split up the calls to ensure the sublayers do not also exceed the context limit.

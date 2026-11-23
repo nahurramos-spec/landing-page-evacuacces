@@ -1,0 +1,170 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.skip {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  padding: 16px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 700;
+}
+.skip:focus {
+  top: 12px;
+}
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+h1:focus {
+  outline: none;
+}
+button:focus-visible,
+a:focus-visible {
+  position: relative;
+  z-index: 2;
+}
+html.contrast {
+  --ink: #ffd600;
+  --surface: #000;
+  --background: #000;
+  --muted: #ffd600;
+  --line: #ffd600;
+  --structure: #ffd600;
+  --accent: #ffd600;
+  --info: #000;
+  --danger: #ffd600;
+  --safe: #ffd600;
+  background: #000;
+  color: #ffd600;
+}
+.contrast body,
+.contrast .landing,
+.contrast .app-header,
+.contrast .landing-header,
+.contrast .landing-footer,
+.contrast .problem,
+.contrast .product-top {
+  background: #000;
+  color: #ffd600;
+}
+.contrast .btn {
+  background: #ffd600;
+  color: #000;
+  border-color: #ffd600;
+}
+.contrast .btn.outline,
+.contrast .menu-toggle {
+  background: #000;
+  color: #ffd600;
+  border-color: #ffd600;
+}
+.contrast .panel,
+.contrast .direction,
+.contrast .room,
+.contrast .hall,
+.contrast .message,
+.contrast .feedback,
+.contrast input,
+.contrast select,
+.contrast textarea,
+.contrast .enlarged-card {
+  background: #000 !important;
+  color: #ffd600 !important;
+  border-color: #ffd600;
+}
+.contrast .emergency {
+  border: 2px solid #ffd600;
+}
+.contrast .btn.danger,
+.contrast .btn.success,
+.contrast .acknowledge {
+  background: #ffd600;
+  color: #000;
+}
+.contrast .danger-text,
+.contrast .metric strong,
+.contrast .safe-text,
+.contrast .tag {
+  color: #ffd600;
+}
+.contrast img.icon,
+.contrast .communication-card img,
+.contrast .enlarged-card img {
+  filter: brightness(0) saturate(100%) invert(82%) sepia(94%) saturate(1800%)
+    hue-rotate(360deg);
+}
+.contrast .landing-header nav a,
+.contrast .landing-footer a {
+  color: #ffd600;
+}
+.contrast * {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+.contrast .marker {
+  background: #ffd600;
+  color: #000;
+  border: 1px solid #ffd600;
+}
+.contrast .route-line {
+  background: #ffd600;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* El verde original sobre azul pálido no alcanza 4,5:1 para texto pequeño. Se usa tinta en esas etiquetas. */
+.refuge.room .safe-text {
+  color: var(--ink);
+}
+@media print {
+  .sidebar,
+  .persistent,
+  .app-tools,
+  .app-header,
+  .btn,
+  .skip {
+    display: none !important;
+  }
+  .app,
+  .workspace,
+  .work-panel,
+  .scroll-area {
+    height: auto;
+    display: block;
+    overflow: visible;
+  }
+  .content {
+    padding: 0;
+  }
+  .panel {
+    break-inside: avoid;
+  }
+  .report-print {
+    display: block;
+  }
+  .data-table {
+    font-size: 10pt;
+  }
+  body {
+    color: #000;
+    background: #fff;
+  }
+}

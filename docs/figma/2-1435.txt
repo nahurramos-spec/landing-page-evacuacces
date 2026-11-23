@@ -1,0 +1,131 @@
+type EaButtonPrimaryProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonPrimary({ className, label = "Acción principal" }: EaButtonPrimaryProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/ink,#111)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:51" data-name="EA/Button/primary">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/surface,white)] text-center" data-node-id="2:52">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonOutlineProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonOutline({ className, label = "Acción secundaria" }: EaButtonOutlineProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:53" data-name="EA/Button/outline">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/ink,#111)] text-center" data-node-id="2:54">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+export default function DCensoUsuariosYCenso() {
+  return (
+    <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-col items-start relative size-full" data-node-id="2:1435" data-name="D · censo · Usuarios y censo">
+      <div className="[word-break:break-word] bg-[var(--color\/structure,#2264bc)] content-stretch flex gap-[16px] h-[64px] items-center leading-[1.25] not-italic overflow-clip p-[24px] relative shrink-0 text-[color:var(--color\/surface,white)] w-full" data-node-id="2:1436" data-name="Cabecera institucional">
+        <p className="flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] min-w-px relative text-[22px]" data-node-id="2:1437">
+          EvacuAccess
+        </p>
+        <p className="flex-[1_0_0] font-['Atkinson_Hyperlegible:Regular'] min-w-px relative text-[16px] text-right whitespace-pre-wrap" data-node-id="2:1438">{`Sede Central · Edificio B  |  Prototipo académico`}</p>
+      </div>
+      <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-[1_0_0] items-start min-h-px overflow-clip relative w-full" data-node-id="2:1439" data-name="Área de trabajo">
+        <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-col gap-[12px] h-full items-start overflow-clip p-[16px] relative shrink-0 w-[224px]" data-node-id="2:1440" data-name="Navegación por rol">
+          <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--color\/text-secondary,#59636c)] w-full" data-node-id="2:5675">
+            Centro de control
+          </p>
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Dashboard" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Disparo de alertas" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Solicitudes" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Zonas de refugio" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Brigadistas" />
+          <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] not-italic relative shrink-0 text-[18px] text-[color:var(--color\/structure,#2264bc)] w-full" data-node-id="2:5686">
+            Usuarios y censo
+          </p>
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Roles y permisos" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Servicios externos" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Historial y reportes" />
+          <div className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] font-normal leading-[0] relative shrink-0 text-[16px] text-[color:var(--color\/safe,#138654)] w-full" data-node-id="2:5693" style={{ fontVariationSettings: '"CTGR" 0, "wdth" 100' }}>
+            <p className="leading-[1.25] mb-0">● Sistemas simulados</p>
+            <p className="leading-[1.25]">Actualización: muestra</p>
+          </div>
+        </div>
+        <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-[1_0_0] flex-col h-full items-start min-w-px overflow-clip relative" data-node-id="2:1441" data-name="Panel principal">
+          <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-[1_0_0] flex-col items-start min-h-px overflow-x-clip overflow-y-auto relative w-full" data-node-id="2:1442" data-name="Área desplazable">
+            <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-col gap-[16px] items-start overflow-clip p-[32px] relative shrink-0 w-full" data-node-id="2:1443" data-name="Contenido">
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--color\/text-secondary,#59636c)] w-full" data-node-id="2:1444">
+                Administrador · Sede Central / Edificio B
+              </p>
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] not-italic relative shrink-0 text-[28px] text-[color:var(--color\/ink,#111)] w-full" data-node-id="2:1445">
+                Usuarios y censo
+              </p>
+              <div className="[word-break:break-word] bg-[var(--color\/surface,white)] border border-[var(--color\/border,#d7dbdf)] border-solid content-stretch flex flex-col gap-[16px] items-start leading-[1.25] not-italic overflow-clip p-[20px] relative rounded-[10px] shrink-0 text-[color:var(--color\/ink,#111)] w-full" data-node-id="2:3900" data-name="65 personas en el edificio">
+                <p className="font-['Atkinson_Hyperlegible:Bold'] relative shrink-0 text-[22px] w-full" data-node-id="2:3901">
+                  Censo activo del edificio
+                </p>
+                <p className="font-['Atkinson_Hyperlegible:Regular'] relative shrink-0 text-[18px] w-full" data-node-id="2:3902">
+                  Personal fijo de demostración: 60. El total y los visitantes se actualizan en esta sesión y se muestran debajo.
+                </p>
+              </div>
+              <div className="[word-break:break-word] bg-[var(--color\/surface,white)] border border-[var(--color\/border,#d7dbdf)] border-solid content-stretch flex flex-col gap-[16px] items-start not-italic overflow-clip p-[20px] relative rounded-[10px] shrink-0 text-[color:var(--color\/ink,#111)] w-full" data-node-id="2:3903" data-name="Último visitante · Elena Soto">
+                <p className="font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] relative shrink-0 text-[22px] w-full" data-node-id="2:3904">
+                  Último visitante previo · Pablo Ruiz
+                </p>
+                <div className="font-['Atkinson_Hyperlegible:Regular'] leading-[0] relative shrink-0 text-[18px] w-full" data-node-id="2:3905">
+                  <p className="leading-[1.25] mb-0">Registro previo 09:58 · Recepción Edificio B</p>
+                  <p className="leading-[1.25]">Necesidad: indicaciones visuales.</p>
+                </div>
+              </div>
+              <EaButtonPrimary className="bg-[var(--color\/ink,#111)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Ver censo tras nuevo ingreso · Muestra" />
+              <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Consultar solicitudes" />
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] not-italic relative shrink-0 text-[18px] text-[color:var(--color\/contrast-background,black)] w-full" data-node-id="2:7044">
+                Personas en el edificio
+              </p>
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] not-italic relative shrink-0 text-[36px] text-[color:var(--color\/contrast-background,black)] w-full" data-node-id="2:7045">
+                65
+              </p>
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] not-italic relative shrink-0 text-[18px] text-[color:var(--color\/contrast-background,black)] w-full" data-node-id="2:7046">
+                Visitantes registrados
+              </p>
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] not-italic relative shrink-0 text-[28px] text-[color:var(--color\/contrast-background,black)] w-full" data-node-id="2:7047">
+                5
+              </p>
+            </div>
+          </div>
+          <div className="bg-[var(--color\/surface,white)] content-stretch flex gap-[12px] items-start overflow-clip p-[16px] relative shrink-0 w-full" data-node-id="2:1446" data-name="Acciones persistentes">
+            <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex flex-[1_0_0] h-[56px] items-center justify-center min-w-px px-[16px] relative rounded-[10px]" label="Solicitudes" />
+            <EaButtonPrimary className="bg-[var(--color\/ink,#111)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex flex-[1_0_0] h-[56px] items-center justify-center min-w-px px-[16px] relative rounded-[10px]" label="Emitir alerta" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## EA/Button/outline
+**Node ID:** 2:53
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Button/primary
+**Node ID:** 2:51
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+The generated code contains image and SVG URL constants, e.g. const image = '[URL temporal omitida]'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

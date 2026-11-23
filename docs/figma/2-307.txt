@@ -1,0 +1,156 @@
+const imgFrame = "assets/icons/imgFrame2-307.svg";
+
+type EaButtonOutlineProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonOutline({ className, label = "Acción secundaria" }: EaButtonOutlineProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:53" data-name="EA/Button/outline">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/ink,#111)] text-center" data-node-id="2:54">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonDangerProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonDanger({ className, label = "SOS — Solicitar rescate" }: EaButtonDangerProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/danger,#cc2529)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:55" data-name="EA/Button/danger">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/surface,white)] text-center" data-node-id="2:56">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonSuccessProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonSuccess({ className, label = "Confirmar seguridad" }: EaButtonSuccessProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/safe,#138654)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:57" data-name="EA/Button/success">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/surface,white)] text-center" data-node-id="2:58">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+export default function DRutaSigueDeFrente() {
+  return (
+    <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-col items-start relative size-full" data-node-id="2:307" data-name="D · ruta · Sigue de frente">
+      <div className="[word-break:break-word] bg-[var(--color\/structure,#2264bc)] content-stretch flex gap-[16px] h-[64px] items-center leading-[1.25] not-italic overflow-clip p-[24px] relative shrink-0 text-[color:var(--color\/surface,white)] w-full" data-node-id="2:308" data-name="Cabecera institucional">
+        <p className="flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] min-w-px relative text-[22px]" data-node-id="2:309">
+          EvacuAccess
+        </p>
+        <p className="flex-[1_0_0] font-['Atkinson_Hyperlegible:Regular'] min-w-px relative text-[16px] text-right whitespace-pre-wrap" data-node-id="2:310">{`Sede Central · Edificio B  |  Prototipo académico`}</p>
+      </div>
+      <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-[1_0_0] items-start min-h-px overflow-clip relative w-full" data-node-id="2:311" data-name="Área de trabajo">
+        <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-col gap-[12px] h-full items-start overflow-clip p-[16px] relative shrink-0 w-[224px]" data-node-id="2:312" data-name="Navegación por rol">
+          <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--color\/text-secondary,#59636c)] w-full" data-node-id="2:4805">
+            Mi EvacuAccess
+          </p>
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mi inicio" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Accesibilidad" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mi PPE" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mapas offline" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mi historial" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mis dispositivos" />
+          <div className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] font-normal leading-[0] relative shrink-0 text-[16px] text-[color:var(--color\/safe,#138654)] w-full" data-node-id="2:4818" style={{ fontVariationSettings: '"CTGR" 0, "wdth" 100' }}>
+            <p className="leading-[1.25] mb-0">● Sistemas simulados</p>
+            <p className="leading-[1.25]">Actualización: muestra</p>
+          </div>
+        </div>
+        <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-[1_0_0] flex-col h-full items-start min-w-px overflow-clip relative" data-node-id="2:313" data-name="Panel principal">
+          <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-[1_0_0] flex-col items-start min-h-px overflow-x-clip overflow-y-auto relative w-full" data-node-id="2:314" data-name="Área desplazable">
+            <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-col gap-[16px] items-start overflow-clip p-[32px] relative shrink-0 w-full" data-node-id="2:315" data-name="Contenido">
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--color\/text-secondary,#59636c)] w-full" data-node-id="2:316">
+                Usuario · Sede Central / Edificio B
+              </p>
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] not-italic relative shrink-0 text-[28px] text-[color:var(--color\/ink,#111)] w-full" data-node-id="2:317">
+                Sigue de frente
+              </p>
+              <div className="[word-break:break-word] bg-[var(--color\/info,#eaf3ff)] border border-[var(--color\/border,#d7dbdf)] border-solid content-stretch flex flex-col gap-[16px] items-start leading-[1.25] not-italic overflow-clip p-[20px] relative rounded-[10px] shrink-0 text-[color:var(--color\/ink,#111)] w-full" data-node-id="2:2003" data-name="Evacuando · Sin escaleras">
+                <p className="font-['Atkinson_Hyperlegible:Bold'] relative shrink-0 text-[22px] w-full" data-node-id="2:2004">
+                  Evacuando · Sin escaleras
+                </p>
+                <p className="font-['Atkinson_Hyperlegible:Regular'] relative shrink-0 text-[18px] w-full" data-node-id="2:2005">
+                  Avanza 20 metros hacia la salida norte.
+                </p>
+              </div>
+              <div className="bg-[var(--color\/info,#eaf3ff)] content-stretch flex flex-col gap-[16px] items-center overflow-clip p-[24px] relative rounded-[16px] shrink-0 w-full" data-node-id="2:2006" data-name="Orientación direccional">
+                <div className="relative shrink-0 size-[180px]" data-node-id="2:2007" data-name="EA/Icon/arrow">
+                  <div className="absolute left-0 size-[180px] top-0" data-node-id="I2:2007;2:1754" data-name="Frame">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                  </div>
+                </div>
+                <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[32px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:2010">
+                  De frente
+                </p>
+                <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[16px] text-[color:var(--color\/structure,#2264bc)] w-[min-content]" data-node-id="2:2011">
+                  Paso 2 de 4 · Vía libre · Baliza B-204 simulada
+                </p>
+              </div>
+              <div className="[word-break:break-word] bg-[var(--color\/surface,white)] border border-[var(--color\/border,#d7dbdf)] border-solid content-stretch flex flex-col gap-[16px] items-start not-italic overflow-clip p-[20px] relative rounded-[10px] shrink-0 text-[color:var(--color\/ink,#111)] w-full" data-node-id="2:2012" data-name="Punto de encuentro">
+                <p className="font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] relative shrink-0 text-[22px] w-full" data-node-id="2:2013">
+                  Punto de encuentro
+                </p>
+                <div className="font-['Atkinson_Hyperlegible:Regular'] leading-[0] relative shrink-0 text-[18px] w-full" data-node-id="2:2014">
+                  <p className="leading-[1.25] mb-0">Patio norte · a 80 m</p>
+                  <p className="leading-[1.25]">Tiempo adaptado: 2 min · Dentro del margen de demostración</p>
+                </div>
+              </div>
+              <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Repetir instrucción · Simulado" />
+              <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Ver mapa" />
+              <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Ver bloqueo de ruta" />
+              <EaButtonSuccess className="bg-[var(--color\/safe,#138654)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Ya estoy fuera / Fuera de peligro" />
+            </div>
+          </div>
+          <div className="bg-[var(--color\/surface,white)] content-stretch flex gap-[12px] items-start overflow-clip p-[16px] relative shrink-0 w-full" data-node-id="2:318" data-name="Acciones persistentes">
+            <EaButtonDanger className="bg-[var(--color\/danger,#cc2529)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex flex-[1_0_0] h-[56px] items-center justify-center min-w-px px-[16px] relative rounded-[10px]" label="SOS · Solicitar rescate" />
+            <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex flex-[1_0_0] h-[56px] items-center justify-center min-w-px px-[16px] relative rounded-[10px]" label="Comunicar necesidad" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## EA/Button/outline
+**Node ID:** 2:53
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Icon/arrow
+**Node ID:** 2:1753
+
+Material Symbols Outlined · Google · 24 px
+
+## EA/Button/success
+**Node ID:** 2:57
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Button/danger
+**Node ID:** 2:55
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+The generated code contains image and SVG URL constants, e.g. const image = '[URL temporal omitida]'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

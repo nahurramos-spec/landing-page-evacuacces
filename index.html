@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#2264BC" />
+    <meta
+      name="description"
+      content="EvacuAccess: orientación accesible, rutas de evacuación y coordinación de asistencia. Entorno de prueba sin conexión con servicios de emergencia."
+    />
+    <title>EvacuAccess · Evacuación accesible</title>
+    <link
+      rel="icon"
+      href="assets/icons/imgFrame2-499.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/Atkinson-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/accessibility.css" />
+    <link rel="stylesheet" href="css/review.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main-content">Saltar al contenido</a>
+    <div id="root"></div>
+    <div
+      id="announcer"
+      class="sr-only"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+    <dialog id="dialog" aria-labelledby="dialog-title">
+      <div id="dialog-content"></div>
+    </dialog>
+    <noscript
+      ><main>
+        <h1>EvacuAccess</h1>
+        <p>
+          EvacuAccess necesita JavaScript para consultar rutas y gestionar la
+          asistencia.
+        </p>
+        <p>Entorno de prueba · Servicios de emergencia no conectados.</p>
+        <a href="https://www.figma.com/design/vNZs4J1ms6hxHErWETquDB/"
+          >Consultar el diseño oficial en Figma</a
+        >
+      </main></noscript
+    >
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

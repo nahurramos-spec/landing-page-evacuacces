@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-23T01:03:51.979Z",
+  "results": [
+    {
+      "case": "Sintaxis e importaciones de módulos nativos",
+      "status": "APROBADA",
+      "modules": 9
+    },
+    {
+      "case": "Recursos de hojas de estilo presentes",
+      "status": "APROBADA"
+    },
+    {
+      "case": "Matriz: exactamente 30 HU y 90 criterios oficiales",
+      "status": "APROBADA"
+    },
+    {
+      "case": "Paquete dist bajo subdirectorio: landing → alerta → confirmación; recursos y foco",
+      "status": "APROBADA"
+    },
+    {
+      "case": "Escape de menú devuelve foco a su control",
+      "status": "APROBADA"
+    }
+  ],
+  "missing": []
+}

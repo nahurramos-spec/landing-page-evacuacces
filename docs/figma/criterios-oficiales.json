@@ -1,0 +1,1382 @@
+[
+  {
+    "id": "2:21473",
+    "name": "HU-02 · Alertas por vibración háptica",
+    "text": [
+      {
+        "id": "2:21475",
+        "text": "HU-02"
+      },
+      {
+        "id": "2:21477",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21479",
+        "text": "Alertas por vibración háptica\nMódulo A · F01–F03"
+      },
+      {
+        "id": "2:21481",
+        "text": "D · alerta\nWF-D · alerta"
+      },
+      {
+        "id": "2:21483",
+        "text": "M · alerta\nWF-M · alerta"
+      },
+      {
+        "id": "2:21485",
+        "text": "Recibir alerta; confirmar recepción"
+      },
+      {
+        "id": "2:21487",
+        "text": "Evacuando; vibración simulada detenida"
+      },
+      {
+        "id": "2:21489",
+        "text": "S · CA01: Patrón continuo descrito, sin vibración física."
+      },
+      {
+        "id": "2:21490",
+        "text": "S · CA02: Activación en tiempo real y sin depender de audio: simulada."
+      },
+      {
+        "id": "2:21491",
+        "text": "S · CA03: Detención al confirmar o finalizar: estado de demostración."
+      }
+    ]
+  },
+  {
+    "id": "2:21492",
+    "name": "HU-03 · Alertas estroboscópicas e indicadores visuales",
+    "text": [
+      {
+        "id": "2:21494",
+        "text": "HU-03"
+      },
+      {
+        "id": "2:21496",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21498",
+        "text": "Alertas estroboscópicas e indicadores visuales\nMódulo A · F01–F03"
+      },
+      {
+        "id": "2:21500",
+        "text": "D · alerta\nWF-D · alerta"
+      },
+      {
+        "id": "2:21502",
+        "text": "M · alerta\nWF-M · alerta"
+      },
+      {
+        "id": "2:21504",
+        "text": "Leer emergencia en alerta estática"
+      },
+      {
+        "id": "2:21506",
+        "text": "Tipo de evento y confirmación accesible"
+      },
+      {
+        "id": "2:21508",
+        "text": "P · CA01: Destellos omitidos por seguridad; frecuencia requiere validación especializada."
+      },
+      {
+        "id": "2:21509",
+        "text": "D · CA02: Tipo de emergencia en 36 px y alto contraste."
+      },
+      {
+        "id": "2:21510",
+        "text": "P · CA03: No se superpone a aplicaciones ni a la pantalla de bloqueo del sistema."
+      }
+    ]
+  },
+  {
+    "id": "2:21511",
+    "name": "HU-04 · Narración por síntesis de voz",
+    "text": [
+      {
+        "id": "2:21513",
+        "text": "HU-04"
+      },
+      {
+        "id": "2:21515",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21517",
+        "text": "Narración por síntesis de voz\nMódulo A · F01–F03"
+      },
+      {
+        "id": "2:21519",
+        "text": "D · voz\nWF-D · voz"
+      },
+      {
+        "id": "2:21521",
+        "text": "M · voz\nWF-M · voz"
+      },
+      {
+        "id": "2:21523",
+        "text": "Escuchar y repetir instrucción simulada"
+      },
+      {
+        "id": "2:21525",
+        "text": "Transcripción direccional visible"
+      },
+      {
+        "id": "2:21527",
+        "text": "S · CA01: Comando relativo simple mediante transcripción de voz simulada."
+      },
+      {
+        "id": "2:21528",
+        "text": "P · CA02: No se modifica ni sobrepasa el volumen del sistema operativo."
+      },
+      {
+        "id": "2:21529",
+        "text": "S · CA03: Repetición solicitada con resultado visible; sin audio ni detección de inmovilidad real."
+      }
+    ]
+  },
+  {
+    "id": "2:21530",
+    "name": "HU-05 · Modo mate y antiparpadeo",
+    "text": [
+      {
+        "id": "2:21532",
+        "text": "HU-05"
+      },
+      {
+        "id": "2:21534",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21536",
+        "text": "Modo mate y antiparpadeo\nMódulo A · F01–F03"
+      },
+      {
+        "id": "2:21538",
+        "text": "D · contraste\nWF-D · contraste"
+      },
+      {
+        "id": "2:21540",
+        "text": "M · contraste\nWF-M · contraste"
+      },
+      {
+        "id": "2:21542",
+        "text": "Activar negro mate y amarillo"
+      },
+      {
+        "id": "2:21544",
+        "text": "Alerta sin destellos"
+      },
+      {
+        "id": "2:21546",
+        "text": "D · CA01: Fondo #000000 con texto #FFD600."
+      },
+      {
+        "id": "2:21547",
+        "text": "D · CA02: Flujo de usuario con cambios instantáneos, sin destellos."
+      },
+      {
+        "id": "2:21548",
+        "text": "P · CA03: Persistencia del modo en el dispositivo pendiente de implementación."
+      }
+    ]
+  },
+  {
+    "id": "2:21549",
+    "name": "HU-06 · Confirmación de recepción de alerta",
+    "text": [
+      {
+        "id": "2:21551",
+        "text": "HU-06"
+      },
+      {
+        "id": "2:21553",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21555",
+        "text": "Confirmación de recepción de alerta\nMódulo A · F01–F03"
+      },
+      {
+        "id": "2:21557",
+        "text": "D · alerta\nWF-D · alerta"
+      },
+      {
+        "id": "2:21559",
+        "text": "M · alerta\nWF-M · alerta"
+      },
+      {
+        "id": "2:21561",
+        "text": "Pulsar Estoy enterado"
+      },
+      {
+        "id": "2:21563",
+        "text": "Estado Evacuando"
+      },
+      {
+        "id": "2:21565",
+        "text": "D · CA01: Botón de confirmación ≥40 % del área de referencia Desktop y Mobile."
+      },
+      {
+        "id": "2:21566",
+        "text": "S · CA02: Actualización de estado mediante variables del prototipo, no red real."
+      },
+      {
+        "id": "2:21567",
+        "text": "S · CA03: Retroalimentación háptica corta descrita; no ejecutada."
+      }
+    ]
+  },
+  {
+    "id": "2:21568",
+    "name": "HU-07 · Orientación direccional",
+    "text": [
+      {
+        "id": "2:21570",
+        "text": "HU-07"
+      },
+      {
+        "id": "2:21572",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21574",
+        "text": "Orientación direccional\nMódulo A · F01–F03"
+      },
+      {
+        "id": "2:21576",
+        "text": "D · ruta\nWF-D · ruta"
+      },
+      {
+        "id": "2:21578",
+        "text": "M · ruta\nWF-M · ruta"
+      },
+      {
+        "id": "2:21580",
+        "text": "Consultar flecha y continuar"
+      },
+      {
+        "id": "2:21582",
+        "text": "De frente · Vía libre"
+      },
+      {
+        "id": "2:21584",
+        "text": "S · CA01: Rumbo y posición precargados, no sensor en tiempo real."
+      },
+      {
+        "id": "2:21585",
+        "text": "D · CA02: Vía libre y bloqueo con texto además de color."
+      },
+      {
+        "id": "2:21586",
+        "text": "D · CA03: Flecha continua y estática, sin parpadeos ni transiciones en este flujo."
+      }
+    ]
+  },
+  {
+    "id": "2:21587",
+    "name": "HU-08 · Ayuda gestual / lengua de señas",
+    "text": [
+      {
+        "id": "2:21589",
+        "text": "HU-08"
+      },
+      {
+        "id": "2:21591",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21593",
+        "text": "Ayuda gestual / lengua de señas\nMódulo A · F01–F03"
+      },
+      {
+        "id": "2:21595",
+        "text": "D · comunicar\nWF-D · comunicar"
+      },
+      {
+        "id": "2:21597",
+        "text": "M · comunicar\nWF-M · comunicar"
+      },
+      {
+        "id": "2:21599",
+        "text": "Solicitar comunicación gestual"
+      },
+      {
+        "id": "2:21601",
+        "text": "Necesidad enviada al brigadista"
+      },
+      {
+        "id": "2:21603",
+        "text": "D · CA01: Solicitud etiquetada como comunicación gestual / señas."
+      },
+      {
+        "id": "2:21604",
+        "text": "D · CA02: Tarjetas rápidas con texto e identificación visual accesibles desde la alerta."
+      },
+      {
+        "id": "2:21605",
+        "text": "S · CA03: Prioridad a brigadista con certificación de señas de demostración."
+      }
+    ]
+  },
+  {
+    "id": "2:21625",
+    "name": "HU-10 · A salvo en zona segura",
+    "text": [
+      {
+        "id": "2:21627",
+        "text": "HU-10"
+      },
+      {
+        "id": "2:21629",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21631",
+        "text": "A salvo en zona segura\nMódulo A · F01–F03"
+      },
+      {
+        "id": "2:21633",
+        "text": "D · seguro\nWF-D · seguro"
+      },
+      {
+        "id": "2:21635",
+        "text": "M · seguro\nWF-M · seguro"
+      },
+      {
+        "id": "2:21637",
+        "text": "Simular llegada QR / baliza al refugio"
+      },
+      {
+        "id": "2:21639",
+        "text": "Llegada confirmada y contadores actualizados"
+      },
+      {
+        "id": "2:21641",
+        "text": "S · CA01: Geofencing / QR sustituidos por acción simulada."
+      },
+      {
+        "id": "2:21642",
+        "text": "S · CA02: Confirmación visible; voz y vibración prolongada simuladas."
+      },
+      {
+        "id": "2:21643",
+        "text": "S · CA03: Variables del prototipo descuentan riesgo y actualizan estado; sin servidor."
+      }
+    ]
+  },
+  {
+    "id": "2:21663",
+    "name": "HU-12 · Tarjetas de comunicación no verbal",
+    "text": [
+      {
+        "id": "2:21665",
+        "text": "HU-12"
+      },
+      {
+        "id": "2:21667",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21669",
+        "text": "Tarjetas de comunicación no verbal\nMódulo A · F01–F03"
+      },
+      {
+        "id": "2:21671",
+        "text": "D · comunicar\nWF-D · comunicar"
+      },
+      {
+        "id": "2:21673",
+        "text": "M · comunicar\nWF-M · comunicar"
+      },
+      {
+        "id": "2:21675",
+        "text": "Seleccionar y ampliar tarjeta"
+      },
+      {
+        "id": "2:21677",
+        "text": "Tarjeta grande y necesidad enviada"
+      },
+      {
+        "id": "2:21679",
+        "text": "D · CA01: Acceso con un toque desde la alerta y desde acción persistente."
+      },
+      {
+        "id": "2:21680",
+        "text": "D · CA02: Texto claro en español; iconografía compartida."
+      },
+      {
+        "id": "2:21681",
+        "text": "D · CA03: Tarjeta seleccionada ampliada para lectura por terceros."
+      }
+    ]
+  },
+  {
+    "id": "2:21758",
+    "name": "HU-17 · Ruta totalmente accesible sin escaleras",
+    "text": [
+      {
+        "id": "2:21760",
+        "text": "HU-17"
+      },
+      {
+        "id": "2:21762",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21764",
+        "text": "Ruta totalmente accesible sin escaleras\nMódulo B · F04"
+      },
+      {
+        "id": "2:21766",
+        "text": "D · ruta\nWF-D · ruta"
+      },
+      {
+        "id": "2:21768",
+        "text": "M · ruta\nWF-M · ruta"
+      },
+      {
+        "id": "2:21770",
+        "text": "Seguir ruta accesible"
+      },
+      {
+        "id": "2:21772",
+        "text": "Trayecto sin escaleras visible"
+      },
+      {
+        "id": "2:21774",
+        "text": "S · CA01: Exclusión de escalones representada en el trayecto; algoritmo no implementado."
+      },
+      {
+        "id": "2:21775",
+        "text": "S · CA02: Rampa de 6 % priorizada en datos de ejemplo; validación física pendiente."
+      },
+      {
+        "id": "2:21776",
+        "text": "S · CA03: Corredores y pasos amplios precargados; sin cálculo geométrico real."
+      }
+    ]
+  },
+  {
+    "id": "2:21777",
+    "name": "HU-18 · Ascensores bloqueados y reenrutamiento",
+    "text": [
+      {
+        "id": "2:21779",
+        "text": "HU-18"
+      },
+      {
+        "id": "2:21781",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21783",
+        "text": "Ascensores bloqueados y reenrutamiento\nMódulo B · F04"
+      },
+      {
+        "id": "2:21785",
+        "text": "D · bloqueo\nWF-D · bloqueo"
+      },
+      {
+        "id": "2:21787",
+        "text": "M · bloqueo\nWF-M · bloqueo"
+      },
+      {
+        "id": "2:21789",
+        "text": "Intentar ascensor; recalcular"
+      },
+      {
+        "id": "2:21791",
+        "text": "Acción bloqueada y ruta a refugio"
+      },
+      {
+        "id": "2:21793",
+        "text": "S · CA01: Ascensores 1 y 2 no disponibles al activar escenario."
+      },
+      {
+        "id": "2:21794",
+        "text": "D · CA02: Intento de usar ascensor devuelve advertencia restrictiva visible."
+      },
+      {
+        "id": "2:21795",
+        "text": "S · CA03: Desvío precargado al refugio del mismo nivel."
+      }
+    ]
+  },
+  {
+    "id": "2:21834",
+    "name": "HU-21 · SOS y ubicación interior",
+    "text": [
+      {
+        "id": "2:21836",
+        "text": "HU-21"
+      },
+      {
+        "id": "2:21838",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21840",
+        "text": "SOS y ubicación interior\nMódulo B · F04"
+      },
+      {
+        "id": "2:21842",
+        "text": "D · sos\nWF-D · sos"
+      },
+      {
+        "id": "2:21844",
+        "text": "M · sos\nWF-M · sos"
+      },
+      {
+        "id": "2:21846",
+        "text": "Pulsar SOS persistente"
+      },
+      {
+        "id": "2:21848",
+        "text": "Solicitud enviada o fallo con reintento"
+      },
+      {
+        "id": "2:21850",
+        "text": "D · CA01: SOS fijado fuera del área desplazable durante evacuación."
+      },
+      {
+        "id": "2:21851",
+        "text": "S · CA02: Envío simulado de Edificio B, Piso 2 y Aula 204; sin coordenadas reales."
+      },
+      {
+        "id": "2:21852",
+        "text": "D · CA03: Confirmación visual Solicitud enviada y alternativa de error."
+      }
+    ]
+  },
+  {
+    "id": "2:21891",
+    "name": "HU-24 · Brigadista en camino",
+    "text": [
+      {
+        "id": "2:21893",
+        "text": "HU-24"
+      },
+      {
+        "id": "2:21895",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21897",
+        "text": "Brigadista en camino\nMódulo B · F04"
+      },
+      {
+        "id": "2:21899",
+        "text": "D · asignado\nWF-D · asignado"
+      },
+      {
+        "id": "2:21901",
+        "text": "M · asignado\nWF-M · asignado"
+      },
+      {
+        "id": "2:21903",
+        "text": "Consultar asignación o reasignación"
+      },
+      {
+        "id": "2:21905",
+        "text": "Nombre, foto y ETA visibles"
+      },
+      {
+        "id": "2:21907",
+        "text": "D · CA01: Foto ficticia, nombre y rol del brigadista asignado."
+      },
+      {
+        "id": "2:21908",
+        "text": "S · CA02: ETA de 2 min / 3 min de ejemplo, sin actualización temporal real."
+      },
+      {
+        "id": "2:21909",
+        "text": "S · CA03: Reasignación a Carla actualiza foto ficticia, nombre y ETA; integración de red simulada."
+      }
+    ]
+  },
+  {
+    "id": "2:21910",
+    "name": "HU-25 · Tiempo de desplazamiento adaptado",
+    "text": [
+      {
+        "id": "2:21912",
+        "text": "HU-25"
+      },
+      {
+        "id": "2:21914",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21916",
+        "text": "Tiempo de desplazamiento adaptado\nMódulo B · F04"
+      },
+      {
+        "id": "2:21918",
+        "text": "D · ppe\nWF-D · ppe"
+      },
+      {
+        "id": "2:21920",
+        "text": "M · ppe\nWF-M · ppe"
+      },
+      {
+        "id": "2:21922",
+        "text": "Revisar ritmo y ETA; consultar bloqueo"
+      },
+      {
+        "id": "2:21924",
+        "text": "Tiempo adaptado y advertencia"
+      },
+      {
+        "id": "2:21926",
+        "text": "S · CA01: Ritmo personal de 0,6 m/s precargado, sin motor de cálculo."
+      },
+      {
+        "id": "2:21927",
+        "text": "S · CA02: Advertencia de 6 min frente a margen de ejemplo de 5 min; no límite profesional."
+      },
+      {
+        "id": "2:21928",
+        "text": "D · CA03: Tiempo dentro del margen presentado con verde y texto."
+      }
+    ]
+  },
+  {
+    "id": "2:21948",
+    "name": "HU-27 · Chat rápido de emergencia",
+    "text": [
+      {
+        "id": "2:21950",
+        "text": "HU-27"
+      },
+      {
+        "id": "2:21952",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21954",
+        "text": "Chat rápido de emergencia\nMódulo B · F04"
+      },
+      {
+        "id": "2:21956",
+        "text": "D · chat\nWF-D · chat"
+      },
+      {
+        "id": "2:21958",
+        "text": "M · chat\nWF-M · chat"
+      },
+      {
+        "id": "2:21960",
+        "text": "Enviar respuesta rápida; simular fallo"
+      },
+      {
+        "id": "2:21962",
+        "text": "Mensaje enviado o pendiente de red"
+      },
+      {
+        "id": "2:21964",
+        "text": "D · CA01: Respuestas rápidas de un toque y tarjetas accesibles."
+      },
+      {
+        "id": "2:21965",
+        "text": "P · CA02: Compresión de audio <50 KB requiere implementación y medición técnica."
+      },
+      {
+        "id": "2:21966",
+        "text": "S · CA03: Cola y reintento representados en estado de red fallida; sin servicio en segundo plano."
+      }
+    ]
+  },
+  {
+    "id": "2:21986",
+    "name": "HU-29 · Zona de Refugio Temporal",
+    "text": [
+      {
+        "id": "2:21988",
+        "text": "HU-29"
+      },
+      {
+        "id": "2:21990",
+        "text": "Usuario"
+      },
+      {
+        "id": "2:21992",
+        "text": "Zona de Refugio Temporal\nMódulo B · F04"
+      },
+      {
+        "id": "2:21994",
+        "text": "D · refugio\nWF-D · refugio"
+      },
+      {
+        "id": "2:21996",
+        "text": "M · refugio\nWF-M · refugio"
+      },
+      {
+        "id": "2:21998",
+        "text": "Comparar disponibilidad y llegar"
+      },
+      {
+        "id": "2:22000",
+        "text": "Refugio confirmado o alternativa por aforo"
+      },
+      {
+        "id": "2:22002",
+        "text": "P · CA01: Certificación cortafuego de refugios pendiente de validación profesional."
+      },
+      {
+        "id": "2:22003",
+        "text": "S · CA02: Ocupación 3/8 y 2/6, con alternativa ante refugio lleno."
+      },
+      {
+        "id": "2:22004",
+        "text": "S · CA03: Ruta y cruce del umbral mediante acción QR / baliza simulada."
+      }
+    ]
+  },
+  {
+    "id": "2:22024",
+    "name": "HU-31 · Dashboard administrativo responsive",
+    "text": [
+      {
+        "id": "2:22026",
+        "text": "HU-31"
+      },
+      {
+        "id": "2:22028",
+        "text": "Administrador"
+      },
+      {
+        "id": "2:22030",
+        "text": "Dashboard administrativo responsive\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22032",
+        "text": "D · admin\nWF-D · admin"
+      },
+      {
+        "id": "2:22034",
+        "text": "M · admin\nWF-M · admin"
+      },
+      {
+        "id": "2:22036",
+        "text": "Consultar contadores y supervisar"
+      },
+      {
+        "id": "2:22038",
+        "text": "Estado operativo en Desktop / Mobile / Tablet"
+      },
+      {
+        "id": "2:22040",
+        "text": "D · CA01: Cuatro contadores: riesgo, evacuando, refugio y evacuados."
+      },
+      {
+        "id": "2:22041",
+        "text": "D · CA02: Adaptación del mismo panel a las tres resoluciones."
+      },
+      {
+        "id": "2:22042",
+        "text": "S · CA03: Contadores con variables de prototipo; no WebSockets."
+      }
+    ]
+  },
+  {
+    "id": "2:22043",
+    "name": "HU-32 · Localización de personas en tiempo real",
+    "text": [
+      {
+        "id": "2:22045",
+        "text": "HU-32"
+      },
+      {
+        "id": "2:22047",
+        "text": "Brigadista"
+      },
+      {
+        "id": "2:22049",
+        "text": "Localización de personas en tiempo real\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22051",
+        "text": "D · brigadas_b\nWF-D · brigadas_b"
+      },
+      {
+        "id": "2:22053",
+        "text": "M · brigadas_b\nWF-M · brigadas_b"
+      },
+      {
+        "id": "2:22055",
+        "text": "Consultar mapa y localización prioritaria"
+      },
+      {
+        "id": "2:22057",
+        "text": "Personas y necesidades situadas en plano"
+      },
+      {
+        "id": "2:22059",
+        "text": "S · CA01: Marcadores y leyenda sensorial / motora; coordenadas de muestra."
+      },
+      {
+        "id": "2:22060",
+        "text": "S · CA02: Posiciones precargadas, sin actualización ni verificación de desfase ≤3 s."
+      },
+      {
+        "id": "2:22061",
+        "text": "P · CA03: Parpadeo rojo omitido; prioridad estática con texto y borde."
+      }
+    ]
+  },
+  {
+    "id": "2:22062",
+    "name": "HU-33 · Alertas masivas o sectorizadas",
+    "text": [
+      {
+        "id": "2:22064",
+        "text": "HU-33"
+      },
+      {
+        "id": "2:22066",
+        "text": "Administrador"
+      },
+      {
+        "id": "2:22068",
+        "text": "Alertas masivas o sectorizadas\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22070",
+        "text": "D · emitir\nWF-D · emitir"
+      },
+      {
+        "id": "2:22072",
+        "text": "M · emitir\nWF-M · emitir"
+      },
+      {
+        "id": "2:22074",
+        "text": "Elegir evento y alcance; confirmar"
+      },
+      {
+        "id": "2:22076",
+        "text": "Alerta emitida al alcance seleccionado"
+      },
+      {
+        "id": "2:22078",
+        "text": "D · CA01: Alcance Todo el edificio / Piso 2 mediante selección interactiva."
+      },
+      {
+        "id": "2:22079",
+        "text": "P · CA02: No se fuerzan háptica, sonido ni estado del sistema operativo."
+      },
+      {
+        "id": "2:22080",
+        "text": "S · CA03: Confirmación de entrega al alcance seleccionado, sin mensajería real."
+      }
+    ]
+  },
+  {
+    "id": "2:22081",
+    "name": "HU-34 · Asignación de brigadistas",
+    "text": [
+      {
+        "id": "2:22083",
+        "text": "HU-34"
+      },
+      {
+        "id": "2:22085",
+        "text": "Administrador"
+      },
+      {
+        "id": "2:22087",
+        "text": "Asignación de brigadistas\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22089",
+        "text": "D · asignar\nWF-D · asignar"
+      },
+      {
+        "id": "2:22091",
+        "text": "M · asignar\nWF-M · asignar"
+      },
+      {
+        "id": "2:22093",
+        "text": "Asignar por proximidad; simular 30 s"
+      },
+      {
+        "id": "2:22095",
+        "text": "Luis asignado o Carla reasignada"
+      },
+      {
+        "id": "2:22097",
+        "text": "S · CA01: Recomendación por mismo piso y distancia de ejemplo."
+      },
+      {
+        "id": "2:22098",
+        "text": "S · CA02: Notificación de misión representada en la interfaz; sin push real."
+      },
+      {
+        "id": "2:22099",
+        "text": "S · CA03: Reasignación tras 30 s mediante evento manual simulado."
+      }
+    ]
+  },
+  {
+    "id": "2:22119",
+    "name": "HU-36 · Necesidades de comunicación accesible",
+    "text": [
+      {
+        "id": "2:22121",
+        "text": "HU-36"
+      },
+      {
+        "id": "2:22123",
+        "text": "Brigadista"
+      },
+      {
+        "id": "2:22125",
+        "text": "Necesidades de comunicación accesible\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22127",
+        "text": "D · mision\nWF-D · mision"
+      },
+      {
+        "id": "2:22129",
+        "text": "M · mision\nWF-M · mision"
+      },
+      {
+        "id": "2:22131",
+        "text": "Revisar ficha y necesidades"
+      },
+      {
+        "id": "2:22133",
+        "text": "Texto, gestos y estímulos que evitar"
+      },
+      {
+        "id": "2:22135",
+        "text": "D · CA01: Ficha destaca Usuario sordo y movilidad reducida."
+      },
+      {
+        "id": "2:22136",
+        "text": "P · CA02: Protocolo de abordaje paso a paso pendiente de documento profesional aprobado."
+      },
+      {
+        "id": "2:22137",
+        "text": "D · CA03: Advertencia explícita de evitar destellos."
+      }
+    ]
+  },
+  {
+    "id": "2:22138",
+    "name": "HU-37 · Registro manual de rescates",
+    "text": [
+      {
+        "id": "2:22140",
+        "text": "HU-37"
+      },
+      {
+        "id": "2:22142",
+        "text": "Brigadista"
+      },
+      {
+        "id": "2:22144",
+        "text": "Registro manual de rescates\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22146",
+        "text": "D · rescate\nWF-D · rescate"
+      },
+      {
+        "id": "2:22148",
+        "text": "M · rescate\nWF-M · rescate"
+      },
+      {
+        "id": "2:22150",
+        "text": "Confirmar rescate individual o múltiple"
+      },
+      {
+        "id": "2:22152",
+        "text": "Rescate registrado; contadores actualizados"
+      },
+      {
+        "id": "2:22154",
+        "text": "D · CA01: Botón Marcar como Rescatado y confirmación."
+      },
+      {
+        "id": "2:22155",
+        "text": "S · CA02: Descuento mediante variables de demostración; sin servidor central."
+      },
+      {
+        "id": "2:22156",
+        "text": "S · CA03: Selección precargada de dos personas y resultado masivo; no lista editable completa."
+      }
+    ]
+  },
+  {
+    "id": "2:22176",
+    "name": "HU-39 · Estado de zonas de refugio",
+    "text": [
+      {
+        "id": "2:22178",
+        "text": "HU-39"
+      },
+      {
+        "id": "2:22180",
+        "text": "Administrador"
+      },
+      {
+        "id": "2:22182",
+        "text": "Estado de zonas de refugio\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22184",
+        "text": "D · zonas\nWF-D · zonas"
+      },
+      {
+        "id": "2:22186",
+        "text": "M · zonas\nWF-M · zonas"
+      },
+      {
+        "id": "2:22188",
+        "text": "Seleccionar Disponible / Lleno / En peligro"
+      },
+      {
+        "id": "2:22190",
+        "text": "Estado actualizado y desvío mostrado"
+      },
+      {
+        "id": "2:22192",
+        "text": "D · CA01: Cambiar estado mediante acciones de un toque."
+      },
+      {
+        "id": "2:22193",
+        "text": "S · CA02: Inoperativa / En peligro deriva a Refugio B en estado de demostración."
+      },
+      {
+        "id": "2:22194",
+        "text": "D · CA03: Lleno / Saturado con advertencia textual y semántica."
+      }
+    ]
+  },
+  {
+    "id": "2:22195",
+    "name": "HU-40 · Reportes post-evento y auditoría",
+    "text": [
+      {
+        "id": "2:22197",
+        "text": "HU-40"
+      },
+      {
+        "id": "2:22199",
+        "text": "Administrador"
+      },
+      {
+        "id": "2:22201",
+        "text": "Reportes post-evento y auditoría\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22203",
+        "text": "D · reporte\nWF-D · reporte"
+      },
+      {
+        "id": "2:22205",
+        "text": "M · reporte\nWF-M · reporte"
+      },
+      {
+        "id": "2:22207",
+        "text": "Cerrar evento y preparar reporte"
+      },
+      {
+        "id": "2:22209",
+        "text": "Resumen y vista PDF / Excel simulada"
+      },
+      {
+        "id": "2:22211",
+        "text": "S · CA01: Vista de preparación PDF / Excel, sin archivos descargables reales."
+      },
+      {
+        "id": "2:22212",
+        "text": "D · CA02: Desglose por edificio, piso y necesidad de accesibilidad."
+      },
+      {
+        "id": "2:22213",
+        "text": "S · CA03: Gráfico de rescate 3 min frente a límite de ejemplo 5 min, sin PDF generado."
+      }
+    ]
+  },
+  {
+    "id": "2:22214",
+    "name": "HU-41 · Brigadistas activos por sector",
+    "text": [
+      {
+        "id": "2:22216",
+        "text": "HU-41"
+      },
+      {
+        "id": "2:22218",
+        "text": "Administrador"
+      },
+      {
+        "id": "2:22220",
+        "text": "Brigadistas activos por sector\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22222",
+        "text": "D · brigadas\nWF-D · brigadas"
+      },
+      {
+        "id": "2:22224",
+        "text": "M · brigadas\nWF-M · brigadas"
+      },
+      {
+        "id": "2:22226",
+        "text": "Consultar estados; arrastrar brigadista"
+      },
+      {
+        "id": "2:22228",
+        "text": "Sector de patrullaje actualizado"
+      },
+      {
+        "id": "2:22230",
+        "text": "S · CA01: Estados disponible, en misión y desconectado representados en leyenda."
+      },
+      {
+        "id": "2:22231",
+        "text": "S · CA02: Arrastre del marcador B y acción equivalente accesible actualizan sector de muestra."
+      },
+      {
+        "id": "2:22232",
+        "text": "S · CA03: Desconexión >30 s descrita, no detección automática de red."
+      }
+    ]
+  },
+  {
+    "id": "2:22233",
+    "name": "HU-42 · Eventos de sensores IoT",
+    "text": [
+      {
+        "id": "2:22235",
+        "text": "HU-42"
+      },
+      {
+        "id": "2:22237",
+        "text": "Administrador"
+      },
+      {
+        "id": "2:22239",
+        "text": "Eventos de sensores IoT\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22241",
+        "text": "D · evento\nWF-D · evento"
+      },
+      {
+        "id": "2:22243",
+        "text": "M · evento\nWF-M · evento"
+      },
+      {
+        "id": "2:22245",
+        "text": "Simular detección en Piso 2"
+      },
+      {
+        "id": "2:22247",
+        "text": "Sector resaltado y alerta disponible"
+      },
+      {
+        "id": "2:22249",
+        "text": "P · CA01: Webhook / endpoint IoT no implementado."
+      },
+      {
+        "id": "2:22250",
+        "text": "S · CA02: Activación por evento manual; umbral <1 s no medido."
+      },
+      {
+        "id": "2:22251",
+        "text": "S · CA03: Plano del sector y aviso destacados en rojo, sin sensores reales."
+      }
+    ]
+  },
+  {
+    "id": "2:22252",
+    "name": "HU-43 · Manual de transferencia asistida",
+    "text": [
+      {
+        "id": "2:22254",
+        "text": "HU-43"
+      },
+      {
+        "id": "2:22256",
+        "text": "Brigadista"
+      },
+      {
+        "id": "2:22258",
+        "text": "Manual de transferencia asistida\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22260",
+        "text": "D · protocolo\nWF-D · protocolo"
+      },
+      {
+        "id": "2:22262",
+        "text": "M · protocolo\nWF-M · protocolo"
+      },
+      {
+        "id": "2:22264",
+        "text": "Consultar disponibilidad del manual"
+      },
+      {
+        "id": "2:22266",
+        "text": "Pendiente de protocolo validado"
+      },
+      {
+        "id": "2:22268",
+        "text": "P · CA01: Ilustraciones y manual offline requieren documento profesional autorizado."
+      },
+      {
+        "id": "2:22269",
+        "text": "P · CA02: Número de brigadistas por técnica no inventado; pendiente de validación."
+      },
+      {
+        "id": "2:22270",
+        "text": "P · CA03: Sugerencia de técnica según PPE pendiente de contenido aprobado."
+      }
+    ]
+  },
+  {
+    "id": "2:22271",
+    "name": "HU-44 · Usuario inmóvil o sin señal",
+    "text": [
+      {
+        "id": "2:22273",
+        "text": "HU-44"
+      },
+      {
+        "id": "2:22275",
+        "text": "Administrador / Brigadista"
+      },
+      {
+        "id": "2:22277",
+        "text": "Usuario inmóvil o sin señal\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22279",
+        "text": "D · solicitudes\nWF-D · solicitudes"
+      },
+      {
+        "id": "2:22281",
+        "text": "M · solicitudes\nWF-M · solicitudes"
+      },
+      {
+        "id": "2:22283",
+        "text": "Revisar prioridad por 120 s inmóvil"
+      },
+      {
+        "id": "2:22285",
+        "text": "María al inicio de solicitudes"
+      },
+      {
+        "id": "2:22287",
+        "text": "S · CA01: Advertencia de 120 s sin movimiento en datos precargados."
+      },
+      {
+        "id": "2:22288",
+        "text": "D · CA02: Persona prioritaria situada al inicio de la lista."
+      },
+      {
+        "id": "2:22289",
+        "text": "P · CA03: Parpadeo omitido por seguridad; se utiliza borde, texto y color estáticos."
+      }
+    ]
+  },
+  {
+    "id": "2:22290",
+    "name": "HU-45 · Servicios de emergencia externos",
+    "text": [
+      {
+        "id": "2:22292",
+        "text": "HU-45"
+      },
+      {
+        "id": "2:22294",
+        "text": "Administrador"
+      },
+      {
+        "id": "2:22296",
+        "text": "Servicios de emergencia externos\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22298",
+        "text": "D · externos\nWF-D · externos"
+      },
+      {
+        "id": "2:22300",
+        "text": "M · externos\nWF-M · externos"
+      },
+      {
+        "id": "2:22302",
+        "text": "Preparar paquete de emergencia"
+      },
+      {
+        "id": "2:22304",
+        "text": "Paquete simulado y enlace expirado al cierre"
+      },
+      {
+        "id": "2:22306",
+        "text": "P · CA01: Cifrado y envío de datos a Bomberos / SAMU no implementados."
+      },
+      {
+        "id": "2:22307",
+        "text": "S · CA02: Enlace temporal solo descrito; no se genera URL operativa."
+      },
+      {
+        "id": "2:22308",
+        "text": "S · CA03: Expiración visible en reporte; token seguro real pendiente."
+      }
+    ]
+  },
+  {
+    "id": "2:22328",
+    "name": "HU-47 · Sector totalmente evacuado",
+    "text": [
+      {
+        "id": "2:22330",
+        "text": "HU-47"
+      },
+      {
+        "id": "2:22332",
+        "text": "Brigadista"
+      },
+      {
+        "id": "2:22334",
+        "text": "Sector totalmente evacuado\nMódulo C · F05–F06"
+      },
+      {
+        "id": "2:22336",
+        "text": "D · sector\nWF-D · sector"
+      },
+      {
+        "id": "2:22338",
+        "text": "M · sector\nWF-M · sector"
+      },
+      {
+        "id": "2:22340",
+        "text": "Arrastrar deslizador de confirmación"
+      },
+      {
+        "id": "2:22342",
+        "text": "Sector despejado"
+      },
+      {
+        "id": "2:22344",
+        "text": "D · CA01: Acción de despeje con confirmación de seguridad."
+      },
+      {
+        "id": "2:22345",
+        "text": "D · CA02: Disparador de arrastre del deslizador, no simple botón accidental."
+      },
+      {
+        "id": "2:22346",
+        "text": "S · CA03: Resultado verde Sector despejado; sin consola remota real."
+      }
+    ]
+  }
+]

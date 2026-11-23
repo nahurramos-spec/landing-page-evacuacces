@@ -1,0 +1,237 @@
+const imgBrigadista = "assets/icons/imgBrigadista2-331.svg";
+const imgUsuarioSensorial = "assets/icons/imgUsuarioSensorial2-331.svg";
+const imgSosPrioritario = "assets/icons/imgSosPrioritario2-331.svg";
+
+type EaButtonOutlineProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonOutline({ className, label = "Acción secundaria" }: EaButtonOutlineProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:53" data-name="EA/Button/outline">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/ink,#111)] text-center" data-node-id="2:54">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonDangerProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonDanger({ className, label = "SOS — Solicitar rescate" }: EaButtonDangerProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/danger,#cc2529)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:55" data-name="EA/Button/danger">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/surface,white)] text-center" data-node-id="2:56">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonPrimaryProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonPrimary({ className, label = "Acción principal" }: EaButtonPrimaryProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/ink,#111)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:51" data-name="EA/Button/primary">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/surface,white)] text-center" data-node-id="2:52">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+function EaMapWide({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[var(--color\\/border,#d7dbdf)] border-solid h-[460px] overflow-clip relative rounded-[10px] w-[1080px]"} data-node-id="2:1774" data-name="EA/Map/wide">
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[15px] not-italic text-[22px] text-[color:var(--color\/ink,#111)] top-[15px] w-[1048px]" data-node-id="2:1775">
+        Plano operativo · Piso 2
+      </p>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] left-[15px] not-italic text-[16px] text-[color:var(--color\/text-secondary,#59636c)] top-[47px] w-[1048px]" data-node-id="2:1776">
+        Edificio B · Posiciones simuladas
+      </p>
+      <div className="absolute bg-[var(--color\/surface,white)] border border-[#a8afb6] border-solid h-[100px] left-[15px] rounded-[4px] top-[99px] w-[252px]" data-node-id="2:1777" data-name="Aula" />
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[21px] not-italic text-[18px] text-[color:var(--color\/ink,#111)] top-[111px] w-[240px]" data-node-id="2:1778">
+        Aula 201
+      </p>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] left-[21px] not-italic text-[16px] text-[color:var(--color\/text-secondary,#59636c)] top-[139px] w-[240px]" data-node-id="2:1779">
+        Libre
+      </p>
+      <div className="absolute bg-[var(--color\/info,#eaf3ff)] border border-[var(--color\/structure,#2264bc)] border-dashed h-[100px] left-[279px] rounded-[4px] top-[99px] w-[252px]" data-node-id="2:1780" data-name="Zona de refugio" />
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[285px] not-italic text-[18px] text-[color:var(--color\/ink,#111)] top-[111px] w-[240px]" data-node-id="2:1781">
+        Refugio A
+      </p>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] left-[285px] not-italic text-[16px] text-[color:var(--color\/safe,#138654)] top-[139px] w-[240px]" data-node-id="2:1782">
+        3/8
+      </p>
+      <div className="absolute bg-[var(--color\/surface,white)] border border-[#a8afb6] border-solid h-[100px] left-[543px] rounded-[4px] top-[99px] w-[252px]" data-node-id="2:1783" data-name="Aula" />
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[549px] not-italic text-[18px] text-[color:var(--color\/ink,#111)] top-[111px] w-[240px]" data-node-id="2:1784">
+        Aula 203
+      </p>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] left-[549px] not-italic text-[16px] text-[color:var(--color\/text-secondary,#59636c)] top-[139px] w-[240px]" data-node-id="2:1785">
+        Libre
+      </p>
+      <div className="absolute bg-[var(--color\/surface,white)] border border-[#a8afb6] border-solid h-[100px] left-[807px] rounded-[4px] top-[99px] w-[252px]" data-node-id="2:1786" data-name="Aula" />
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[813px] not-italic text-[18px] text-[color:var(--color\/ink,#111)] top-[111px] w-[240px]" data-node-id="2:1787">
+        Aula 204
+      </p>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] left-[813px] not-italic text-[16px] text-[color:var(--color\/danger,#cc2529)] top-[139px] w-[240px]" data-node-id="2:1788">
+        SOS
+      </p>
+      <div className="absolute bg-[var(--color\/surface,white)] border border-[#a8afb6] border-solid h-[100px] left-[15px] rounded-[4px] top-[294px] w-[252px]" data-node-id="2:1789" data-name="Aula" />
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[21px] not-italic text-[18px] text-[color:var(--color\/ink,#111)] top-[306px] w-[240px]" data-node-id="2:1790">
+        Aula 205
+      </p>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] left-[21px] not-italic text-[16px] text-[color:var(--color\/text-secondary,#59636c)] top-[334px] w-[240px]" data-node-id="2:1791">
+        Libre
+      </p>
+      <div className="absolute bg-[var(--color\/info,#eaf3ff)] border border-[var(--color\/structure,#2264bc)] border-dashed h-[100px] left-[279px] rounded-[4px] top-[294px] w-[252px]" data-node-id="2:1792" data-name="Zona de refugio" />
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[285px] not-italic text-[18px] text-[color:var(--color\/ink,#111)] top-[306px] w-[240px]" data-node-id="2:1793">
+        Refugio B
+      </p>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] left-[285px] not-italic text-[16px] text-[color:var(--color\/safe,#138654)] top-[334px] w-[240px]" data-node-id="2:1794">
+        2/6
+      </p>
+      <div className="absolute bg-[var(--color\/surface,white)] border border-[#a8afb6] border-solid h-[100px] left-[543px] rounded-[4px] top-[294px] w-[252px]" data-node-id="2:1795" data-name="Aula" />
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[549px] not-italic text-[18px] text-[color:var(--color\/ink,#111)] top-[306px] w-[240px]" data-node-id="2:1796">
+        Aula 207
+      </p>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] left-[549px] not-italic text-[16px] text-[color:var(--color\/text-secondary,#59636c)] top-[334px] w-[240px]" data-node-id="2:1797">
+        Libre
+      </p>
+      <div className="absolute bg-[var(--color\/surface,white)] border border-[#a8afb6] border-solid h-[100px] left-[807px] rounded-[4px] top-[294px] w-[252px]" data-node-id="2:1798" data-name="Aula" />
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[813px] not-italic text-[18px] text-[color:var(--color\/ink,#111)] top-[306px] w-[240px]" data-node-id="2:1799">
+        Aula 208
+      </p>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] left-[813px] not-italic text-[16px] text-[color:var(--color\/text-secondary,#59636c)] top-[334px] w-[240px]" data-node-id="2:1800">
+        Libre
+      </p>
+      <div className="absolute bg-[var(--color\/safe,#138654)] h-[4px] left-[23px] rounded-[4px] top-[249px] w-[1032px]" data-node-id="2:1801" data-name="Ruta sin escaleras" />
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] font-bold leading-[1.25] left-[15px] text-[16px] text-[color:var(--color\/safe,#138654)] top-[217px] w-[100px]" data-node-id="2:1802" style={{ fontVariationSettings: '"CTGR" 0, "wdth" 100' }}>
+        Salida ←
+      </p>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] font-bold leading-[1.25] left-[979px] text-[16px] text-[color:var(--color\/safe,#138654)] top-[217px] w-[90px]" data-node-id="2:1803" style={{ fontVariationSettings: '"CTGR" 0, "wdth" 100' }}>
+        → Salida
+      </p>
+      <div className="absolute bg-[#fbeaeb] border border-[var(--color\/danger,#cc2529)] border-solid h-[22px] left-[625.4px] rounded-[4px] top-[261px] w-[28px]" data-node-id="2:1804" data-name="Ascensor bloqueado" />
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[629.4px] not-italic text-[18px] text-[color:var(--color\/danger,#cc2529)] top-[260px] w-[25px]" data-node-id="2:1805">
+        ×
+      </p>
+      <div className="absolute left-[323px] size-[26px] top-[237px]" data-node-id="2:1806" data-name="Brigadista">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBrigadista} />
+      </div>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[329px] not-italic text-[16px] text-[color:var(--color\/surface,white)] top-[239px] w-[20px]" data-node-id="2:1807">
+        B
+      </p>
+      <div className="absolute left-[560.6px] size-[26px] top-[237px]" data-node-id="2:1808" data-name="Usuario sensorial">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgUsuarioSensorial} />
+      </div>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[566.6px] not-italic text-[16px] text-[color:var(--color\/surface,white)] top-[239px] w-[20px]" data-node-id="2:1809">
+        U
+      </p>
+      <div className="absolute left-[841.4px] size-[26px] top-[237px]" data-node-id="2:1810" data-name="SOS prioritario">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSosPrioritario} />
+      </div>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] left-[847.4px] not-italic text-[16px] text-[color:var(--color\/surface,white)] top-[239px] w-[20px]" data-node-id="2:1811">
+        !
+      </p>
+      <p className="[word-break:break-word] absolute font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] left-[15px] not-italic text-[16px] text-[color:var(--color\/ink,#111)] top-[423px] w-[1048px] whitespace-pre-wrap" data-node-id="2:1812">{`U Persona con necesidad de asistencia     B Brigadista     ! SOS activo     — Ruta habilitada`}</p>
+    </div>
+  );
+}
+
+export default function DMapaMapaDeEvacuacion() {
+  return (
+    <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-col items-start relative size-full" data-node-id="2:331" data-name="D · mapa · Mapa de evacuación">
+      <div className="[word-break:break-word] bg-[var(--color\/structure,#2264bc)] content-stretch flex gap-[16px] h-[64px] items-center leading-[1.25] not-italic overflow-clip p-[24px] relative shrink-0 text-[color:var(--color\/surface,white)] w-full" data-node-id="2:332" data-name="Cabecera institucional">
+        <p className="flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] min-w-px relative text-[22px]" data-node-id="2:333">
+          EvacuAccess
+        </p>
+        <p className="flex-[1_0_0] font-['Atkinson_Hyperlegible:Regular'] min-w-px relative text-[16px] text-right whitespace-pre-wrap" data-node-id="2:334">{`Sede Central · Edificio B  |  Prototipo académico`}</p>
+      </div>
+      <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-[1_0_0] items-start min-h-px overflow-clip relative w-full" data-node-id="2:335" data-name="Área de trabajo">
+        <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-col gap-[12px] h-full items-start overflow-clip p-[16px] relative shrink-0 w-[224px]" data-node-id="2:336" data-name="Navegación por rol">
+          <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--color\/text-secondary,#59636c)] w-full" data-node-id="2:4823">
+            Mi EvacuAccess
+          </p>
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mi inicio" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Accesibilidad" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mi PPE" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mapas offline" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mi historial" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mis dispositivos" />
+          <div className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] font-normal leading-[0] relative shrink-0 text-[16px] text-[color:var(--color\/safe,#138654)] w-full" data-node-id="2:4836" style={{ fontVariationSettings: '"CTGR" 0, "wdth" 100' }}>
+            <p className="leading-[1.25] mb-0">● Sistemas simulados</p>
+            <p className="leading-[1.25]">Actualización: muestra</p>
+          </div>
+        </div>
+        <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-[1_0_0] flex-col h-full items-start min-w-px overflow-clip relative" data-node-id="2:337" data-name="Panel principal">
+          <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-[1_0_0] flex-col items-start min-h-px overflow-x-clip overflow-y-auto relative w-full" data-node-id="2:338" data-name="Área desplazable">
+            <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-col gap-[16px] items-start overflow-clip p-[32px] relative shrink-0 w-full" data-node-id="2:339" data-name="Contenido">
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--color\/text-secondary,#59636c)] w-full" data-node-id="2:340">
+                Usuario · Sede Central / Edificio B
+              </p>
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] not-italic relative shrink-0 text-[28px] text-[color:var(--color\/ink,#111)] w-full" data-node-id="2:341">
+                Mapa de evacuación
+              </p>
+              <EaMapWide className="bg-[var(--color\/surface,white)] border border-[var(--color\/border,#d7dbdf)] border-solid h-[460px] overflow-clip relative rounded-[10px] shrink-0 w-full" />
+              <div className="[word-break:break-word] bg-[var(--color\/info,#eaf3ff)] border border-[var(--color\/border,#d7dbdf)] border-solid content-stretch flex flex-col gap-[16px] items-start not-italic overflow-clip p-[20px] relative rounded-[10px] shrink-0 text-[color:var(--color\/ink,#111)] w-full" data-node-id="2:2062" data-name="Ubicación de demostración">
+                <p className="font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] relative shrink-0 text-[22px] w-full" data-node-id="2:2063">
+                  Ubicación de demostración
+                </p>
+                <div className="font-['Atkinson_Hyperlegible:Regular'] leading-[0] relative shrink-0 text-[18px] w-full" data-node-id="2:2064">
+                  <p className="leading-[1.25] mb-0">Edificio B · Piso 2 · Aula 204.</p>
+                  <p className="leading-[1.25]">La ubicación interior y las balizas son simuladas.</p>
+                </div>
+              </div>
+              <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Ver puertas y pendientes" />
+              <EaButtonPrimary className="bg-[var(--color\/ink,#111)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Continuar ruta accesible" />
+              <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Reportar obstáculo" />
+              <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Consultar refugios" />
+            </div>
+          </div>
+          <div className="bg-[var(--color\/surface,white)] content-stretch flex gap-[12px] items-start overflow-clip p-[16px] relative shrink-0 w-full" data-node-id="2:342" data-name="Acciones persistentes">
+            <EaButtonDanger className="bg-[var(--color\/danger,#cc2529)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex flex-[1_0_0] h-[56px] items-center justify-center min-w-px px-[16px] relative rounded-[10px]" label="SOS · Solicitar rescate" />
+            <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex flex-[1_0_0] h-[56px] items-center justify-center min-w-px px-[16px] relative rounded-[10px]" label="Comunicar necesidad" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## EA/Button/outline
+**Node ID:** 2:53
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Map/wide
+**Node ID:** 2:1774
+
+Plano esquemático académico. Mismos datos y habitaciones en todas las resoluciones. La ruta no constituye indicación operativa real.
+
+## EA/Button/primary
+**Node ID:** 2:51
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Button/danger
+**Node ID:** 2:55
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+The generated code contains image and SVG URL constants, e.g. const image = '[URL temporal omitida]'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

@@ -1,0 +1,205 @@
+{
+  "date": "2026-11-23T01:00:09.371Z",
+  "results": [
+    {
+      "name": "SOS: aviso previo, cancelar sin registrar y confirmación local sin envío externo",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Emisión: el alcance no se aplica antes de confirmar y se informa que no hay transmisión",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Solicitudes: la tarjeta secundaria conserva la selección y asignación de R-015",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Equipo: no se publican fichas vacías ni se inventan integrantes",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Registros anteriores: presentación natural sin borrar el historial ni alterar sus datos",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Seis pantallas prioritarias: 390, 768, 1024 y 1440 px, aviso visible, sin overflow ni infracciones axe",
+      "status": "APROBADA"
+    },
+    {
+      "name": "Sin errores de JavaScript ni solicitudes a servicios externos",
+      "status": "APROBADA"
+    }
+  ],
+  "screens": [
+    {
+      "view": "sos",
+      "width": 390,
+      "file": "docs/evidencias/revision-producto/sos-390.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "solicitudes",
+      "width": 390,
+      "file": "docs/evidencias/revision-producto/solicitudes-390.png",
+      "axeViolations": 0,
+      "fixture": "Prioridad activa"
+    },
+    {
+      "view": "visitante",
+      "width": 390,
+      "file": "docs/evidencias/revision-producto/visitante-390.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "mision",
+      "width": 390,
+      "file": "docs/evidencias/revision-producto/mision-390.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "admin",
+      "width": 390,
+      "file": "docs/evidencias/revision-producto/admin-390.png",
+      "axeViolations": 0,
+      "fixture": "Ascensores bloqueados"
+    },
+    {
+      "view": "landing",
+      "width": 390,
+      "file": "docs/evidencias/revision-producto/landing-390.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "sos",
+      "width": 768,
+      "file": "docs/evidencias/revision-producto/sos-768.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "solicitudes",
+      "width": 768,
+      "file": "docs/evidencias/revision-producto/solicitudes-768.png",
+      "axeViolations": 0,
+      "fixture": "Prioridad activa"
+    },
+    {
+      "view": "visitante",
+      "width": 768,
+      "file": "docs/evidencias/revision-producto/visitante-768.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "mision",
+      "width": 768,
+      "file": "docs/evidencias/revision-producto/mision-768.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "admin",
+      "width": 768,
+      "file": "docs/evidencias/revision-producto/admin-768.png",
+      "axeViolations": 0,
+      "fixture": "Ascensores bloqueados"
+    },
+    {
+      "view": "landing",
+      "width": 768,
+      "file": "docs/evidencias/revision-producto/landing-768.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "sos",
+      "width": 1024,
+      "file": "docs/evidencias/revision-producto/sos-1024.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "solicitudes",
+      "width": 1024,
+      "file": "docs/evidencias/revision-producto/solicitudes-1024.png",
+      "axeViolations": 0,
+      "fixture": "Prioridad activa"
+    },
+    {
+      "view": "visitante",
+      "width": 1024,
+      "file": "docs/evidencias/revision-producto/visitante-1024.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "mision",
+      "width": 1024,
+      "file": "docs/evidencias/revision-producto/mision-1024.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "admin",
+      "width": 1024,
+      "file": "docs/evidencias/revision-producto/admin-1024.png",
+      "axeViolations": 0,
+      "fixture": "Ascensores bloqueados"
+    },
+    {
+      "view": "landing",
+      "width": 1024,
+      "file": "docs/evidencias/revision-producto/landing-1024.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "sos",
+      "width": 1440,
+      "file": "docs/evidencias/revision-producto/sos-1440.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "solicitudes",
+      "width": 1440,
+      "file": "docs/evidencias/revision-producto/solicitudes-1440.png",
+      "axeViolations": 0,
+      "fixture": "Prioridad activa"
+    },
+    {
+      "view": "visitante",
+      "width": 1440,
+      "file": "docs/evidencias/revision-producto/visitante-1440.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "mision",
+      "width": 1440,
+      "file": "docs/evidencias/revision-producto/mision-1440.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    },
+    {
+      "view": "admin",
+      "width": 1440,
+      "file": "docs/evidencias/revision-producto/admin-1440.png",
+      "axeViolations": 0,
+      "fixture": "Ascensores bloqueados"
+    },
+    {
+      "view": "landing",
+      "width": 1440,
+      "file": "docs/evidencias/revision-producto/landing-1440.png",
+      "axeViolations": 0,
+      "fixture": "Estado inicial"
+    }
+  ],
+  "errors": [],
+  "externalRequests": []
+}

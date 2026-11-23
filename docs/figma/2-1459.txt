@@ -1,0 +1,104 @@
+const imgFrame = "assets/icons/imgFrame2-1459.svg";
+
+type EaButtonOutlineProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonOutline({ className, label = "Acción secundaria" }: EaButtonOutlineProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:53" data-name="EA/Button/outline">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/ink,#111)] text-center" data-node-id="2:54">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonPrimaryProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonPrimary({ className, label = "Acción principal" }: EaButtonPrimaryProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/ink,#111)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:51" data-name="EA/Button/primary">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/surface,white)] text-center" data-node-id="2:52">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+export default function DQrRegistroMedianteQr() {
+  return (
+    <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-col items-start relative size-full" data-node-id="2:1459" data-name="D · qr · Registro mediante QR">
+      <div className="[word-break:break-word] bg-[var(--color\/structure,#2264bc)] content-stretch flex gap-[16px] h-[64px] items-center leading-[1.25] not-italic overflow-clip p-[24px] relative shrink-0 text-[color:var(--color\/surface,white)] w-full" data-node-id="2:1460" data-name="Cabecera institucional">
+        <p className="flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] min-w-px relative text-[22px]" data-node-id="2:1461">
+          EvacuAccess
+        </p>
+        <p className="flex-[1_0_0] font-['Atkinson_Hyperlegible:Regular'] min-w-px relative text-[16px] text-right whitespace-pre-wrap" data-node-id="2:1462">{`Sede Central · Edificio B  |  Prototipo académico`}</p>
+      </div>
+      <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-[1_0_0] items-start min-h-px overflow-clip relative w-full" data-node-id="2:1463" data-name="Área de trabajo">
+        <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-[1_0_0] flex-col h-full items-start min-w-px overflow-clip relative" data-node-id="2:1465" data-name="Panel principal">
+          <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-[1_0_0] flex-col items-start min-h-px overflow-x-clip overflow-y-auto relative w-full" data-node-id="2:1466" data-name="Área desplazable">
+            <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-col gap-[16px] items-start overflow-clip p-[32px] relative shrink-0 w-full" data-node-id="2:1467" data-name="Contenido">
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--color\/text-secondary,#59636c)] w-full" data-node-id="2:1468">
+                Visitante · Sede Central / Edificio B
+              </p>
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] not-italic relative shrink-0 text-[28px] text-[color:var(--color\/ink,#111)] w-full" data-node-id="2:1469">
+                Registro mediante QR
+              </p>
+              <div className="bg-[var(--color\/info,#eaf3ff)] border border-[var(--color\/border,#d7dbdf)] border-solid content-stretch flex flex-col gap-[16px] items-start overflow-clip p-[20px] relative rounded-[10px] shrink-0 w-full" data-node-id="2:3910" data-name="Registro de visitantes">
+                <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[22px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:3911">
+                  Registro de visitantes
+                </p>
+                <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:3912">
+                  Acceso web sin instalación. Este botón representa el escaneo del QR de recepción. No se activa la cámara.
+                </p>
+                <div className="relative shrink-0 size-[72px]" data-node-id="2:3913" data-name="EA/Icon/map">
+                  <div className="absolute left-0 size-[72px] top-0" data-node-id="I2:3913;2:1763" data-name="Frame">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                  </div>
+                </div>
+                <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[22px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:3916">
+                  QR · Simulación de acceso
+                </p>
+              </div>
+              <EaButtonPrimary className="bg-[var(--color\/ink,#111)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Escanear QR simulado y abrir registro" />
+              <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Volver al acceso de demostración" />
+            </div>
+          </div>
+          <div className="bg-[var(--color\/surface,white)] content-stretch flex items-start overflow-clip p-[16px] relative shrink-0 w-full" data-node-id="2:1470" data-name="Acciones persistentes">
+            <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex flex-[1_0_0] h-[56px] items-center justify-center min-w-px px-[16px] relative rounded-[10px]" label="Cancelar registro" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## EA/Icon/map
+**Node ID:** 2:1762
+
+Material Symbols Outlined · Google · 24 px
+
+## EA/Button/primary
+**Node ID:** 2:51
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Button/outline
+**Node ID:** 2:53
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+The generated code contains image and SVG URL constants, e.g. const image = '[URL temporal omitida]'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

@@ -1,0 +1,136 @@
+{
+  "date": "2026-11-23T00:32:46.325Z",
+  "basis": "Hashes de los fuentes previos conservados localmente. Los campos without-before corresponden a archivos nuevos o auxiliares editados sin captura inicial.",
+  "files": [
+    {
+      "path": "index.html",
+      "change": "modificado",
+      "before": "cf644a0b4b760939ab1b75bf35d707efb876e1f4fe1849c3102c3320b32ce94a",
+      "after": "35762bc63cb66f093866bcde094ee6dc2c6ee115faea161d2841de710c267640"
+    },
+    {
+      "path": "js/ui.js",
+      "change": "modificado",
+      "before": "104d001e61b84ab1f5695dd7a1a16a1b59c8e3dd8aa76170e29864e72eb3034b",
+      "after": "d2fba5df6eabe6e94c42f551527db8b3b438656f7a4d7aa92c4fe50ed4d48186"
+    },
+    {
+      "path": "js/main.js",
+      "change": "modificado",
+      "before": "f9a9fdb0ec3d2a83fde5ca881b1c41e2a2a6c06a0f66bf65cbe80f5c74c21c58",
+      "after": "efd4054b32fc0a31bcc825d933ffa1a84690b0f8e61a0edba9e6e5fd8cfbeca8"
+    },
+    {
+      "path": "js/landing.js",
+      "change": "modificado",
+      "before": "8848810014a47b8290b59f163e4aa32734d87f26436a0a1d26b850f592bd520b",
+      "after": "163d5f61520ab9d9300bb2066225132985cc8a98d02df51db48506a7da8c0ba7"
+    },
+    {
+      "path": "js/evacuation.js",
+      "change": "modificado",
+      "before": "f50398fa36a244f412dbe40758bc827adf2886a462202811eda8b184d5997412",
+      "after": "5859acae847e5c7c434a14b1c104e2ca04b9c095395c1d4eebc9b7f1a9c75062"
+    },
+    {
+      "path": "js/administration.js",
+      "change": "modificado",
+      "before": "3d442c87e5719c0be28bf8df96add4c5b2cf80b9b29f59c6bb28dc6f33d174ab",
+      "after": "1d3ad1f6cabde0cec71e8f2066a5a30438bcd9dcafe6b90b801e26f8dbe634b8"
+    },
+    {
+      "path": "js/brigadier.js",
+      "change": "modificado",
+      "before": "d04de589ffd3879fde91314dfd5639d64e7520941c0b2c255a70664c5be767d7",
+      "after": "54f3586c7f734328bd484d46a41b4f0bd83a56def615508099ceaf544b627ba7"
+    },
+    {
+      "path": "js/map.js",
+      "change": "modificado",
+      "before": "209e61b2b8bf64699004c29b58554f8199fa75986625948eeec1fd84e16c485f",
+      "after": "5cf9ba9dbb4cc376bc7d02b608d0a6fbeaf04e9146d6630c2f38de01f3b1115e"
+    },
+    {
+      "path": "js/state.js",
+      "change": "modificado",
+      "before": "45877cb1f340b4746eb8215729565ac51fb1702183dd4a4dfea657dbaaaaa451",
+      "after": "64634cb1f6c8321b255a685906ff2ee87aa9619a4bc28615235f9409dbe768fb"
+    },
+    {
+      "path": "css/review.css",
+      "change": "modificado",
+      "before": "f7c5916de3056a012286e18b14fc7cce6dce8372d02054911af8f4ac38599c84",
+      "after": "13ed1aab1b813fc2211eaddf0b96227470efbaf036c69286f740a5e1012d0c81"
+    },
+    {
+      "path": "tests/browser.mjs",
+      "change": "modificado",
+      "before": "ba109ec970ce16fcaff3b3b576c1e82e3a90141751421274f879cfb7f8569e2a",
+      "after": "98450ffb511c1df1f5a4eafcee0ce9b346a1f4a3698661f0b327a79278989d14"
+    },
+    {
+      "path": "tests/targeted.mjs",
+      "change": "modificado",
+      "before": "7982616aa4f70ab2583cdc2c68c182a9de03efc5b85b57aa78e74d1a0139b293",
+      "after": "5d5eb8a357acb8361bd59c3d1b5981c2f602c3e8c3187c4c902a381b93c309f8"
+    },
+    {
+      "path": "tests/static.mjs",
+      "change": "modificado",
+      "before": "eddf36ebd5f7a911f56d507398cf5479de7339cf85c112d69660421da3b27a0e",
+      "after": "d2f9cac6d09712b73e51eb331891c76973cd0f3d7faa6a87472514c199a48778"
+    },
+    {
+      "path": "tests/documentation.mjs",
+      "change": "modificado",
+      "before": "9dadf0dccda66eaa07401f2867bc09708e47c7f48054cc5736c8f9e2c68abc70",
+      "after": "30ba1a7cc86c4fbee6db2f62f4c16bb1d4a5bd38a2ddd80d92a985beb5c396da"
+    },
+    {
+      "path": "README.md",
+      "change": "modificado",
+      "before": "b86c707f0a990bcb8445846cd95ce3bbb4a0f980718f32a3153e17ae07955f33",
+      "after": "9eb3305deb90e1729e3caeadb9d1b724f2cbc6f372b569ecd18bbe9c7011d0c3"
+    },
+    {
+      "path": "docs/limitaciones-tecnicas.md",
+      "change": "modificado",
+      "before": "0ef6efa4d9af93e26e313471d8c7f53b31624d89a8fcc6f9fe3c4299b0459a15",
+      "after": "e20bcf21c256526596095eb68b51ce5178f3d793a913f535eae87c163fa56fa8"
+    },
+    {
+      "path": "docs/revision-visual.md",
+      "change": "modificado",
+      "before": "28b8ef6b3c6027abf02d4967889493e1246da4e2f89ce4902a371bf7220c9b44",
+      "after": "0eb1676e761c7cf598a9e1bfb391ead73a8689545f99c08c537e2033951c30b8"
+    },
+    {
+      "path": "package.json",
+      "change": "modificado",
+      "after": "654d5a3db34e7f4d57835aec7af0ca42061b63e837475fbd32099c9a63350162"
+    },
+    {
+      "path": ".gitignore",
+      "change": "modificado",
+      "after": "7973f170d852f6abd2b81262ac009b0f61c2b3833163c31ba55014baa5953f9b"
+    },
+    {
+      "path": "tests/product-review.mjs",
+      "change": "nuevo",
+      "after": "ffce17ac4351cf96ffbdde1321494894ac96306c856d77c6fcb528fc573c6a5d"
+    },
+    {
+      "path": "docs/revision-producto.md",
+      "change": "nuevo",
+      "after": "70fe63d91d9b83a180c46588279d90394740f74a1e3e706dc7848a7f5e45183e"
+    }
+  ],
+  "generated": [
+    "dist/",
+    "docs/evidencias/",
+    "docs/resultados-qa.md",
+    "docs/hu-trazabilidad.md",
+    "docs/escenarios-prueba.md",
+    "docs/capitulo-v.md"
+  ]
+}

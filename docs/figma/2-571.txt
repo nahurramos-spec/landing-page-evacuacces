@@ -1,0 +1,230 @@
+const imgMaterialSymbolsOutlinedLock = "assets/icons/imgMaterialSymbolsOutlinedLock2-571.svg";
+const imgMaterialSymbolsOutlinedMedication = "assets/icons/imgMaterialSymbolsOutlinedMedication2-571.svg";
+const imgMaterialSymbolsOutlinedWater = "assets/icons/imgMaterialSymbolsOutlinedWater2-571.svg";
+const imgMaterialSymbolsOutlinedAir = "assets/icons/imgMaterialSymbolsOutlinedAir2-571.svg";
+const imgMaterialSymbolsOutlinedAccessible = "assets/icons/imgMaterialSymbolsOutlinedAccessible2-571.svg";
+const imgMaterialSymbolsOutlinedHeart = "assets/icons/imgMaterialSymbolsOutlinedHeart2-571.svg";
+const imgMaterialSymbolsOutlinedSmoke = "assets/icons/imgMaterialSymbolsOutlinedSmoke2-571.svg";
+
+type EaButtonOutlineProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonOutline({ className, label = "Acción secundaria" }: EaButtonOutlineProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:53" data-name="EA/Button/outline">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/ink,#111)] text-center" data-node-id="2:54">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonDangerProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonDanger({ className, label = "SOS — Solicitar rescate" }: EaButtonDangerProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/danger,#cc2529)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:55" data-name="EA/Button/danger">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/surface,white)] text-center" data-node-id="2:56">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonPrimaryProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonPrimary({ className, label = "Acción principal" }: EaButtonPrimaryProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/ink,#111)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:51" data-name="EA/Button/primary">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/surface,white)] text-center" data-node-id="2:52">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+function EaCommunicationEstoyAtrapado({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[#9ca4ab] border-solid content-stretch flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] w-[180px]"} data-node-id="2:24401" data-name="EA/Communication/Estoy atrapado">
+      <div className="relative shrink-0 size-[32px]" data-node-id="2:24402" data-name="Material Symbols Outlined · lock">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMaterialSymbolsOutlinedLock} />
+      </div>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/contrast-background,black)] text-center w-[min-content]" data-node-id="2:24404">
+        Estoy atrapado
+      </p>
+    </div>
+  );
+}
+
+function EaCommunicationNecesitoMiMedicina({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[#9ca4ab] border-solid content-stretch flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] w-[180px]"} data-node-id="2:24397" data-name="EA/Communication/Necesito mi medicina">
+      <div className="relative shrink-0 size-[32px]" data-node-id="2:24398" data-name="Material Symbols Outlined · medication">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMaterialSymbolsOutlinedMedication} />
+      </div>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/contrast-background,black)] text-center w-[min-content]" data-node-id="2:24400">
+        Necesito mi medicina
+      </p>
+    </div>
+  );
+}
+
+function EaCommunicationNecesitoAgua({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[#9ca4ab] border-solid content-stretch flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] w-[180px]"} data-node-id="2:24393" data-name="EA/Communication/Necesito agua">
+      <div className="relative shrink-0 size-[32px]" data-node-id="2:24394" data-name="Material Symbols Outlined · water">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMaterialSymbolsOutlinedWater} />
+      </div>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/contrast-background,black)] text-center w-[min-content]" data-node-id="2:24396">
+        Necesito agua
+      </p>
+    </div>
+  );
+}
+
+function EaCommunicationMeFaltaElAire({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[#9ca4ab] border-solid content-stretch flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] w-[180px]"} data-node-id="2:24389" data-name="EA/Communication/Me falta el aire">
+      <div className="relative shrink-0 size-[32px]" data-node-id="2:24390" data-name="Material Symbols Outlined · air">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMaterialSymbolsOutlinedAir} />
+      </div>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/contrast-background,black)] text-center w-[min-content]" data-node-id="2:24392">
+        Me falta el aire
+      </p>
+    </div>
+  );
+}
+
+function EaCommunicationNoPuedoCaminar({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[#9ca4ab] border-solid content-stretch flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] w-[180px]"} data-node-id="2:24385" data-name="EA/Communication/No puedo caminar">
+      <div className="relative shrink-0 size-[32px]" data-node-id="2:24386" data-name="Material Symbols Outlined · accessible">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMaterialSymbolsOutlinedAccessible} />
+      </div>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/contrast-background,black)] text-center w-[min-content]" data-node-id="2:24388">
+        No puedo caminar
+      </p>
+    </div>
+  );
+}
+
+function EaCommunicationTengoDolor({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[#9ca4ab] border-solid content-stretch flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] w-[180px]"} data-node-id="2:24381" data-name="EA/Communication/Tengo dolor">
+      <div className="relative shrink-0 size-[32px]" data-node-id="2:24382" data-name="Material Symbols Outlined · heart">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMaterialSymbolsOutlinedHeart} />
+      </div>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/contrast-background,black)] text-center w-[min-content]" data-node-id="2:24384">
+        Tengo dolor
+      </p>
+    </div>
+  );
+}
+
+function EaCommunicationHayHumo({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[#9ca4ab] border-solid content-stretch flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] w-[180px]"} data-node-id="2:24377" data-name="EA/Communication/Hay humo">
+      <div className="relative shrink-0 size-[32px]" data-node-id="2:24378" data-name="Material Symbols Outlined · smoke">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMaterialSymbolsOutlinedSmoke} />
+      </div>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/contrast-background,black)] text-center w-[min-content]" data-node-id="2:24380">
+        Hay humo
+      </p>
+    </div>
+  );
+}
+
+export default function DComunicarComunicaLoQueNecesitas() {
+  return (
+    <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-col items-start relative size-full" data-node-id="2:571" data-name="D · comunicar · Comunica lo que necesitas">
+      <div className="[word-break:break-word] bg-[var(--color\/structure,#2264bc)] content-stretch flex gap-[16px] h-[64px] items-center leading-[1.25] not-italic overflow-clip p-[24px] relative shrink-0 text-[color:var(--color\/surface,white)] w-full" data-node-id="2:572" data-name="Cabecera institucional">
+        <p className="flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] min-w-px relative text-[22px]" data-node-id="2:573">
+          EvacuAccess
+        </p>
+        <p className="flex-[1_0_0] font-['Atkinson_Hyperlegible:Regular'] min-w-px relative text-[16px] text-right whitespace-pre-wrap" data-node-id="2:574">{`Sede Central · Edificio B  |  Prototipo académico`}</p>
+      </div>
+      <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-[1_0_0] items-start min-h-px overflow-clip relative w-full" data-node-id="2:575" data-name="Área de trabajo">
+        <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-col gap-[12px] h-full items-start overflow-clip p-[16px] relative shrink-0 w-[224px]" data-node-id="2:576" data-name="Navegación por rol">
+          <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--color\/text-secondary,#59636c)] w-full" data-node-id="2:5002">
+            Mi EvacuAccess
+          </p>
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mi inicio" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Accesibilidad" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mi PPE" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mapas offline" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mi historial" />
+          <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Mis dispositivos" />
+          <div className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] font-normal leading-[0] relative shrink-0 text-[16px] text-[color:var(--color\/safe,#138654)] w-full" data-node-id="2:5015" style={{ fontVariationSettings: '"CTGR" 0, "wdth" 100' }}>
+            <p className="leading-[1.25] mb-0">● Sistemas simulados</p>
+            <p className="leading-[1.25]">Actualización: muestra</p>
+          </div>
+        </div>
+        <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-[1_0_0] flex-col h-full items-start min-w-px overflow-clip relative" data-node-id="2:577" data-name="Panel principal">
+          <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-[1_0_0] flex-col items-start min-h-px overflow-x-clip overflow-y-auto relative w-full" data-node-id="2:578" data-name="Área desplazable">
+            <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-col gap-[16px] items-start overflow-clip p-[32px] relative shrink-0 w-full" data-node-id="2:579" data-name="Contenido">
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--color\/text-secondary,#59636c)] w-full" data-node-id="2:580">
+                Usuario · Sede Central / Edificio B
+              </p>
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] not-italic relative shrink-0 text-[28px] text-[color:var(--color\/ink,#111)] w-full" data-node-id="2:581">
+                Comunica lo que necesitas
+              </p>
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] not-italic relative shrink-0 text-[18px] text-[color:var(--color\/ink,#111)] w-full" data-node-id="2:2560">
+                Toca una tarjeta para mostrarla en grande.
+              </p>
+              <div className="bg-[var(--color\/surface,white)] content-start flex flex-wrap gap-[12px_16px] items-start overflow-clip relative shrink-0 w-full" data-node-id="2:2561" data-name="Tarjetas de comunicación">
+                <EaCommunicationHayHumo className="bg-[var(--color\/surface,white)] border border-[#9ca4ab] border-solid content-stretch cursor-pointer flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] shrink-0 w-[276px]" />
+                <EaCommunicationTengoDolor className="bg-[var(--color\/surface,white)] border border-[#9ca4ab] border-solid content-stretch cursor-pointer flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] shrink-0 w-[276px]" />
+                <EaCommunicationNoPuedoCaminar className="bg-[var(--color\/surface,white)] border border-[#9ca4ab] border-solid content-stretch cursor-pointer flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] shrink-0 w-[276px]" />
+                <EaCommunicationMeFaltaElAire className="bg-[var(--color\/surface,white)] border border-[#9ca4ab] border-solid content-stretch cursor-pointer flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] shrink-0 w-[276px]" />
+                <EaCommunicationNecesitoAgua className="bg-[var(--color\/surface,white)] border border-[#9ca4ab] border-solid content-stretch cursor-pointer flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] shrink-0 w-[276px]" />
+                <EaCommunicationNecesitoMiMedicina className="bg-[var(--color\/surface,white)] border border-[#9ca4ab] border-solid content-stretch cursor-pointer flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] shrink-0 w-[276px]" />
+                <EaCommunicationEstoyAtrapado className="bg-[var(--color\/surface,white)] border border-[#9ca4ab] border-solid content-stretch cursor-pointer flex flex-col gap-[12px] h-[144px] items-center justify-center p-[12px] relative rounded-[10px] shrink-0 w-[276px]" />
+              </div>
+              <EaButtonPrimary className="bg-[var(--color\/ink,#111)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex h-[56px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-full" label="Requiero comunicación gestual / señas" />
+              <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--color\/text-secondary,#59636c)] w-full" data-node-id="2:2578">
+                La ayuda gestual prioriza personal con certificación en lengua de señas. Priorización simulada.
+              </p>
+            </div>
+          </div>
+          <div className="bg-[var(--color\/surface,white)] content-stretch flex gap-[12px] items-start overflow-clip p-[16px] relative shrink-0 w-full" data-node-id="2:582" data-name="Acciones persistentes">
+            <EaButtonDanger className="bg-[var(--color\/danger,#cc2529)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex flex-[1_0_0] h-[56px] items-center justify-center min-w-px px-[16px] relative rounded-[10px]" label="SOS · Solicitar rescate" />
+            <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch cursor-pointer flex flex-[1_0_0] h-[56px] items-center justify-center min-w-px px-[16px] relative rounded-[10px]" label="Comunicar necesidad" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## EA/Button/outline
+**Node ID:** 2:53
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Button/primary
+**Node ID:** 2:51
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Button/danger
+**Node ID:** 2:55
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+The generated code contains image and SVG URL constants, e.g. const image = '[URL temporal omitida]'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

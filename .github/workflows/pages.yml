@@ -1,0 +1,57 @@
+name: Publicar EvacuAccess en GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:state:evidence
+      - run: npx playwright install --with-deps chromium
+      - name: Comprobar aplicación y paquete estático
+        shell: bash
+        run: |
+          npm start > /tmp/evacuaccess-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:4173/ > /dev/null; then break; fi
+            sleep 1
+          done
+          curl --fail --silent http://127.0.0.1:4173/ > /dev/null
+          npm run test:browser
+          npm run test:product
+          node tests/targeted.mjs
+          npm run build
+          npm run test:static
+      - name: Conservar resultados de CI
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidencias-qa
+          path: docs/evidencias/
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Desplegar
+        id: deployment
+        uses: actions/deploy-pages@v4

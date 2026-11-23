@@ -1,0 +1,19 @@
+{
+  "name": "evacuaccess",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node tests/server.mjs",
+    "build": "node tests/build.mjs",
+    "test": "node --test tests/state.test.mjs",
+    "test:state:evidence": "node tests/state-evidence.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "test:static": "node tests/static.mjs",
+    "test:product": "node tests/product-review.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@axe-core/playwright": "^4.10.2"
+  }
+}

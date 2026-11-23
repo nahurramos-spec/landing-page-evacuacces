@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-23T01:00:08.331Z",
+  "results": [
+    {
+      "case": "PPE y salto al contenido por teclado · 1440 px",
+      "status": "APROBADA",
+      "axeViolations": 0
+    },
+    {
+      "case": "PPE y salto al contenido por teclado · 390 px",
+      "status": "APROBADA",
+      "axeViolations": 0
+    },
+    {
+      "case": "Landing móvil: acceso a demo visible y texto 200 % sin desbordamiento",
+      "status": "APROBADA"
+    }
+  ]
+}

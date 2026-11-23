@@ -1,0 +1,256 @@
+type EaButtonFocusProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonFocus({ className, label = "Acción principal" }: EaButtonFocusProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border-3 border-[var(--color\\/accent,#3985e8)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:61" data-name="EA/Button/focus">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/ink,#111)] text-center" data-node-id="2:62">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonContrastProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonContrast({ className, label = "Estoy enterado" }: EaButtonContrastProps) {
+  return (
+    <div className={className || "bg-[#ffd600] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:59" data-name="EA/Button/contrast">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-black text-center" data-node-id="2:60">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonSuccessProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonSuccess({ className, label = "Confirmar seguridad" }: EaButtonSuccessProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/safe,#138654)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:57" data-name="EA/Button/success">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/surface,white)] text-center" data-node-id="2:58">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonDangerProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonDanger({ className, label = "SOS — Solicitar rescate" }: EaButtonDangerProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/danger,#cc2529)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:55" data-name="EA/Button/danger">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/surface,white)] text-center" data-node-id="2:56">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonOutlineProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonOutline({ className, label = "Acción secundaria" }: EaButtonOutlineProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/surface,white)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:53" data-name="EA/Button/outline">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/ink,#111)] text-center" data-node-id="2:54">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type EaButtonPrimaryProps = {
+  className?: string;
+  label?: string;
+};
+
+function EaButtonPrimary({ className, label = "Acción principal" }: EaButtonPrimaryProps) {
+  return (
+    <div className={className || "bg-[var(--color\\/ink,#111)] border border-[var(--color\\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] w-[390px]"} data-node-id="2:51" data-name="EA/Button/primary">
+      <p className="[word-break:break-word] flex-[1_0_0] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-px not-italic relative text-[18px] text-[color:var(--color\/surface,white)] text-center" data-node-id="2:52">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+export default function SistemaVisualEvacuAccess() {
+  return (
+    <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-col gap-[24px] items-start p-[32px] relative size-full" data-node-id="2:12" data-name="Sistema visual EvacuAccess">
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[36px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:13">
+        EvacuAccess
+      </p>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[22px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:14">
+        Un solo producto web · cuatro roles · tres resoluciones
+      </p>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/text-secondary,#59636c)] w-[min-content]" data-node-id="2:15">
+        Prototipo académico. No sustituye sistemas certificados de emergencia.
+      </p>
+      <div className="[word-break:break-word] bg-[var(--color\/surface,white)] content-stretch flex gap-[16px] h-[150px] items-start leading-[1.25] not-italic overflow-clip relative shrink-0 text-[16px] w-[1336px]" data-node-id="2:16" data-name="Paleta 60 / 30 / 10">
+        <div className="bg-[var(--color\/accent,#3985e8)] content-stretch flex flex-col gap-[8px] h-[150px] items-start overflow-clip p-[8px] relative shrink-0 text-[color:var(--color\/ink,#111)] w-[119px]" data-node-id="2:17" data-name="blue">
+          <p className="font-['Atkinson_Hyperlegible:Bold'] relative shrink-0 w-full" data-node-id="2:18">
+            blue
+          </p>
+          <p className="font-['Atkinson_Hyperlegible:Regular'] relative shrink-0 w-full" data-node-id="2:19">
+            #3985E8
+          </p>
+        </div>
+        <div className="bg-[var(--color\/ink,#111)] content-stretch flex flex-col gap-[8px] h-[150px] items-start overflow-clip p-[8px] relative shrink-0 text-[color:var(--color\/surface,white)] w-[119px]" data-node-id="2:20" data-name="ink">
+          <p className="font-['Atkinson_Hyperlegible:Bold'] relative shrink-0 w-full" data-node-id="2:21">
+            ink
+          </p>
+          <p className="font-['Atkinson_Hyperlegible:Regular'] relative shrink-0 w-full" data-node-id="2:22">
+            #111111
+          </p>
+        </div>
+        <div className="bg-[var(--color\/surface,white)] content-stretch flex flex-col gap-[8px] h-[150px] items-start overflow-clip p-[8px] relative shrink-0 text-[color:var(--color\/ink,#111)] w-[119px]" data-node-id="2:23" data-name="white">
+          <p className="font-['Atkinson_Hyperlegible:Bold'] relative shrink-0 w-full" data-node-id="2:24">
+            white
+          </p>
+          <p className="font-['Atkinson_Hyperlegible:Regular'] relative shrink-0 w-full" data-node-id="2:25">
+            #FFFFFF
+          </p>
+        </div>
+        <div className="bg-[var(--color\/background,#f6f7f8)] content-stretch flex flex-col gap-[8px] h-[150px] items-start overflow-clip p-[8px] relative shrink-0 text-[color:var(--color\/ink,#111)] w-[119px]" data-node-id="2:26" data-name="bg">
+          <p className="font-['Atkinson_Hyperlegible:Bold'] relative shrink-0 w-full" data-node-id="2:27">
+            bg
+          </p>
+          <p className="font-['Atkinson_Hyperlegible:Regular'] relative shrink-0 w-full" data-node-id="2:28">
+            #F6F7F8
+          </p>
+        </div>
+        <div className="bg-[var(--color\/border,#d7dbdf)] content-stretch flex flex-col gap-[8px] h-[150px] items-start overflow-clip p-[8px] relative shrink-0 text-[color:var(--color\/ink,#111)] w-[119px]" data-node-id="2:29" data-name="line">
+          <p className="font-['Atkinson_Hyperlegible:Bold'] relative shrink-0 w-full" data-node-id="2:30">
+            line
+          </p>
+          <p className="font-['Atkinson_Hyperlegible:Regular'] relative shrink-0 w-full" data-node-id="2:31">
+            #D7DBDF
+          </p>
+        </div>
+        <div className="bg-[var(--color\/text-secondary,#59636c)] content-stretch flex flex-col gap-[8px] h-[150px] items-start overflow-clip p-[8px] relative shrink-0 text-[color:var(--color\/ink,#111)] w-[119px]" data-node-id="2:32" data-name="muted">
+          <p className="font-['Atkinson_Hyperlegible:Bold'] relative shrink-0 w-full" data-node-id="2:33">
+            muted
+          </p>
+          <p className="font-['Atkinson_Hyperlegible:Regular'] relative shrink-0 w-full" data-node-id="2:34">
+            #59636C
+          </p>
+        </div>
+        <div className="bg-[var(--color\/info,#eaf3ff)] content-stretch flex flex-col gap-[8px] h-[150px] items-start overflow-clip p-[8px] relative shrink-0 text-[color:var(--color\/ink,#111)] w-[119px]" data-node-id="2:35" data-name="pale">
+          <p className="font-['Atkinson_Hyperlegible:Bold'] relative shrink-0 w-full" data-node-id="2:36">
+            pale
+          </p>
+          <p className="font-['Atkinson_Hyperlegible:Regular'] relative shrink-0 w-full" data-node-id="2:37">
+            #EAF3FF
+          </p>
+        </div>
+        <div className="bg-[var(--color\/danger,#cc2529)] content-stretch flex flex-col gap-[8px] h-[150px] items-start overflow-clip p-[8px] relative shrink-0 text-[color:var(--color\/surface,white)] w-[119px]" data-node-id="2:38" data-name="red">
+          <p className="font-['Atkinson_Hyperlegible:Bold'] relative shrink-0 w-full" data-node-id="2:39">
+            red
+          </p>
+          <p className="font-['Atkinson_Hyperlegible:Regular'] relative shrink-0 w-full" data-node-id="2:40">
+            #CC2529
+          </p>
+        </div>
+        <div className="bg-[var(--color\/safe,#138654)] content-stretch flex flex-col gap-[8px] h-[150px] items-start overflow-clip p-[8px] relative shrink-0 text-[color:var(--color\/surface,white)] w-[119px]" data-node-id="2:41" data-name="green">
+          <p className="font-['Atkinson_Hyperlegible:Bold'] relative shrink-0 w-full" data-node-id="2:42">
+            green
+          </p>
+          <p className="font-['Atkinson_Hyperlegible:Regular'] relative shrink-0 w-full" data-node-id="2:43">
+            #138654
+          </p>
+        </div>
+        <div className="bg-[var(--color\/contrast-foreground,#ffd600)] content-stretch flex flex-col gap-[8px] h-[150px] items-start overflow-clip p-[8px] relative shrink-0 text-[color:var(--color\/ink,#111)] w-[119px]" data-node-id="2:44" data-name="yellow">
+          <p className="font-['Atkinson_Hyperlegible:Bold'] relative shrink-0 w-full" data-node-id="2:45">
+            yellow
+          </p>
+          <p className="font-['Atkinson_Hyperlegible:Regular'] relative shrink-0 w-full" data-node-id="2:46">
+            #FFD600
+          </p>
+        </div>
+      </div>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[28px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:47">
+        Atkinson Hyperlegible
+      </p>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:48">
+        36 Alerta · 32 Instrucción · 28 Título · 22 Subtítulo · 18 Texto y botón · 16 Auxiliar
+      </p>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:49">
+        Foco visible de 3 px · Objetivos ≥ 48 px · Texto + icono + estado · Sin parpadeos
+      </p>
+      <div className="bg-[var(--color\/surface,white)] content-start flex flex-wrap gap-[20px_24px] h-[580px] items-start overflow-clip relative shrink-0 w-[1336px]" data-node-id="2:50" data-name="Componentes reutilizables">
+        <EaButtonPrimary className="bg-[var(--color\/ink,#111)] border border-[var(--color\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-[390px]" />
+        <EaButtonOutline className="bg-[var(--color\/surface,white)] border border-[var(--color\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-[390px]" />
+        <EaButtonDanger className="bg-[var(--color\/danger,#cc2529)] border border-[var(--color\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-[390px]" />
+        <EaButtonSuccess className="bg-[var(--color\/safe,#138654)] border border-[var(--color\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-[390px]" />
+        <EaButtonContrast className="bg-[#ffd600] border border-[var(--color\/ink,#111)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-[390px]" />
+        <EaButtonFocus className="bg-[var(--color\/surface,white)] border-3 border-[var(--color\/accent,#3985e8)] border-solid content-stretch flex h-[64px] items-center justify-center px-[16px] relative rounded-[10px] shrink-0 w-[390px]" />
+      </div>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[28px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:63">
+        Responsive por rol, no por dispositivo
+      </p>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:64">
+        Desktop 1440 × 900: menú lateral y paneles en paralelo. Tablet 768 × 1024: navegación compacta y contenido reorganizado. Mobile 390 × 844: mismas funciones, tarjetas apiladas y acciones de emergencia persistentes.
+      </p>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Bold'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[22px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:65">
+        Seguridad y alcance
+      </p>
+      <p className="[word-break:break-word] font-['Atkinson_Hyperlegible:Regular'] leading-[1.25] min-w-full not-italic relative shrink-0 text-[18px] text-[color:var(--color\/ink,#111)] w-[min-content]" data-node-id="2:66">
+        Negro mate #000000 + amarillo #FFD600. Sin destellos ni animaciones. Háptica, voz, smartwatch, balizas, IoT, red, tiempos y envíos externos: simulados. Los protocolos físicos quedan pendientes de validación profesional.
+      </p>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## EA/Button/primary
+**Node ID:** 2:51
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Button/outline
+**Node ID:** 2:53
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Button/danger
+**Node ID:** 2:55
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Button/success
+**Node ID:** 2:57
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Button/contrast
+**Node ID:** 2:59
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+
+## EA/Button/focus
+**Node ID:** 2:61
+
+Botón compartido Desktop / Tablet / Mobile. Objetivo mínimo 48 px. Foco azul 3 px. No depende solo del color.
+The generated code contains image and SVG URL constants, e.g. const image = '[URL temporal omitida]'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

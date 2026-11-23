@@ -1,0 +1,592 @@
+import {
+  initialState,
+  loadState,
+  saveState,
+  transition,
+  counts,
+  eta,
+  reportCSV,
+} from "./state.js";
+import {
+  esc,
+  btn,
+  go,
+  panel,
+  entries,
+  entryButtons,
+  environmentNotice,
+} from "./ui.js";
+import { landing } from "./landing.js";
+import { userView, cards, cardIcon } from "./evacuation.js";
+import { adminView } from "./administration.js";
+import { brigadeView } from "./brigadier.js";
+let state = loadState(),
+  view = "",
+  feedback = "",
+  isError = false,
+  lastFocus = null,
+  visitorKey = crypto.randomUUID();
+const root = document.querySelector("#root"),
+  dialog = document.querySelector("#dialog");
+const userLinks = [
+  ["inicio", "Mi inicio"],
+  ["perfil", "Accesibilidad"],
+  ["ppe", "Mi PPE"],
+  ["mapa", "Mapa de evacuación"],
+  ["historial", "Mi historial"],
+  ["dispositivos", "Mis dispositivos"],
+];
+const adminLinks = [
+  ["admin", "Dashboard"],
+  ["emitir", "Disparo de alertas"],
+  ["solicitudes", "Solicitudes"],
+  ["zonas", "Zonas de refugio"],
+  ["brigadas", "Brigadistas"],
+  ["censo", "Usuarios y censo"],
+  ["externos", "Servicios externos"],
+  ["reporte", "Historial y reportes"],
+];
+const brigadeLinks = [
+  ["misiones", "Misiones"],
+  ["mapa-brigada", "Mapa y sectores"],
+  ["chat", "Chat de emergencia"],
+  ["sector", "Despejar sector"],
+];
+const adminRoutes = adminLinks.map((x) => x[0]).concat(["asignar", "evento"]);
+const brigadeRoutes = [
+  "misiones",
+  "mision",
+  "protocolo",
+  "masivo",
+  "sector",
+  "mapa-brigada",
+];
+function announce(message, error = false) {
+  feedback = message;
+  isError = error;
+  const live = document.querySelector("#announcer");
+  live.textContent = "";
+  requestAnimationFrame(() => {
+    live.textContent = message;
+  });
+}
+function preferences() {
+  document.documentElement.classList.toggle("contrast", state.prefs.contrast);
+  document.documentElement.style.setProperty(
+    "--text-scale",
+    state.prefs.text / 100,
+  );
+  document.documentElement.dataset.textSize = state.prefs.text;
+}
+function commit(action, payload = {}, rerender = true) {
+  try {
+    const next = transition(state, action, payload);
+    state = next.state;
+    const saved = saveState(state);
+    announce(
+      next.result +
+        (saved
+          ? ""
+          : " · No se pudo guardar en este navegador; el estado se conserva en memoria."),
+    );
+    preferences();
+    if (rerender) render(false);
+    return true;
+  } catch (error) {
+    announce(error.message, true);
+    if (rerender) render(false);
+    return false;
+  }
+}
+function navigate(next) {
+  feedback = "";
+  if (location.hash === `#/${next}`) render();
+  else location.hash = `/${next}`;
+}
+function launch(payload) {
+  if (commit("entry", payload, false)) {
+    navigate(payload.view);
+  }
+}
+function footer(v) {
+  if (state.role === "admin")
+    return go("solicitudes", "Solicitudes") + go("emitir", "Emitir alerta", "");
+  if (state.role === "brigadista")
+    return go("misiones", "Misiones") + go("chat", "Chat", "");
+  if (state.role === "visitante")
+    return ["qr", "visitante"].includes(v)
+      ? go(v === "qr" ? "acceso" : "qr", "Cancelar registro")
+      : go("qr", "Registro de visitantes") + go("visita-ok", "Mi visita", "");
+  if (["acceso", "perfil", "ppe", "inicio"].includes(v))
+    return go("acceso", "Volver") + go("inicio", "Inicio", "");
+  return (
+    btn("sendSOS", "SOS · Solicitar rescate", { kind: "danger", hu: "HU-21" }) +
+    go("comunicar", "Comunicar necesidad", "outline", "HU-12")
+  );
+}
+function tools() {
+  return `<details class="workspace-options" data-panel="workspace-options"><summary>Opciones del entorno</summary><div class="stack">${view === "sector" ? panel("Confirmar llegadas", `<p>Completa los rescates antes de registrar las demás llegadas del sector.</p>${state.sectors.map((x) => btn("sectorArrivalDialog", `Registrar llegadas de ${x.name}`, { kind: "outline", payload: { sector: x.name } })).join("")}`) : ""}<div class="app-tools"><a href="#landing">Volver al inicio</a><a href="#/recorridos">Cambiar perfil</a>${btn("contrast", state.prefs.contrast ? "Modo estándar" : "Alto contraste", { hu: "HU-05" })}${btn("resetDialog", "Restablecer entorno")}<a href="docs/limitaciones-tecnicas.md" target="_blank" rel="noreferrer">Alcance del entorno de prueba</a></div></div></details>`;
+}
+function titleHTML(title) {
+  if (view === "alerta" && state.prefs.contrast)
+    return (
+      esc(title.replace(" · Alto contraste", "")) +
+      '<span class="desktop-text"> · Alto contraste</span>'
+    );
+  return esc(title);
+}
+function retainFocus(before) {
+  if (!before) return;
+  let next = before.id ? document.getElementById(before.id) : null;
+  if (!next && before.dataset?.action)
+    next = [...root.querySelectorAll("[data-action]")].find(
+      (n) =>
+        n.dataset.action === before.dataset.action &&
+        n.dataset.payload === before.dataset.payload &&
+        !n.disabled,
+    );
+  if (!next && before.tagName === "BUTTON")
+    next = [...root.querySelectorAll("button")].find(
+      (n) => n.textContent === before.textContent && !n.disabled,
+    );
+  if (!next && before !== document.body) next = root.querySelector(".feedback");
+  if (next) {
+    if (next.classList.contains("feedback")) next.tabIndex = -1;
+    next.focus({ preventScroll: true });
+  }
+}
+function render(focus = true) {
+  const before = document.activeElement;
+  const openedPanels = [
+    ...root.querySelectorAll("details[open][data-panel]"),
+  ].map((node) => node.dataset.panel);
+  preferences();
+  const hash = location.hash;
+  view = hash.startsWith("#/") ? hash.slice(2).split("?")[0] : "landing";
+  if (view === "landing") {
+    root.innerHTML = landing();
+    document.title = "EvacuAccess · Evacuación accesible";
+    if (hash && hash !== "#landing") {
+      requestAnimationFrame(() =>
+        document.getElementById(hash.slice(1))?.scrollIntoView(),
+      );
+    }
+    return;
+  }
+  if (view === "recorridos") {
+    root.innerHTML = `<main id="main-content" class="demo-list"><h1 tabindex="-1">EvacuAccess</h1>${environmentNotice()}<h2>Elige cómo ingresar</h2><p>Accede a tu perfil para consultar rutas, solicitar asistencia o coordinar la evacuación.</p>${entryButtons()}<a href="#landing">Volver al inicio</a></main>`;
+    return;
+  }
+  const denied =
+    (adminRoutes.includes(view) && state.role !== "admin") ||
+    (brigadeRoutes.includes(view) && state.role !== "brigadista");
+  let data = denied
+    ? {
+        title: "Acceso restringido",
+        body: `<p>Este panel corresponde a otro rol. Selecciona el recorrido apropiado.</p>${go("recorridos", "Seleccionar recorrido", "")}`,
+      }
+    : adminView(view, state) ||
+      brigadeView(view, state) ||
+      userView(view, state);
+  if (!data)
+    data = {
+      title: "Vista no encontrada",
+      body: go("recorridos", "Volver a los recorridos", ""),
+    };
+  const noNav = ["acceso", "alerta", "qr", "visitante", "visita-ok"].includes(
+      view,
+    ),
+    links =
+      state.role === "admin"
+        ? adminLinks
+        : state.role === "brigadista"
+          ? brigadeLinks
+          : userLinks;
+  const side = noNav
+    ? ""
+    : `<nav class="sidebar" id="role-navigation" aria-label="Navegación del rol"><p class="sidebar-title">${state.role === "admin" ? "Centro de control" : state.role === "brigadista" ? "Brigada · Sector norte" : "Mi EvacuAccess"}</p>${links.map(([v, label]) => (v === view ? `<span class="btn outline current" aria-current="page">${label}</span>` : `<a class="btn outline" href="#/${v}">${label}</a>`)).join("")}<p class="system-state">Sede Central · Edificio B</p></nav>`;
+  root.innerHTML = `<div class="app" data-ui><header class="app-header"><a class="brand" href="#landing">EvacuAccess</a><p class="context">Sede Central · Edificio B</p><p class="mobile-context">Sede Central</p>${!noNav ? '<button type="button" class="menu-toggle" data-action="menu" aria-controls="role-navigation" aria-expanded="false">Menú</button>' : ""}</header>${environmentNotice()}<div class="workspace">${side}<div class="work-panel"><main id="main-content" class="scroll-area"><div data-view="${view}" class="content ${data.emergency ? "alert-view" : ""}" ${data.hu ? `data-hu="${data.hu}"` : ""}><p class="breadcrumb">${data.breadcrumb || `${state.role === "admin" ? "Administrador" : state.role === "brigadista" ? "Brigadista" : state.role === "visitante" ? "Visitante" : "Usuario"} · Sede Central / Edificio B`}</p><h1 tabindex="-1">${titleHTML(data.title)}</h1>${feedback ? `<div class="feedback ${isError ? "error" : ""}" ${isError ? 'role="alert"' : ""}>${esc(feedback)}</div>` : ""}${data.body}${tools()}</div></main><footer class="persistent" aria-label="Acciones persistentes">${footer(view)}</footer></div></div></div>`;
+  document.title = `${data.title} · EvacuAccess`;
+  root.querySelectorAll("details[data-panel]").forEach((node) => {
+    node.open = openedPanels.includes(node.dataset.panel);
+  });
+  if (focus) root.querySelector("h1")?.focus({ preventScroll: true });
+  else retainFocus(before);
+}
+function openDialog(title, body) {
+  lastFocus = document.activeElement;
+  document.querySelector("#dialog-content").innerHTML =
+    `<h2 id="dialog-title">${esc(title)}</h2>${body}${btn("cancelDialog", "Cancelar", { kind: "outline" })}`;
+  dialog.showModal();
+}
+function closeDialog() {
+  dialog.close();
+  lastFocus?.isConnected && lastFocus.focus();
+}
+dialog.addEventListener("click", (e) => {
+  if (e.target === dialog) {
+    const r = dialog.getBoundingClientRect();
+    if (
+      e.clientX < r.left ||
+      e.clientX > r.right ||
+      e.clientY < r.top ||
+      e.clientY > r.bottom
+    )
+      closeDialog();
+  }
+});
+dialog.addEventListener("close", () => {
+  if (lastFocus?.isConnected) lastFocus.focus();
+  else root.querySelector("h1")?.focus({ preventScroll: true });
+});
+function speech() {
+  const text = state.route.blocked
+    ? `Ascensores bloqueados. Sigue la ruta sin escaleras hacia ${state.route.destination}.`
+    : "Sigue de frente. Avanza 20 metros hacia la salida norte.";
+  if (!("speechSynthesis" in window)) {
+    announce(`Voz no disponible. Instrucción: ${text}`);
+    render(false);
+    return;
+  }
+  speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "es-PE";
+  utterance.onerror = () => {
+    announce(`No se pudo reproducir la voz. Instrucción: ${text}`, true);
+    render(false);
+  };
+  speechSynthesis.speak(utterance);
+  announce(`Instrucción solicitada: ${text}`);
+  render(false);
+}
+function vibrate() {
+  let supported = false;
+  try {
+    supported =
+      typeof navigator.vibrate === "function" &&
+      navigator.vibrate([200, 100, 200]);
+  } catch {}
+  announce(
+    supported
+      ? "Patrón háptico solicitado al dispositivo. Alerta visual disponible."
+      : "Vibración no disponible o bloqueada. La alerta visual y textual sigue disponible.",
+  );
+  render(false);
+}
+document.addEventListener("click", (e) => {
+  const element = e.target.closest("[data-action]");
+  if (!element) return;
+  const action = element.dataset.action,
+    payload = JSON.parse(element.dataset.payload || "{}");
+  switch (action) {
+    case "navigate":
+      navigate(payload.view);
+      break;
+    case "entry":
+      launch(payload);
+      break;
+    case "menu": {
+      const side = document.querySelector(".sidebar");
+      const open = side.classList.toggle("open");
+      element.setAttribute("aria-expanded", String(open));
+      if (open) side.querySelector("a")?.focus();
+      break;
+    }
+    case "cancelDialog":
+      closeDialog();
+      break;
+    case "contrast":
+      commit("contrast");
+      break;
+    case "confirmAlert":
+      if (commit("confirmAlert")) {
+        try {
+          navigator.vibrate?.(0);
+          if (state.prefs.haptic) navigator.vibrate?.(80);
+        } catch {}
+        if (state.prefs.voice) speech();
+      }
+      break;
+    case "speak":
+      speech();
+      break;
+    case "vibrate":
+      vibrate();
+      break;
+    case "sendSOS":
+      openDialog(
+        "Solicitar rescate",
+        `<p>La solicitud se registrará únicamente en este entorno de prueba. No se enviará a brigadistas ni a servicios de emergencia reales.</p><p>Ubicación de prueba: Edificio B · Piso 2 · Aula 204.</p>${btn("confirmSOS", "Registrar solicitud SOS", { kind: "danger", hu: "HU-21" })}`,
+      );
+      break;
+    case "confirmSOS":
+      closeDialog();
+      if (commit("sos", {}, false)) {
+        if (view === "sos") render(false);
+        else {
+          location.hash = "/sos";
+        }
+      } else render(false);
+      break;
+    case "failSOS":
+      commit("sos", { fail: true });
+      break;
+    case "safeDialog":
+      openDialog(
+        "Confirmar salida segura",
+        `<p>¿Confirmas que María López llegó a una zona segura?</p>${btn("safeConfirm", "Confirmar llegada a zona segura", { kind: "success", hu: "HU-10" })}`,
+      );
+      break;
+    case "safeConfirm":
+      closeDialog();
+      if (commit("arrive", {}, false)) {
+        location.hash = "/seguro";
+      }
+      break;
+    case "refugeArrival":
+      commit("arrive", { refuge: true });
+      break;
+    case "showCard":
+      openDialog(
+        "Tarjeta de comunicación",
+        `<div class="enlarged-card"><img src="assets/icons/${cardIcon(payload.icon)}.svg" alt=""><p>${esc(payload.message)}</p></div>${btn("sendCard", "Enviar necesidad", { hu: "HU-12", payload })}`,
+      );
+      break;
+    case "sendCard":
+      closeDialog();
+      commit("card", payload);
+      break;
+    case "quickMessage":
+      commit("message", payload);
+      break;
+    case "sensor":
+      if (commit("sensor", {}, false)) location.hash = "/evento";
+      break;
+    case "selectRequest":
+      state.selectedRequest = payload.id;
+      saveState(state);
+      navigate("asignar");
+      break;
+    case "assign":
+      commit("assign", payload);
+      break;
+    case "emitConfirm":
+      closeDialog();
+      commit("emit", payload);
+      break;
+    case "reassign":
+      commit("assign", { requestId: payload.requestId, brigadierId: "B2" });
+      break;
+    case "openMission":
+      state.selectedMission = payload.id;
+      if (
+        state.missions.find((m) => m.id === payload.id)?.status === "assigned"
+      )
+        commit("accept", { id: payload.id }, false);
+      saveState(state);
+      navigate("mision");
+      break;
+    case "queueMission":
+      commit("assign", {
+        requestId: payload.id,
+        brigadierId: "B1",
+        queue: true,
+      });
+      break;
+    case "rescueDialog":
+      openDialog(
+        "Confirmar rescate",
+        `<p>Confirma la llegada a zona segura de ${payload.ids.length} persona${payload.ids.length === 1 ? "" : "s"} de las misiones: ${payload.ids.map(esc).join(", ")}.</p>${btn("rescueConfirm", "Confirmar registro de rescate", { kind: "success", hu: "HU-37", payload })}`,
+      );
+      break;
+    case "rescueConfirm":
+      closeDialog();
+      commit("rescue", payload);
+      break;
+    case "disconnect":
+      commit("brigadierStatus", {
+        id: "B4",
+        status:
+          state.brigadiers.find((b) => b.id === "B4").status === "offline"
+            ? "available"
+            : "offline",
+      });
+      break;
+    case "sectorArrivalDialog":
+      openDialog(
+        "Registrar llegadas del sector",
+        `<p>Se registrará la llegada a zona segura de las personas evacuando o en refugio del sector ${esc(payload.sector)}. Las misiones y personas en riesgo deben resolverse primero.</p>${btn("sectorArrivalConfirm", "Confirmar llegadas", { payload })}`,
+      );
+      break;
+    case "sectorArrivalConfirm":
+      closeDialog();
+      commit("sectorArrival", { ...payload, confirm: true });
+      break;
+    case "marker": {
+      const p =
+        payload.type === "sos"
+          ? state.people[0]
+          : payload.type === "person"
+            ? state.people[2]
+            : null;
+      openDialog(
+        payload.type === "brigade" ? "Brigadistas por sector" : p.name,
+        `<p>${p ? `Edificio ${p.building} · Piso ${p.floor} · ${esc(p.location)}<br>${esc(p.needs.join(" · "))}<br>Canal: ${esc(p.channel)}` : state.brigadiers.map((b) => `${esc(b.name)} · ${esc(b.sector)}`).join("<br>")}</p>${noteLocal("Ubicaciones de prueba.")}`,
+      );
+      break;
+    }
+    case "csv": {
+      const blob = new Blob([reportCSV(state)], {
+          type: "text/csv;charset=utf-8",
+        }),
+        url = URL.createObjectURL(blob),
+        a = document.createElement("a");
+      a.href = url;
+      a.download = "evacuaccess-reporte.csv";
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      announce(
+        "Reporte CSV generado con el estado y la auditoría de esta sesión",
+      );
+      render(false);
+      break;
+    }
+    case "print":
+      window.print();
+      break;
+    case "closeDialog":
+      openDialog(
+        "Finalizar emergencia",
+        `<p>Se cerrará el evento y expirará el paquete externo. El reporte conservará los estados actuales del censo.</p>${btn("closeConfirm", "Confirmar cierre del evento", { hu: "HU-40 HU-45" })}`,
+      );
+      break;
+    case "closeConfirm":
+      closeDialog();
+      commit("close");
+      break;
+    case "resetDialog":
+      openDialog(
+        "Restablecer entorno",
+        `<p>Se restaurarán los datos iniciales y se borrarán las preferencias, mensajes y eventos guardados en este entorno.</p>${btn("resetConfirm", "Restaurar escenario inicial")}`,
+      );
+      break;
+    case "resetConfirm":
+      closeDialog();
+      state = initialState();
+      saveState(state);
+      visitorKey = crypto.randomUUID();
+      feedback = "";
+      preferences();
+      navigate("recorridos");
+      break;
+    default:
+      commit(action, payload);
+  }
+});
+const noteLocal = (t) => `<p class="small-copy muted">${t}</p>`;
+document.addEventListener("submit", (e) => {
+  const form = e.target;
+  e.preventDefault();
+  const data = new FormData(form);
+  if (form.id === "preferences") {
+    commit("preferences", {
+      needs: [
+        "Discapacidad auditiva",
+        "Discapacidad visual",
+        "Movilidad reducida",
+      ].filter((_, i) => data.has("need" + i)),
+      voice: data.has("voice"),
+      haptic: data.has("haptic"),
+      contrast: data.has("contrast"),
+      text: Number(data.get("text")),
+    });
+  } else if (form.id === "ppe")
+    commit("ppe", { pace: Number(data.get("pace")) });
+  else if (form.id === "chat") commit("message", { text: data.get("message") });
+  else if (form.id === "visitor") {
+    if (
+      commit(
+        "visitor",
+        {
+          name: data.get("name"),
+          destination: data.get("destination"),
+          needs: data.get("needs"),
+          key: visitorKey,
+        },
+        false,
+      )
+    ) {
+      visitorKey = crypto.randomUUID();
+      location.hash = "/visita-ok";
+    }
+  } else if (form.id === "alert-form") {
+    const event = data.get("event"),
+      scope = data.get("scope");
+    openDialog(
+      "Confirmar emisión de alerta",
+      `<p><strong>${esc(event)} · ${esc(scope)}</strong></p><p>Mensaje: Emergencia activa · ${esc(event)}. Sigue la ruta indicada.</p><p>Esta alerta se registrará únicamente en el entorno de prueba. No se transmitirá a dispositivos ni a servicios reales.</p>${btn("emitConfirm", "Confirmar emisión", { hu: "HU-33", payload: { event, scope } })}`,
+    );
+  } else if (form.id === "mass-rescue") {
+    const ids = [...data.keys()];
+    if (!ids.length) {
+      announce("Selecciona al menos una misión activa", true);
+      render(false);
+    } else
+      openDialog(
+        "Confirmar rescates seleccionados",
+        `<p>Se registrarán ${ids.length} rescates de las misiones ${ids.map(esc).join(", ")}.</p>${btn("rescueConfirm", "Confirmar registro de rescates", { hu: "HU-37", payload: { ids } })}`,
+      );
+  } else if (form.id === "clear-sector")
+    commit("clearSector", {
+      sector: data.get("sector"),
+      value: Number(data.get("slider")),
+      confirm: data.has("verified"),
+    });
+  else if (form.dataset.sectorForm)
+    commit("sectorAssign", {
+      id: form.dataset.sectorForm,
+      sector: data.get("sector"),
+    });
+});
+document.addEventListener("input", (e) => {
+  if (e.target.id === "clear-slider") {
+    document.querySelector("#slider-value").value =
+      `${e.target.value} % · Usa también las flechas o Fin del teclado.`;
+    e.target.setAttribute(
+      "aria-valuetext",
+      `${e.target.value} %, ${Number(e.target.value) === 100 ? "listo para confirmar" : "pendiente"}`,
+    );
+  }
+});
+document.addEventListener("change", (e) => {
+  if (e.target.closest("#alert-form")) {
+    const f = document.querySelector("#alert-form"),
+      d = new FormData(f);
+    document.querySelector("#alert-preview").textContent =
+      `Selección actual: ${d.get("event")} · ${d.get("scope")}`;
+  }
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    const open = document.querySelector(".sidebar.open");
+    open?.classList.remove("open");
+    const menu = document.querySelector(".menu-toggle");
+    menu?.setAttribute("aria-expanded", "false");
+    if (open) menu?.focus();
+  }
+});
+window.addEventListener("hashchange", () => render());
+window.addEventListener("storage", () => {
+  state = loadState();
+  render(false);
+});
+document.querySelector(".skip").addEventListener("click", (event) => {
+  event.preventDefault();
+  const main = document.getElementById("main-content");
+  if (!main) return;
+  main.tabIndex = -1;
+  main.focus({ preventScroll: true });
+  if (main.classList.contains("scroll-area")) main.scrollTop = 0;
+  else main.scrollIntoView({ block: "start" });
+});
+render(false);
