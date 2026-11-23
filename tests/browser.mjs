@@ -373,7 +373,7 @@ await run(
     await click("sensor");
     await page.waitForURL("**/#/evento");
     assert.equal((await stored()).sensors.length, 1);
-    assert.equal(await page.locator(".room.hazard").count(), 1);
+    await expect(page.locator(".room.hazard")).toHaveCount(1);
     await page
       .getByRole("button", { name: "Revisar y emitir alerta de incendio" })
       .click();

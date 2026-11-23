@@ -56,3 +56,9 @@ Comprobación pública: 2026-11-23T01:08:12.990Z. [Sitio](https://nahurramos-spe
 - Recursos HTTP y contenido de los fuentes: **35 aprobadas, 0 fallidas**. [Evidencia](evidencias/publicado/recursos-http.json).
 
 Se repitieron los siete puntos de entrada, las interacciones locales, 34 capturas con axe y seis pantallas prioritarias a 390, 768, 1024 y 1440 px. Los recursos públicos coinciden con los fuentes; no se detectaron errores de JavaScript ni recursos ausentes en las rutas ejercitadas. La comprobación no convierte servicios externos, sensores ni protocolos pendientes en funcionalidades reales.
+
+## Incidencia de CI conservada
+
+La [ejecución](https://github.com/nahurramos-spec/landing-page-evacuacces/actions/runs/45092931666) del commit 9288f0fe61a876f3d2d31dadcb65ace2b43e4dfa tuvo 30 casos de navegador aprobados y 1 fallido: «Sensor IoT manual resalta sector y abre emisión de alerta». La URL ya había cambiado a #/evento y el sensor estaba guardado, pero el recuento inmediato de .room.hazard devolvió 0 antes del renderizado de hashchange. Corrección: Usar expect(locator).toHaveCount(1), que espera el mismo resultado requerido sin modificar la aplicación ni rebajar la aserción. No se publicó esta ejecución; la versión anterior continuó disponible. Ver Actions para la ejecución posterior de corrección.
+
+[Registro](evidencias/incidencia-ci.json) · [Artefacto de la ejecución fallida](https://github.com/nahurramos-spec/landing-page-evacuacces/actions/runs/45092931666/artifacts/14781509892). Este fallo no se cuenta como aprobado ni se elimina del historial.

@@ -1,0 +1,13 @@
+{
+  "workflowUrl": "https://github.com/nahurramos-spec/landing-page-evacuacces/actions/runs/45092931666",
+  "sha": "9288f0fe61a876f3d2d31dadcb65ace2b43e4dfa",
+  "conclusion": "failure",
+  "suite": "Navegador",
+  "passed": 30,
+  "failed": 1,
+  "case": "Sensor IoT manual resalta sector y abre emisión de alerta",
+  "observed": "La URL ya había cambiado a #/evento y el sensor estaba guardado, pero el recuento inmediato de .room.hazard devolvió 0 antes del renderizado de hashchange.",
+  "correction": "Usar expect(locator).toHaveCount(1), que espera el mismo resultado requerido sin modificar la aplicación ni rebajar la aserción.",
+  "artifactUrl": "https://github.com/nahurramos-spec/landing-page-evacuacces/actions/runs/45092931666/artifacts/14781509892",
+  "deployment": "No se publicó esta ejecución; la versión anterior continuó disponible. Ver Actions para la ejecución posterior de corrección."
+}
