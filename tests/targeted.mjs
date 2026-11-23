@@ -6,6 +6,8 @@ import { initialState, STORAGE_KEY } from "../js/state.js";
 const browser = await launchBrowser();
 const context = await browser.newContext();
 const page = await context.newPage();
+const directory = process.env.EVIDENCE_DIR || "docs/evidencias";
+await fs.mkdir(directory, { recursive: true });
 const results = [];
 for (const width of [1440, 390]) {
   await page.setViewportSize({ width, height: width === 1440 ? 900 : 844 });
@@ -18,7 +20,7 @@ for (const width of [1440, 390]) {
   await page.reload();
   await page.locator("h1").waitFor();
   await page.evaluate(() => document.fonts.ready);
-  await page.screenshot({ path: `docs/evidencias/ppe-${width}.png` });
+  await page.screenshot({ path: `${directory}/ppe-${width}.png` });
   const analysis = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
     .analyze();
@@ -52,7 +54,7 @@ assert.equal(
   true,
 );
 await page.screenshot({
-  path: "docs/evidencias/landing-390-responsive.png",
+  path: `${directory}/landing-390-responsive.png`,
   fullPage: true,
 });
 const enlarged = initialState();
@@ -72,7 +74,7 @@ results.push({
 });
 await browser.close();
 await fs.writeFile(
-  "docs/evidencias/qa-targeted.json",
+  `${directory}/qa-targeted.json`,
   JSON.stringify({ date: new Date().toISOString(), results }, null, 2),
 );
 console.log(results);

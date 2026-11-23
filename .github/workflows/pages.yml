@@ -12,6 +12,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   deploy:
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -24,6 +25,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run test:state:evidence
+        env:
+          EVIDENCE_DIR: docs/evidencias/ci/estado
       - run: npx playwright install --with-deps chromium
       - name: Comprobar aplicación y paquete estático
         shell: bash
@@ -36,17 +39,17 @@ jobs:
             sleep 1
           done
           curl --fail --silent http://127.0.0.1:4173/ > /dev/null
-          npm run test:browser
-          npm run test:product
-          node tests/targeted.mjs
+          EVIDENCE_DIR=docs/evidencias/ci/navegador npm run test:browser
+          EVIDENCE_DIR=docs/evidencias/ci/producto npm run test:product
+          EVIDENCE_DIR=docs/evidencias/ci/puntuales node tests/targeted.mjs
           npm run build
-          npm run test:static
+          EVIDENCE_DIR=docs/evidencias/ci/paquete npm run test:static
       - name: Conservar resultados de CI
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: evidencias-qa
-          path: docs/evidencias/
+          path: docs/evidencias/ci/
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

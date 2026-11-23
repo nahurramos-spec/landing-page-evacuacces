@@ -18,7 +18,7 @@ page.on("request", (r) => {
   if (!r.url().startsWith(base) && !r.url().startsWith("data:"))
     externalRequests.push(r.url());
 });
-const directory = "docs/evidencias/revision-producto";
+const directory = process.env.EVIDENCE_DIR || "docs/evidencias/revision-producto";
 await fs.mkdir(directory, { recursive: true });
 async function fixture(view, role = "usuario", modify) {
   let s = initialState();
@@ -245,6 +245,8 @@ await fs.writeFile(
   JSON.stringify(
     {
       date: new Date().toISOString(),
+      baseURL: base,
+      platform: process.platform,
       results,
       screens,
       errors,

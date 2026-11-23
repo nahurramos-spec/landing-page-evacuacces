@@ -4,6 +4,7 @@ import AxeBuilder from "@axe-core/playwright";
 import fs from "node:fs/promises";
 import assert from "node:assert/strict";
 import { initialState, transition, STORAGE_KEY } from "../js/state.js";
+const evidenceDirectory = process.env.EVIDENCE_DIR || "docs/evidencias";
 const base = process.env.BASE_URL || "http://127.0.0.1:4173";
 const browser = await launchBrowser();
 const context = await browser.newContext({
@@ -20,7 +21,7 @@ page.on("pageerror", (e) => errors.push(e.message));
 page.on("response", (r) => {
   if (r.status() >= 400) failedResources.push(r.url());
 });
-await fs.mkdir("docs/evidencias", { recursive: true });
+await fs.mkdir(evidenceDirectory, { recursive: true });
 async function reveal(locator) {
   await locator.waitFor({ state: "attached" });
   const panels = await locator.evaluate((node) => {
@@ -68,7 +69,7 @@ async function run(name, fn) {
     results.push({ name, status: "FALLÓ", detail: e.message });
     console.log("FAIL", name, e.message);
     await page
-      .screenshot({ path: `docs/evidencias/fallo-${results.length}.png` })
+      .screenshot({ path: `${evidenceDirectory}/fallo-${results.length}.png` })
       .catch(() => {});
   }
 }
@@ -459,9 +460,9 @@ await run(
     const download = page.waitForEvent("download");
     await click("csv");
     const file = await download;
-    await file.saveAs("docs/evidencias/reporte-prueba.csv");
+    await file.saveAs(`${evidenceDirectory}/reporte-prueba.csv`);
     const data = await fs.readFile(
-      "docs/evidencias/reporte-prueba.csv",
+      `${evidenceDirectory}/reporte-prueba.csv`,
       "utf8",
     );
     assert.match(data, /María López/);
@@ -481,7 +482,7 @@ await run(
     await click("print");
     assert.equal(await page.evaluate(() => window.__printRequested), true);
     const pdf = await page.pdf({
-      path: "docs/evidencias/reporte-impresion.pdf",
+      path: `${evidenceDirectory}/reporte-impresion.pdf`,
       format: "A4",
       printBackground: true,
     });
@@ -554,7 +555,7 @@ await run(
           if (v === "admin") s = transition(s, "block").state;
           return s;
         });
-        const path = `docs/evidencias/${v}-${width}.png`;
+        const path = `${evidenceDirectory}/${v}-${width}.png`;
         await page.screenshot({ path });
         const overflow = await page.evaluate(() =>
           [...document.querySelectorAll("body *")]
@@ -621,7 +622,7 @@ await run(
           true,
         );
         await page.screenshot({
-          path: `docs/evidencias/${v}-${width}-responsive.png`,
+          path: `${evidenceDirectory}/${v}-${width}-responsive.png`,
           fullPage: v === "landing",
         });
       }
@@ -660,7 +661,7 @@ await run(
         return s;
       });
       await page.screenshot({
-        path: `docs/evidencias/mapa-texto200-${width}.png`,
+        path: `${evidenceDirectory}/mapa-texto200-${width}.png`,
       });
     }
   },
@@ -690,10 +691,12 @@ await run(
   },
 );
 await fs.writeFile(
-  "docs/evidencias/qa-browser.json",
+  `${evidenceDirectory}/qa-browser.json`,
   JSON.stringify(
     {
       date: new Date().toISOString(),
+      baseURL: base,
+      platform: process.platform,
       browser: await browser.version(),
       results,
       errors,

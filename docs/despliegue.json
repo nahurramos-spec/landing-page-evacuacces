@@ -4,8 +4,41 @@
   "pagesUrl": "https://nahurramos-spec.github.io/landing-page-evacuacces/",
   "buildType": "workflow",
   "configured": true,
-  "published": false,
-  "verified": false,
-  "status": "Pages configurado mediante API oficial; primer push y despliegue pendientes.",
-  "checks": []
+  "published": true,
+  "verified": true,
+  "status": "Publicado y comprobado: Actions finalizó correctamente y las suites se repitieron sobre la URL pública.",
+  "checkedAt": "2026-11-23T01:08:12.990Z",
+  "sha": "994dd33c1acc10a7e8119de677d5af073abc6af7",
+  "workflowUrl": "https://github.com/nahurramos-spec/landing-page-evacuacces/actions/runs/45092436191",
+  "workflowRunId": 45092436191,
+  "verificationScope": "Evidencia de la publicación indicada por sha y workflowRunId. Las actualizaciones documentales posteriores conservan este punto de comprobación; no es una referencia circular al commit que contiene este informe.",
+  "checks": [
+    {
+      "suite": "Navegador público",
+      "passed": 31,
+      "failed": 0,
+      "evidence": "evidencias/publicado/navegador/qa-browser.json"
+    },
+    {
+      "suite": "Producto público",
+      "passed": 7,
+      "failed": 0,
+      "evidence": "evidencias/publicado/producto/qa-producto.json"
+    },
+    {
+      "suite": "Recursos HTTP y contenido de los fuentes",
+      "passed": 35,
+      "failed": 0,
+      "evidence": "evidencias/publicado/recursos-http.json"
+    }
+  ],
+  "viewportWidths": [
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "coreStories": 30,
+  "officialAcceptanceCriteria": 90,
+  "externalEmergencyServicesConnected": false
 }

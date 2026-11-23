@@ -46,3 +46,13 @@ Ejecución: 2026-11-23T01:00:09.371Z. 7 casos aprobados y 0 fallidos. 24 captura
 ## Reorganización y entrega
 
 Las pruebas anteriores se ejecutaron tras el traslado a js/main.js y assets/images/. Los 25 estilos y recursos visuales conservan su SHA-256. Se añadió una prueba de compatibilidad con las sesiones guardadas anteriormente. Véase [organización del repositorio](organizacion-repositorio.md) y [estado de publicación](despliegue.json).
+
+## Verificación de GitHub Pages
+
+Comprobación pública: 2026-11-23T01:08:12.990Z. [Sitio](https://nahurramos-spec.github.io/landing-page-evacuacces/) · [Actions](https://github.com/nahurramos-spec/landing-page-evacuacces/actions/runs/45092436191) · commit comprobado 994dd33c1acc10a7e8119de677d5af073abc6af7.
+
+- Navegador público: **31 aprobadas, 0 fallidas**. [Evidencia](evidencias/publicado/navegador/qa-browser.json).
+- Producto público: **7 aprobadas, 0 fallidas**. [Evidencia](evidencias/publicado/producto/qa-producto.json).
+- Recursos HTTP y contenido de los fuentes: **35 aprobadas, 0 fallidas**. [Evidencia](evidencias/publicado/recursos-http.json).
+
+Se repitieron los siete puntos de entrada, las interacciones locales, 34 capturas con axe y seis pantallas prioritarias a 390, 768, 1024 y 1440 px. Los recursos públicos coinciden con los fuentes; no se detectaron errores de JavaScript ni recursos ausentes en las rutas ejercitadas. La comprobación no convierte servicios externos, sensores ni protocolos pendientes en funcionalidades reales.

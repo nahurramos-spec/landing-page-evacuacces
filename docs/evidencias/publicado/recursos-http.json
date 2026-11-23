@@ -1,0 +1,322 @@
+{
+  "date": "2026-11-23T01:07:27.504Z",
+  "baseURL": "https://nahurramos-spec.github.io/landing-page-evacuacces/",
+  "comparison": "SHA-256 binario; CRLF/LF normalizado en texto por los atributos de Git",
+  "results": [
+    {
+      "file": "index.html",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/index.html",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 1766,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "css/accessibility.css",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/css/accessibility.css",
+      "httpStatus": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 3081,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "css/responsive.css",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/css/responsive.css",
+      "httpStatus": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 6141,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "css/review.css",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/css/review.css",
+      "httpStatus": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 8609,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "css/styles.css",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/css/styles.css",
+      "httpStatus": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 15450,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "js/administration.js",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/js/administration.js",
+      "httpStatus": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 12861,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "js/brigadier.js",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/js/brigadier.js",
+      "httpStatus": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 6102,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "js/evacuation.js",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/js/evacuation.js",
+      "httpStatus": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 18046,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "js/landing.js",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/js/landing.js",
+      "httpStatus": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 6633,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "js/main.js",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/js/main.js",
+      "httpStatus": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 21666,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "js/map.js",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/js/map.js",
+      "httpStatus": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 2085,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "js/state.js",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/js/state.js",
+      "httpStatus": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 21907,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "js/team.js",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/js/team.js",
+      "httpStatus": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 270,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "js/ui.js",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/js/ui.js",
+      "httpStatus": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 2823,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/fonts/Atkinson-Bold.ttf",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/fonts/Atkinson-Bold.ttf",
+      "httpStatus": 200,
+      "contentType": "font/ttf",
+      "bytes": 55256,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/fonts/Atkinson-Regular.ttf",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/fonts/Atkinson-Regular.ttf",
+      "httpStatus": 200,
+      "contentType": "font/ttf",
+      "bytes": 54348,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/fonts/OFL.txt",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/fonts/OFL.txt",
+      "httpStatus": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 4352,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgBrigadista2-1147.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgBrigadista2-1147.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 267,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgBrigadista2-331.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgBrigadista2-331.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 237,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgFrame2-1459.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgFrame2-1459.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 704,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgFrame2-307.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgFrame2-307.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 323,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgFrame2-499.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgFrame2-499.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 1445,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgMaterialSymbolsOutlinedAccessible2-571.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgMaterialSymbolsOutlinedAccessible2-571.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 1827,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgMaterialSymbolsOutlinedAir2-571.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgMaterialSymbolsOutlinedAir2-571.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 1828,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgMaterialSymbolsOutlinedHeart2-571.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgMaterialSymbolsOutlinedHeart2-571.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 1740,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgMaterialSymbolsOutlinedLock2-571.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgMaterialSymbolsOutlinedLock2-571.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 1436,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgMaterialSymbolsOutlinedMedication2-571.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgMaterialSymbolsOutlinedMedication2-571.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 791,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgMaterialSymbolsOutlinedSmoke2-571.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgMaterialSymbolsOutlinedSmoke2-571.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 2143,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgMaterialSymbolsOutlinedWater2-571.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgMaterialSymbolsOutlinedWater2-571.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 1176,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgSosPrioritario2-1147.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgSosPrioritario2-1147.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 272,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgSosPrioritario2-331.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgSosPrioritario2-331.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 242,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgUsuarioSensorial2-1147.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgUsuarioSensorial2-1147.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 274,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/icons/imgUsuarioSensorial2-331.svg",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/icons/imgUsuarioSensorial2-331.svg",
+      "httpStatus": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 244,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/images/carla.png",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/images/carla.png",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "bytes": 12020,
+      "matchesSource": true,
+      "status": "APROBADA"
+    },
+    {
+      "file": "assets/images/luis.png",
+      "url": "https://nahurramos-spec.github.io/landing-page-evacuacces/assets/images/luis.png",
+      "httpStatus": 200,
+      "contentType": "image/png",
+      "bytes": 12580,
+      "matchesSource": true,
+      "status": "APROBADA"
+    }
+  ]
+}

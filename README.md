@@ -6,7 +6,7 @@ Aplicación web responsive para explorar la evacuación inclusiva y la coordinac
 
 Repositorio: [nahurramos-spec/landing-page-evacuacces](https://github.com/nahurramos-spec/landing-page-evacuacces).
 
-GitHub Pages está configurado mediante Actions. La URL asignada es [EvacuAccess](https://nahurramos-spec.github.io/landing-page-evacuacces/); publicación y comprobación pendientes. El estado verificable se registra en [despliegue](docs/despliegue.json).
+Sitio publicado y comprobado: [EvacuAccess en GitHub Pages](https://nahurramos-spec.github.io/landing-page-evacuacces/). [Despliegue exitoso](https://github.com/nahurramos-spec/landing-page-evacuacces/actions/runs/45092436191). La fecha, commit y evidencias de la comprobación figuran en [despliegue](docs/despliegue.json).
 
 ## Problema y propuesta
 
@@ -94,6 +94,7 @@ evacuaccess/
 │   └── evidencias/             Resultados y capturas, incluidas históricas
 ├── tests/                      Pruebas y herramientas locales
 ├── index.html
+├── .gitattributes
 ├── .gitignore
 ├── .nojekyll
 ├── package.json
@@ -135,6 +136,8 @@ node tests/documentation.mjs
 
 El generador documental utiliza el TAP y los JSON guardados; no ejecuta pruebas ni transforma fallos en aprobaciones. Los [resultados de QA](docs/resultados-qa.md) y [escenarios](docs/escenarios-prueba.md) contienen las ejecuciones reales. Hay capturas de 390, 768, 1024 y 1440 px; las comparaciones con Figma no se presentan como porcentajes de fidelidad.
 
+Para repetir la suite sobre Pages, definir `BASE_URL=https://nahurramos-spec.github.io/landing-page-evacuacces/` y `EVIDENCE_DIR=docs/evidencias/publicado/navegador` antes de ejecutar `npm run test:browser`. Para `npm run test:product`, usar `EVIDENCE_DIR=docs/evidencias/publicado/producto`. Las evidencias públicas quedan separadas de las locales; después retirar esas variables para volver al servidor local. Con BASE_URL definido también puede ejecutarse `node tests/published-resources.mjs`: verifica los 35 recursos de ejecución y compara su contenido con los fuentes, normalizando CRLF/LF en texto.
+
 ## Recorrido sugerido
 
 1. Entrar por «Discapacidad auditiva», confirmar la alerta y seguir la ruta.
@@ -152,7 +155,7 @@ Atkinson Hyperlegible local, etiquetas y estructura semántica, salto al conteni
 
 ## Publicación
 
-Se reutiliza origin y la rama main. La única estrategia es **GitHub Actions → artefacto dist/ → GitHub Pages**. El workflow instala dependencias y Chromium, ejecuta estado/navegador/producto/comprobaciones puntuales, genera y verifica el paquete, conserva evidencias de CI y publica. Pages usa GitHub Actions. Los recursos relativos y las rutas por hash permiten servir bajo el subdirectorio del repositorio.
+Se reutiliza origin y la rama main. La única estrategia es **GitHub Actions → artefacto dist/ → GitHub Pages**. El workflow instala dependencias y Chromium, ejecuta estado/navegador/producto/comprobaciones puntuales, genera y verifica el paquete, conserva evidencias de CI y publica. Cada suite guarda sus resultados en una subcarpeta de docs/evidencias/ci/; el artefacto «evidencias-qa» permite descargarlos sin sobrescribir los informes locales ni públicos versionados. Pages usa GitHub Actions. Los recursos relativos y las rutas por hash permiten servir bajo el subdirectorio del repositorio.
 
 Consultar las [ejecuciones](https://github.com/nahurramos-spec/landing-page-evacuacces/actions/workflows/pages.yml) y el [capítulo V](docs/capitulo-v.md). Cada push a main o ejecución manual vuelve a validar y desplegar. No se suben dependencias, credenciales ni carpetas generadas.
 

@@ -3,6 +3,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
+const directory = process.env.EVIDENCE_DIR || "docs/evidencias";
+await fs.mkdir(directory, { recursive: true });
 const results = [];
 const js = (await fs.readdir("js")).filter((x) => x.endsWith(".js"));
 for (const name of js) {
@@ -79,7 +81,7 @@ for (const href of links) {
   assert.ok(r.ok(), href);
 }
 assert.deepEqual(missing, []);
-await page.screenshot({ path: "docs/evidencias/subdirectorio-mobile.png" });
+await page.screenshot({ path: `${directory}/subdirectorio-mobile.png` });
 results.push({
   case: "Paquete dist bajo subdirectorio: landing → alerta → confirmación; recursos y foco",
   status: "APROBADA",
@@ -99,7 +101,7 @@ results.push({
 });
 await browser.close();
 await fs.writeFile(
-  "docs/evidencias/qa-static.json",
+  `${directory}/qa-static.json`,
   JSON.stringify({ date: new Date().toISOString(), results, missing }, null, 2),
 );
 console.log(results);
