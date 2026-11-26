@@ -19,7 +19,7 @@ export function adminView(view, s) {
       return {
         title: "Dashboard operativo",
         hu: "HU-31",
-        body: `<p class="muted">Estado de la evacuación en Sede Central</p><div class="metrics">${Object.entries(
+        body: `<p class="muted">Estado de la evacuación en Sede Central · Simulación</p><div class="metrics">${Object.entries(
           statuses,
         )
           .map(
@@ -28,13 +28,13 @@ export function adminView(view, s) {
           )
           .join(
             "",
-          )}</div><div class="dashboard-grid"><div class="stack">${map(s)}${go("solicitudes", "Ver solicitudes y localizar personas")}</div><div class="stack dashboard-side">${panel("Zonas de refugio", `<p>${s.refuges.map((r) => `Refugio ${r.id}: ${esc(r.status)} · ${occupancy(s, r.id)}/${r.capacity}`).join("<br>")}<br>Capacidad disponible: ${s.refuges.filter((r) => refugeAvailable(s, r)).reduce((a, r) => a + r.capacity - occupancy(s, r.id), 0)} personas</p>`)}${panel("Ascensores", `<p>${s.route.blocked ? "1 y 2 bloqueados<br>Rutas sin escaleras recalculadas." : "Sin bloqueo activado en esta sesión"}</p>`, "danger-panel")}${panel("Brigadistas activos", `<p>${s.brigadiers.filter((b) => b.status !== "offline").length} de ${s.brigadiers.length} brigadistas activos</p>`, "warning-panel")}${go("asignar", "Asignar rescate prioritario", "")}</div></div>${controls("sensor-controls", btn("sensor", "Activar evento de sensor IoT", { kind: "outline", hu: "HU-42" }))}${go("emitir", "Emitir alerta global / sectorizada")}${go("solicitudes", "Solicitudes de rescate")}${go("zonas", "Gestionar zonas de refugio")}${go("brigadas", "Brigadistas por sector")}${go("censo", "Usuarios y censo")}${go("externos", "Servicios de emergencia externos")}${go("reporte", "Historial y reportes")}${btn("closeDialog", "Finalizar emergencia", { kind: "outline", hu: "HU-40" })}`,
+          )}</div><div class="dashboard-grid"><div class="stack">${map(s)}${go("solicitudes", "Ver solicitudes y localizar personas")}</div><div class="stack dashboard-side">${panel("Zonas de refugio", `<p>${s.refuges.map((r) => `Refugio ${r.id}: ${esc(r.status)} · ${occupancy(s, r.id)}/${r.capacity}`).join("<br>")}<br>Capacidad disponible de ejemplo: ${s.refuges.filter((r) => refugeAvailable(s, r)).reduce((a, r) => a + r.capacity - occupancy(s, r.id), 0)} personas</p>`)}${panel("Ascensores", `<p>${s.route.blocked ? "1 y 2 bloqueados<br>Rutas sin escaleras recalculadas." : "1 y 2 bloqueados<br>Rutas sin escaleras recalculadas."}</p>`, "danger-panel")}${panel("Brigadistas activos", `<p>6 de 8 · Sector norte</p>`, "warning-panel")}${go("asignar", "Asignar rescate prioritario", "")}</div></div>${go("emitir", "Emitir alerta global / sectorizada")}${go("solicitudes", "Solicitudes de rescate")}${go("zonas", "Gestionar zonas de refugio")}${go("brigadas", "Brigadistas por sector")}${go("censo", "Usuarios y censo")}${go("externos", "Servicios de emergencia externos")}${go("reporte", "Historial y reportes")}${btn("closeDialog", "Finalizar emergencia", { kind: "outline", hu: "HU-40" })}`,
       };
     case "emitir":
       return {
         title: "Disparo de alertas de emergencia",
         hu: "HU-33",
-        body: `<form id="alert-form" class="stack">${panel("1 Tipo de evento", `<p>Selecciona el protocolo que se activará.</p><fieldset><legend class="sr-only">Tipo de evento</legend><div class="radio-choices">${["Sismo", "Incendio", "Simulacro"].map((x) => `<label class="choice"><input type="radio" name="event" value="${x}" ${x === (s.sectors[0].hazard ? "Incendio" : s.alert.event) ? "checked" : ""}>${x}</label>`).join("")}</div></fieldset>`)}${panel("2 Alcance de la alerta", `<p>Elige todo el edificio o un piso específico. El resumen muestra el alcance antes de emitir.</p><fieldset class="stack"><legend class="sr-only">Destinatarios</legend>${["Todo el edificio", "Piso 2"].map((x) => `<label class="choice"><input type="radio" name="scope" value="${x}" ${s.alert.scope === x ? "checked" : ""}>${x}</label>`).join("")}</fieldset>`, "info")}${panel("3 Mensaje adaptativo", "<p>Evacúa hacia la zona segura más cercana. Sigue la ruta accesible y espera indicaciones de la brigada.<br>Texto · Voz opcional · Vibración opcional · Sin destellos</p>")}<p id="alert-preview" class="tag">Selección actual: ${s.alert.event} · ${s.alert.scope}</p><button class="btn" type="submit">Confirmar y emitir alerta</button></form>${go("externos", "Preparar información para servicios externos")}${go("admin", "Cancelar")}`,
+        body: `<form id="alert-form" class="stack">${panel("1 Tipo de evento", `<p>Selecciona el protocolo que se activará.</p><fieldset><legend class="sr-only">Tipo de evento</legend><div class="radio-choices">${["Sismo", "Incendio", "Simulacro"].map((x) => `<label class="choice"><input type="radio" name="event" value="${x}" ${x === (s.sectors[0].hazard ? "Incendio" : s.alert.event) ? "checked" : ""}>${x}</label>`).join("")}</div></fieldset>`)}${panel("2 Alcance de la alerta", `<p>Elige todo el edificio o un piso específico. El resumen muestra el alcance actual.</p><fieldset class="stack"><legend class="sr-only">Destinatarios</legend>${["Todo el edificio", "Piso 2"].map((x) => `<label class="choice"><input type="radio" name="scope" value="${x}" ${s.alert.scope === x ? "checked" : ""}>${x} · Selección de muestra</label>`).join("")}</fieldset>`, "info")}${panel("3 Mensaje adaptativo", "<p>«Evacúa hacia la zona segura más cercana. Sigue la ruta accesible y espera indicaciones de la brigada.»<br>Texto · Voz simulada · Vibración simulada · Sin destellos</p>")}<p id="alert-preview" class="tag">Selección actual: ${s.alert.event} · ${s.alert.scope}</p><button class="btn" type="submit">Confirmar y emitir alerta</button></form>${go("externos", "Preparar información para servicios externos")}${go("admin", "Cancelar")}`,
       };
     case "solicitudes":
       return {
@@ -61,14 +61,14 @@ export function adminView(view, s) {
                 },
               );
             return panel(
-              `${p.priority ? "Prioridad 1 · " : ""}${p.name} · ${r.id}`,
-              `<p>${r.status === "rescued" ? "Rescate registrado" : "SOS activo"} · Edificio ${p.building} · ${floor} · ${esc(p.location)}<br>${p.priority ? "Sin movimiento hace 120 s · Señal pendiente<br>" : ""}${esc(p.channel)} · ${esc(p.needs.filter((n) => n !== "Discapacidad auditiva").join(" · "))}${b ? `<br>Asignado a ${esc(b.name)}` : ""}</p>${r.status === "rescued" ? '<p class="safe-text">Llegada a zona segura confirmada.</p>' : btn("selectRequest", "Localizar y asignar brigadista", { hu: "HU-34", payload: { id: r.id } })}`,
-              p.priority ? "priority danger-panel" : "",
+              `Prioridad 1 · ${p.name} · ${r.id}`,
+              `<p>${r.status === "rescued" ? "Rescate registrado" : "SOS activo"} · Edificio ${p.building} · ${floor} · ${esc(p.location)}<br>Sin movimiento hace 120 s · Señal pendiente<br>${esc(p.channel)} · ${esc(p.needs.filter((n) => n !== "Discapacidad auditiva").join(" · "))}${b ? `<br>Asignado a ${esc(b.name)}` : ""}</p>${r.status === "rescued" ? '<p class="safe-text">Llegada a zona segura confirmada.</p>' : btn("selectRequest", "Localizar y asignar brigadista", { hu: "HU-34", payload: { id: r.id } })}`,
+              "priority danger-panel",
             );
           })
           .join(
             "",
-          )}${controls("priority-controls", btn("priority", "Marcar sin movimiento o sin señal · 120 s", { kind: "outline", hu: "HU-44" }))}`,
+          )}${note("Prioridad crítica indicada con texto, borde e icono estático. Se omite el parpadeo por seguridad.")}`,
       };
 
     case "asignar": {
@@ -97,7 +97,12 @@ export function adminView(view, s) {
       return {
         title: "Usuarios y censo",
         hu: "HU-31 HU-37",
-        body: `${panel("Censo activo del edificio", `<p>Personal fijo: 60. Consulta el total de personas y visitantes registrados.</p><div class="grid2"><div><h3>Personas en el edificio</h3><p class="eta">${s.people.length}</p></div><div><h3>Visitantes registrados</h3><p class="eta">${s.people.filter((p) => p.visitor).length}</p></div></div>`)}<div class="panel table-wrap"><table class="data-table"><caption>Personas registradas</caption><thead><tr><th scope="col">Persona</th><th scope="col">Ubicación</th><th scope="col">Estado</th><th scope="col">Necesidades</th></tr></thead><tbody>${s.people.map((p) => `<tr><th scope="row">${esc(p.name)}</th><td>${p.building} · Piso ${p.floor} · ${esc(p.sector)}</td><td>${statuses[p.status]}</td><td>${esc(p.needs.join(" · ") || "Sin necesidad indicada")}</td></tr>`).join("")}</tbody></table></div>${go("solicitudes", "Consultar solicitudes")}`,
+        body: `${panel("Censo activo del edificio", `<p>Personal fijo de demostración: 60. El total y los visitantes se actualizan en esta sesión y se muestran debajo.</p><h3>Último visitante previo · Pablo Ruiz</h3><p>Registro previo 09:50 · Recepción Edificio B<br>Necesidad: Indicaciones visuales.</p>${go("visitante", "Ver censo tras nuevo ingreso · Muestra", "")}${go("solicitudes", "Consultar solicitudes")}`)}<div class="stack"><p class="muted">Personas en el edificio</p><p class="eta" style="color:var(--ink)">${s.people.length}</p><p class="muted">Visitantes registrados</p><p class="eta" style="color:var(--ink)">${s.people.filter((p) => p.visitor).length}</p></div><div class="panel table-wrap"><table class="data-table"><caption>Personas registradas</caption><thead><tr><th scope="col">Persona</th><th scope="col">Ubicación</th><th scope="col">Estado</th><th scope="col">Necesidades</th></tr></thead><tbody>${s.people.map((p) => `<tr><th scope="row">${esc(p.name)}</th><td>${p.building} · Piso ${p.floor} · ${esc(p.sector)}</td><td>${statuses[p.status]}</td><td>${esc(p.needs.join(" · ") || "Sin necesidad indicada")}</td></tr>`).join("")}</tbody></table></div>`,
+      };
+    case "roles":
+      return {
+        title: "Roles y permisos",
+        body: `${panel("Matriz de roles del prototipo", "<p>Usuario: perfil de accesibilidad, alertas, ruta y SOS.<br>Brigadista: misiones, PPE autorizado, Push-To-Talk y despeje.<br>Administrador: dashboard operativo, alertas, solicitudes, zonas y censo.<br>Visitante: registro mediante QR y orientación básica.</p>")}${go("admin", "Volver al dashboard")}`,
       };
     case "evento":
       return {

@@ -50,6 +50,8 @@ html.contrast {
 }
 .contrast body,
 .contrast .landing,
+.contrast .landing .hero,
+.contrast .proto-screen,
 .contrast .app-header,
 .contrast .landing-header,
 .contrast .landing-footer,
@@ -58,7 +60,8 @@ html.contrast {
   background: #000;
   color: #ffd600;
 }
-.contrast .btn {
+.contrast .btn,
+.contrast .btn.proto-btn {
   background: #ffd600;
   color: #000;
   border-color: #ffd600;

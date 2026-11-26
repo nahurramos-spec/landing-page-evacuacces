@@ -32,7 +32,7 @@ const userLinks = [
   ["inicio", "Mi inicio"],
   ["perfil", "Accesibilidad"],
   ["ppe", "Mi PPE"],
-  ["mapa", "Mapa de evacuación"],
+  ["mapa", "Mapas offline"],
   ["historial", "Mi historial"],
   ["dispositivos", "Mis dispositivos"],
 ];
@@ -43,14 +43,16 @@ const adminLinks = [
   ["zonas", "Zonas de refugio"],
   ["brigadas", "Brigadistas"],
   ["censo", "Usuarios y censo"],
+  ["roles", "Roles y permisos"],
   ["externos", "Servicios externos"],
   ["reporte", "Historial y reportes"],
 ];
 const brigadeLinks = [
   ["misiones", "Misiones"],
   ["mapa-brigada", "Mapa y sectores"],
-  ["chat", "Chat de emergencia"],
+  ["chat", "Push-To-Talk"],
   ["sector", "Despejar sector"],
+  ["observaciones", "Observaciones"],
 ];
 const adminRoutes = adminLinks.map((x) => x[0]).concat(["asignar", "evento"]);
 const brigadeRoutes = [
@@ -60,6 +62,7 @@ const brigadeRoutes = [
   "masivo",
   "sector",
   "mapa-brigada",
+  "observaciones",
 ];
 function announce(message, error = false) {
   feedback = message;
@@ -112,20 +115,22 @@ function footer(v) {
   if (state.role === "admin")
     return go("solicitudes", "Solicitudes") + go("emitir", "Emitir alerta", "");
   if (state.role === "brigadista")
-    return go("misiones", "Misiones") + go("chat", "Chat", "");
+    return v === "misiones"
+      ? go("mapa-brigada", "Mapa") + go("chat", "PTT", "")
+      : go("misiones", "Misiones") + go("chat", "PTT", "");
   if (state.role === "visitante")
     return ["qr", "visitante"].includes(v)
       ? go(v === "qr" ? "acceso" : "qr", "Cancelar registro")
       : go("qr", "Registro de visitantes") + go("visita-ok", "Mi visita", "");
   if (["acceso", "perfil", "ppe", "inicio"].includes(v))
-    return go("acceso", "Volver") + go("inicio", "Inicio", "");
+    return go("acceso", "← Volver") + go("inicio", "Inicio", "");
   return (
     btn("sendSOS", "SOS · Solicitar rescate", { kind: "danger", hu: "HU-21" }) +
     go("comunicar", "Comunicar necesidad", "outline", "HU-12")
   );
 }
 function tools() {
-  return `<details class="workspace-options" data-panel="workspace-options"><summary>Opciones del entorno</summary><div class="stack">${view === "sector" ? panel("Confirmar llegadas", `<p>Completa los rescates antes de registrar las demás llegadas del sector.</p>${state.sectors.map((x) => btn("sectorArrivalDialog", `Registrar llegadas de ${x.name}`, { kind: "outline", payload: { sector: x.name } })).join("")}`) : ""}<div class="app-tools"><a href="#landing">Volver al inicio</a><a href="#/recorridos">Cambiar perfil</a>${btn("contrast", state.prefs.contrast ? "Modo estándar" : "Alto contraste", { hu: "HU-05" })}${btn("resetDialog", "Restablecer entorno")}<a href="docs/limitaciones-tecnicas.md" target="_blank" rel="noreferrer">Alcance del entorno de prueba</a></div></div></details>`;
+  return "";
 }
 function titleHTML(title) {
   if (view === "alerta" && state.prefs.contrast)
@@ -174,7 +179,8 @@ function render(focus = true) {
     return;
   }
   if (view === "recorridos") {
-    root.innerHTML = `<main id="main-content" class="demo-list"><h1 tabindex="-1">EvacuAccess</h1>${environmentNotice()}<h2>Elige cómo ingresar</h2><p>Accede a tu perfil para consultar rutas, solicitar asistencia o coordinar la evacuación.</p>${entryButtons()}<a href="#landing">Volver al inicio</a></main>`;
+    root.innerHTML = `<main id="main-content" class="demo-list proto-screen"><img class="proto-trazado" src="assets/icons/marca-trazado.svg" alt="" width="210" height="94" aria-hidden="true"><div class="proto-brand-row"><h1 tabindex="-1">EvacuAccess</h1><img class="proto-logo" src="assets/icons/evacuaccess-logo.svg" alt="" width="48" height="48"></div><h2>Prototipo académico · Desktop</h2><p>Elige un recorrido. Todos pertenecen a la misma plataforma; no hay saltos entre dispositivos.</p><div class="proto-list">${entryButtons()}</div><p class="proto-footnote">Integraciones simuladas. Sin destellos, comunicaciones externas ni protocolos físicos no validados.</p><p class="proto-back"><a href="#landing">Volver a la landing</a></p></main>`;
+    document.title = "EvacuAccess · Prototipo académico";
     return;
   }
   const denied =
@@ -204,8 +210,8 @@ function render(focus = true) {
           : userLinks;
   const side = noNav
     ? ""
-    : `<nav class="sidebar" id="role-navigation" aria-label="Navegación del rol"><p class="sidebar-title">${state.role === "admin" ? "Centro de control" : state.role === "brigadista" ? "Brigada · Sector norte" : "Mi EvacuAccess"}</p>${links.map(([v, label]) => (v === view ? `<span class="btn outline current" aria-current="page">${label}</span>` : `<a class="btn outline" href="#/${v}">${label}</a>`)).join("")}<p class="system-state">Sede Central · Edificio B</p></nav>`;
-  root.innerHTML = `<div class="app" data-ui><header class="app-header"><a class="brand" href="#landing">EvacuAccess</a><p class="context">Sede Central · Edificio B</p><p class="mobile-context">Sede Central</p>${!noNav ? '<button type="button" class="menu-toggle" data-action="menu" aria-controls="role-navigation" aria-expanded="false">Menú</button>' : ""}</header>${environmentNotice()}<div class="workspace">${side}<div class="work-panel"><main id="main-content" class="scroll-area"><div data-view="${view}" class="content ${data.emergency ? "alert-view" : ""}" ${data.hu ? `data-hu="${data.hu}"` : ""}><p class="breadcrumb">${data.breadcrumb || `${state.role === "admin" ? "Administrador" : state.role === "brigadista" ? "Brigadista" : state.role === "visitante" ? "Visitante" : "Usuario"} · Sede Central / Edificio B`}</p><h1 tabindex="-1">${titleHTML(data.title)}</h1>${feedback ? `<div class="feedback ${isError ? "error" : ""}" ${isError ? 'role="alert"' : ""}>${esc(feedback)}</div>` : ""}${data.body}${tools()}</div></main><footer class="persistent" aria-label="Acciones persistentes">${footer(view)}</footer></div></div></div>`;
+    : `<nav class="sidebar" id="role-navigation" aria-label="Navegación del rol"><p class="sidebar-title">${state.role === "admin" ? "Centro de control" : state.role === "brigadista" ? "Brigada · Sector norte" : "Mi EvacuAccess"}</p>${links.map(([v, label]) => (v === view ? `<span class="btn outline current" aria-current="page">${label}</span>` : `<a class="btn outline" href="#/${v}">${label}</a>`)).join("")}<p class="system-state"><span class="status-dot" aria-hidden="true">●</span> Sistemas simulados<br>Actualización muestra</p></nav>`;
+  root.innerHTML = `<div class="app" data-ui><header class="app-header"><a class="brand" href="#landing">EvacuAccess</a><p class="context">Sede Central · Edificio B | Prototipo académico</p><p class="mobile-context">Sede Central</p>${!noNav ? '<button type="button" class="menu-toggle" data-action="menu" aria-controls="role-navigation" aria-expanded="false">Menú</button>' : ""}</header><div class="workspace">${side}<div class="work-panel"><main id="main-content" class="scroll-area"><div data-view="${view}" class="content ${data.emergency ? "alert-view" : ""}" ${data.hu ? `data-hu="${data.hu}"` : ""}><p class="breadcrumb">${data.breadcrumb || `${state.role === "admin" ? "Administrador" : state.role === "brigadista" ? "Brigadista" : state.role === "visitante" ? "Visitante" : "Usuario"} · Sede Central / Edificio B`}</p><h1 tabindex="-1">${titleHTML(data.title)}</h1>${feedback ? `<div class="feedback ${isError ? "error" : ""}" ${isError ? 'role="alert"' : ""}>${esc(feedback)}</div>` : ""}${data.body}${tools()}</div></main><footer class="persistent" aria-label="Acciones persistentes">${footer(view)}</footer></div></div></div>`;
   document.title = `${data.title} · EvacuAccess`;
   root.querySelectorAll("details[data-panel]").forEach((node) => {
     node.open = openedPanels.includes(node.dataset.panel);

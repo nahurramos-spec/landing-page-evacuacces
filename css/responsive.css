@@ -251,8 +251,19 @@
     font-size: 2rem;
   }
   .feature-list,
-  .entry-grid {
+  .entry-grid,
+  .profile-list {
     grid-template-columns: 1fr;
+  }
+  .hero-actions .btn,
+  .solution-cta {
+    width: 100%;
+    min-width: 0;
+  }
+  .proto-trazado {
+    width: 140px;
+    height: auto;
+    right: 8px;
   }
   .entry-grid .btn:last-child {
     grid-column: auto;

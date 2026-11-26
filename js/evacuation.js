@@ -31,8 +31,8 @@ export function userView(view, s) {
         title: "Iniciar sesión",
         breadcrumb: "Acceso a la plataforma",
         body: `<h2 class="intro-title">Una plataforma para todas las personas</h2><p>Gestiona tu accesibilidad, recibe orientación y coordina la evacuación desde cualquier pantalla.</p>${panel(
-          "Elige tu perfil",
-          `<p>Selecciona el perfil con el que quieres ingresar.</p>${[
+          "Acceso de demostración",
+          `<p>Datos precargados. Elige el rol autorizado para recorrer el prototipo. No se valida una identidad real.</p>${[
             ["general", "Usuario · María López", "usuario", "perfil"],
             [
               "brigadista",
@@ -47,13 +47,13 @@ export function userView(view, s) {
               btn("entry", label, { payload: { entry, role, view } }),
             )
             .join("")}`,
-        )}`,
+        )}${panel("Prototipo académico", "<p>No es un sistema de emergencia certificado. Todas las emergencias y comunicaciones de esta demostración son simuladas.</p>", "info")}`,
       };
     case "perfil":
       return {
         title: "Perfil de accesibilidad",
         hu: "HU-05 HU-08",
-        body: `<form id="preferences" class="stack">${panel("1. Tus necesidades", `<p>Selecciona de forma independiente. Puedes combinar las opciones y editarlas después.</p>${["Discapacidad auditiva", "Discapacidad visual", "Movilidad reducida"].map((n, i) => check("need" + i, n, s.prefs.needs.includes(n))).join("")}`)}${panel("2. Cómo quieres recibir las alertas", `<p>Texto siempre disponible. Voz y vibración dependen del dispositivo.</p>${check("voice", "Instrucciones por voz", s.prefs.voice)}${check("haptic", "Vibración háptica cuando esté disponible", s.prefs.haptic)}${check("contrast", "Modo mate · Alto contraste", s.prefs.contrast)}<label class="field" for="text-size">Tamaño de texto · 100 % a 200 %<select id="text-size" name="text"><option value="100" ${s.prefs.text === 100 ? "selected" : ""}>100 %</option><option value="150" ${s.prefs.text === 150 ? "selected" : ""}>150 %</option><option value="200" ${s.prefs.text === 200 ? "selected" : ""}>200 %</option></select></label>`)}<button class="btn" type="submit">Guardar preferencias</button></form>`,
+        body: `<form id="preferences" class="stack">${panel("1. Tus necesidades", `<p>Selecciona de forma independiente. Puedes combinar las opciones y editarlas después.</p>${["Discapacidad auditiva", "Discapacidad visual", "Movilidad reducida"].map((n, i) => check("need" + i, n, s.prefs.needs.includes(n))).join("")}`)}${panel("2. Cómo quieres recibir las alertas", `<p>Texto siempre disponible. Voz y vibración dependen del dispositivo y se simulan aquí.</p>${check("voice", "Instrucciones por voz", s.prefs.voice)}${check("haptic", "Vibración háptica", s.prefs.haptic)}${check("contrast", "Modo mate · Alto contraste", s.prefs.contrast)}<label class="field" for="text-size">Tamaño de texto · 100 % → 200 %<select id="text-size" name="text"><option value="100" ${s.prefs.text === 100 ? "selected" : ""}>100 %</option><option value="150" ${s.prefs.text === 150 ? "selected" : ""}>150 %</option><option value="200" ${s.prefs.text === 200 ? "selected" : ""}>200 %</option></select></label>`)}<button class="btn" type="submit">Guardar preferencias</button></form>`,
       };
     case "inicio":
       return {
@@ -64,14 +64,14 @@ export function userView(view, s) {
       return {
         title: "Plan Personalizado de Evacuación",
         hu: "HU-25",
-        body: `${panel("Asistencia de movilidad", `<p>Silla de ruedas manual · No utilizar escaleras<br>Ruta amplia · Rampa de referencia: 6 %<br>Ritmo personal de referencia: ${String(s.ppe.pace).replace(".", ",")} m/s</p><form id="ppe" class="stack"><label for="pace" class="field">Ritmo de desplazamiento (m/s)<input id="pace" name="pace" type="number" min="0.1" max="1.5" step="0.1" value="${s.ppe.pace}" required></label><button class="btn outline" type="submit">Confirmar silla manual y ritmo</button></form><p class="${eta(s) > s.ppe.margin ? "danger-text" : "safe-text"}"><strong>Tiempo adaptado: ${eta(s)} min · ${eta(s) > s.ppe.margin ? "Supera el margen" : "Dentro del margen"} de referencia de ${s.ppe.margin} min</strong></p>${note("Estimación con datos de prueba.")}`)}${panel("Contactos de apoyo", "<p>Brigada autorizada · Comunicación por texto y gestos.</p>")}${go("alerta", "Ver alerta de emergencia")}${go("ruta", "Explorar ruta sin escaleras")}`,
+        body: `<form id="ppe" class="stack"><input type="hidden" name="pace" value="${s.ppe.pace}">${panel("Asistencia de movilidad", `<p>Silla de ruedas manual · No utilizar escaleras<br>Ancho de paso requerido: 90 cm o más<br>Ritmo personal de referencia: ${String(s.ppe.pace).replace(".", ",")} m/s</p><button class="btn outline" type="submit">Confirmar silla manual y ritmo</button>`)}${panel("Contactos de apoyo · 2 de 2", "<p>Lucía Ramos · +51 966 666 101<br>Diego López · +51 966 666 102<br>Datos ficticios. Avisos SMS y push simulados.</p>")}${note("Privacidad: PPE disponible solo para la brigada autorizada. El almacenamiento y la autorización del servidor no están implementados.")}<button class="btn" type="submit">Guardar PPE</button></form>`,
       };
     case "alerta":
       return {
         title: `Evacuar por ${s.alert.event.toLowerCase()}${s.prefs.contrast ? " · Alto contraste" : ""}`,
         hu: "HU-02 HU-03 HU-06",
         emergency: true,
-        body: `${panel(`Emergencia ${s.alert.active ? "activa" : "finalizada"} · ${s.alert.event}`, '<p>Mantén la calma. Sigue la ruta indicada.</p><p class="small-copy"><strong>Vibración opcional · Voz opcional · Sin destellos</strong></p>', "emergency", "HU-03")}<p>Toca el botón para confirmar que recibiste la alerta.</p>${btn("confirmAlert", s.alert.confirmed ? "✓ Alerta confirmada · Evacuando" : "✓ Estoy enterado", { kind: "acknowledge", hu: "HU-06", disabled: !s.alert.active || s.alert.confirmed })}<p>Al confirmar: estado «Evacuando» y detención de la vibración.</p>${s.alert.confirmed ? go("ruta", "Continuar ruta accesible", "", "HU-07") : ""}${btn("contrast", s.prefs.contrast ? "Usar alerta estándar" : "Activar alto contraste", { kind: "outline", hu: "HU-05" })}${btn("vibrate", "Probar vibración de alerta", { kind: "outline", hu: "HU-02" })}${btn("speak", "Escuchar instrucciones", { kind: "outline", hu: "HU-04" })}${go("comunicar", "Ver tarjetas de comunicación", "outline", "HU-12")}`,
+        body: `${panel(`Emergencia ${s.alert.active ? "activa" : "finalizada"} · ${s.alert.event}`, '<p>Mantén la calma. Sigue la ruta indicada en esta demostración.</p><p class="small-copy"><strong>Vibración simulada · Voz simulada · Sin destellos</strong></p>', "emergency", "HU-03")}<p>Toca el botón para confirmar que recibiste la alerta.</p>${btn("confirmAlert", s.alert.confirmed ? "✓ Alerta confirmada · Evacuando" : "✓ Estoy enterado", { kind: "acknowledge", hu: "HU-06", disabled: !s.alert.active || s.alert.confirmed })}<p>Al confirmar: estado «Evacuando» y detención de la vibración.</p>${s.alert.confirmed ? go("ruta", "Continuar ruta accesible", "", "HU-07") : ""}${btn("contrast", s.prefs.contrast ? "Usar alerta estándar" : "Activar alto contraste", { kind: "outline", hu: "HU-05" })}${btn("vibrate", "Probar vibración de alerta", { kind: "outline", hu: "HU-02" })}${btn("speak", "Escuchar instrucciones", { kind: "outline", hu: "HU-04" })}${go("comunicar", "Ver tarjetas de comunicación", "outline", "HU-12")}`,
       };
     case "ruta":
       return {
@@ -79,39 +79,39 @@ export function userView(view, s) {
           ? "Ruta accesible recalculada"
           : "Sigue de frente",
         hu: "HU-07 HU-17 HU-18",
-        body: `${panel("Evacuando · Sin escaleras", `<p>${s.route.blocked ? esc(s.route.notice) : "Avanza 20 metros hacia la salida norte."}</p>`, "info")}<section class="direction"><div class="arrow-slot">${icon("imgFrame2-307")}</div><h2>${s.route.step < 4 ? "De frente" : "Llegada al destino"}</h2><p class="tag">Paso ${s.route.step} de 4 · ${s.route.blocked ? "Ascensores bloqueados · Desvío habilitado" : "Vía libre"} · Piso 2</p><progress value="${s.route.step}" max="4" aria-label="Progreso de la ruta">${s.route.step}/4</progress></section>${panel("Punto de encuentro", `<p>${esc(s.route.destination)} · a ${s.route.blocked ? s.refuges.find((x) => x.id === s.selectedRefuge)?.distance || 0 : s.ppe.distance} m<br>Tiempo adaptado: ${eta(s)} min · ${eta(s) > s.ppe.margin ? "Supera" : "Dentro del"} margen de referencia</p>`)}${btn("speak", "Repetir instrucción", { kind: "outline", hu: "HU-04" })}${s.route.step < 4 ? btn("nextStep", "Continuar al siguiente movimiento", { hu: "HU-07" }) : go("refugio", "Consultar llegada al refugio")}${go("mapa", "Ver mapa")}${controls("route-controls", btn("block", "Bloquear ascensores y recalcular", { kind: "outline", hu: "HU-18" }))}${btn("elevator", "Consultar ascensores 1 y 2", { kind: "outline", hu: "HU-18" })}${btn("safeDialog", "Ya estoy fuera / Fuera de peligro", { kind: "success", hu: "HU-10" })}${note("Ruta de prueba · Sin posicionamiento real.")}`,
+        body: `${panel("Evacuando · Sin escaleras", `<p>${s.route.blocked ? esc(s.route.notice) : "Avanza 20 metros hacia la salida norte."}</p>`, "info")}<section class="direction"><div class="arrow-slot">${icon("imgFrame2-307")}</div><h2>${s.route.step < 4 ? "De frente" : "Llegada al destino"}</h2><p class="tag">Paso ${s.route.step} de 4 · ${s.route.blocked ? "Ascensores bloqueados · Desvío habilitado" : "Vía libre · Baliza B-204 simulada"}</p></section>${panel("Punto de encuentro", `<p>${esc(s.route.destination)} · a ${s.route.blocked ? s.refuges.find((x) => x.id === s.selectedRefuge)?.distance || 0 : s.ppe.distance} m<br>Tiempo adaptado: ${eta(s)} min · ${eta(s) > s.ppe.margin ? "Supera" : "Dentro del"} margen de demostración</p>`)}${btn("speak", "Repetir instrucción", { kind: "outline", hu: "HU-04" })}${s.route.step < 4 ? btn("nextStep", "Continuar al siguiente movimiento", { hu: "HU-07" }) : go("refugio", "Consultar llegada al refugio")}${go("mapa", "Ver mapa")}${btn("elevator", "Consultar ascensores 1 y 2", { kind: "outline", hu: "HU-18" })}${btn("safeDialog", "Ya estoy fuera / Fuera de peligro", { kind: "success", hu: "HU-10" })}`,
       };
     case "mapa":
       return {
         title: "Mapa de evacuación",
         hu: "HU-17 HU-32",
-        body: `${map(s)}${panel("Tu ubicación", "<p>Edificio B · Piso 2 · Aula 204.</p>", "info")}${go("ruta", "Continuar ruta accesible")}${go("refugio", "Consultar refugios")}${controls("map-controls", btn("block", "Bloquear ascensores y recalcular", { kind: "outline", hu: "HU-18" }))}`,
+        body: `${map(s)}${panel("Ubicación de demostración", "<p>Edificio B · Piso 2 · Aula 204.<br>La ubicación interior y las balizas son simuladas.</p>", "info")}${go("ruta", "Continuar ruta accesible")}${go("refugio", "Consultar refugios")}`,
       };
     case "sos":
       return {
         title:
           r.status === "failed"
-            ? "No se pudo registrar el SOS"
+            ? "No se pudo enviar el SOS"
             : r.status === "rescued"
               ? "Rescate registrado"
-              : "Solicitud SOS registrada",
+              : "Solicitud SOS enviada",
         hu: "HU-21 HU-24",
-        body: `${r.status === "failed" ? "" : icon("imgFrame2-499")}${panel(r.status === "failed" ? "Fallo de envío" : r.status === "rescued" ? "Rescate registrado" : "Solicitud registrada", `<p>SOS ${r.id} · ${esc(p.name)}<br>Edificio B · Piso 2 · Aula 204<br>Ubicación de prueba. ${r.status === "failed" ? "La solicitud está guardada y puedes reintentar." : r.status === "rescued" ? "La llegada a zona segura está confirmada." : b ? `Asignada a ${esc(b.name)}.` : "La solicitud está pendiente de asignación."}</p>`, r.status === "failed" ? "danger-panel" : "success-panel")}${r.status === "failed" ? btn("sendSOS", "Reintentar envío", { hu: "HU-21" }) : go("asistencia", "Consultar brigadista asignado", "", "HU-24")}${go("comunicar", "Comunicar una necesidad")}${controls("sos-controls", btn("failSOS", "Provocar fallo de envío", { kind: "outline", hu: "HU-21", disabled: !!r.assigned || r.status === "rescued" }))}`,
+        body: `${r.status === "failed" ? "" : icon("imgFrame2-499")}${panel(r.status === "failed" ? "Fallo de envío" : r.status === "rescued" ? "Rescate registrado" : "Solicitud enviada", `<p>SOS ${r.id} · ${esc(p.name)}<br>Edificio B · Piso 2 · Aula 204<br>${r.status === "failed" ? "La solicitud está guardada y puedes reintentar." : r.status === "rescued" ? "La llegada a zona segura está confirmada." : b ? `Ubicación interior simulada. Asignada a ${esc(b.name)}.` : "Ubicación interior simulada. El centro de control ha recibido la solicitud en esta demostración."}</p>`, r.status === "failed" ? "danger-panel" : "success-panel")}${r.status === "failed" ? btn("sendSOS", "Reintentar envío", { hu: "HU-21" }) : go("asistencia", "Consultar brigadista asignado", "", "HU-24")}${go("comunicar", "Comunicar una necesidad")}${btn("failSOS", "Ver fallo de envío simulado", { kind: "outline", hu: "HU-21", disabled: !!r.assigned || r.status === "rescued" })}`,
       };
     case "asistencia":
       return {
         title: b ? "Brigadista en camino" : "Estado de la asistencia",
         hu: "HU-21 HU-24",
         body: b
-          ? `${panel(`${b.name} · Brigadista`, `<div class="row"><img class="portrait" src="${b.photo}" alt="${esc(b.name)}"><div class="stack"><p>${esc(b.badge)} · ${r.id} · Sector ${esc(b.sector)}</p><p class="eta">Llega en ${b.eta} min</p></div></div><p>Comunicación por texto y gestos.</p>${note("Identidad y tiempo estimado de prueba.")}`)}${go("chat", "Abrir chat de emergencia", "")}${go("comunicar", "Mostrar tarjetas de comunicación")}${btn("safeDialog", "Llegué a zona segura", { kind: "success", hu: "HU-10" })}${go("sos", "Volver a la solicitud")}`
-          : `${panel("Pendiente de asignación", `<p>${r.id} · ${esc(p.name)}<br>La solicitud está registrada y aún no tiene un brigadista asignado.</p>`, "info")}${go("comunicar", "Comunicar una necesidad")}${go("sos", "Volver a la solicitud")}${controls("assignment-shortcut", btn("entry", "Gestionar asignación", { payload: { entry: "admin", role: "admin", view: "asignar" } }))}`,
+          ? `${panel(`${b.name} · Brigadista`, `<div class="row"><img class="portrait" src="${b.photo}" alt="${esc(b.name)}"><div class="stack"><p>${esc(b.badge)} · ${r.id} · Sector ${esc(b.sector)}</p><p class="eta">Llega en ${b.eta} min</p></div></div><p>Comunicación por texto y gestos.</p>${note("Identidad y tiempo estimado de demostración.")}`)}${go("chat", "Abrir chat de emergencia", "")}${go("comunicar", "Mostrar tarjetas de comunicación")}${btn("safeDialog", "Llegué a zona segura", { kind: "success", hu: "HU-10" })}${go("sos", "Volver a la solicitud")}`
+          : `${panel("Pendiente de asignación", `<p>${r.id} · ${esc(p.name)}<br>La solicitud está enviada y aún no tiene un brigadista asignado.</p>`, "info")}${go("comunicar", "Comunicar una necesidad")}${go("sos", "Volver a la solicitud")}`,
       };
 
     case "comunicar":
       return {
         title: "Comunica lo que necesitas",
         hu: "HU-08 HU-12",
-        body: `<p>Toca una tarjeta para mostrarla en grande.</p><div class="card-grid">${cards.map(([text, name]) => btn("showCard", `${icon(cardIcon(name))}<span>${text}</span>`, { kind: "outline communication-card", hu: "HU-12", payload: { message: text, icon: name } })).join("")}</div>${btn("gestures", "Requiero comunicación gestual / señas", { hu: "HU-08" })}<p>La necesidad de comunicación se incluirá en tu solicitud de asistencia.</p>${p.needCard ? panel("Necesidad enviada", `<p>${esc(p.needCard)}</p>`, "info") : ""}${go("chat", "Abrir chat rápido")}`,
+        body: `<p>Toca una tarjeta para mostrarla en grande.</p><div class="card-grid">${cards.map(([text, name]) => btn("showCard", `${icon(cardIcon(name))}<span>${text}</span>`, { kind: "outline communication-card", hu: "HU-12", payload: { message: text, icon: name } })).join("")}</div>${btn("gestures", "Requiero comunicación gestual / señas", { hu: "HU-08" })}${note("La ayuda gestual prioriza personal con certificación en lengua de señas. Priorización simulada.")}${p.needCard ? panel("Necesidad enviada", `<p>${esc(p.needCard)}</p>`, "info") : ""}`,
       };
     case "chat":
       return {
@@ -153,15 +153,15 @@ export function userView(view, s) {
       };
     case "qr":
       return {
-        title: "Registro de visitantes",
+        title: "Registro mediante QR",
         breadcrumb: "Visitante · Sede Central / Edificio B",
-        body: `${panel("Registro de visitantes", `<p>Registra tu visita y tus necesidades de accesibilidad, sin instalar una aplicación.</p>${icon("imgFrame2-1459", "", "qr-icon")}<p><strong>Registro de visitantes</strong></p>`, "info")}${go("visitante", "Abrir registro de visitantes", "")}${go("acceso", "Volver al acceso")}`,
+        body: `${panel("Registro de visitantes", `<p>Acceso web sin instalación. Este botón representa el escaneo del QR de recepción. No se activa la cámara.</p>${icon("imgFrame2-1459", "", "qr-icon")}<p><strong>QR · Simulación de acceso</strong></p>`, "info")}${go("visitante", "Escanear QR simulado y abrir registro", "")}${go("acceso", "Volver al acceso de demostración")}`,
       };
     case "visitante":
       return {
         title: "Registro de visitante",
         breadcrumb: "Visitante · Sede Central / Edificio B",
-        body: `<form id="visitor" class="stack">${panel("Datos necesarios para el ingreso", `<p>Completa los datos de tu visita. Utiliza únicamente datos de prueba.</p><label class="visitor-field" for="visitor-name"><span>Nombre</span><input id="visitor-name" name="name" value="Elena Soto" maxlength="60" required autocomplete="off"></label><label class="visitor-field" for="destination"><span>Destino</span><input id="destination" name="destination" value="Edificio B · Recepción" maxlength="80" required autocomplete="off"></label><label class="sr-only" for="visitor-needs">Necesidad de accesibilidad</label><select id="visitor-needs" class="visitor-needs" name="needs"><option value="Texto e indicaciones visuales">Texto y señales visuales</option><option>Movilidad reducida</option><option>Discapacidad visual</option><option>Comunicación gestual / señas</option></select>`)}<button class="btn" type="submit">Registrar ingreso</button></form>`,
+        body: `<form id="visitor" class="stack">${panel("Datos necesarios para el ingreso", `<p>Formulario precargado de demostración. No introduzcas datos personales reales.</p><label class="visitor-field" for="visitor-name"><span>Nombre</span><input id="visitor-name" name="name" value="Elena Soto" maxlength="60" required autocomplete="off"></label><label class="visitor-field" for="destination"><span>Destino</span><input id="destination" name="destination" value="Edificio B · Recepción" maxlength="80" required autocomplete="off"></label><label class="sr-only" for="visitor-needs">Necesidad de accesibilidad</label><select id="visitor-needs" class="visitor-needs" name="needs"><option value="Texto e indicaciones visuales">Necesidad: texto e indicaciones visuales</option><option>Movilidad reducida</option><option>Discapacidad visual</option><option>Comunicación gestual / señas</option></select>`)}<button class="btn" type="submit">Registrar ingreso</button>${note("Se muestra un recorrido con datos de ejemplo. Los campos no almacenan información ni validan identidad.")}</form>`,
       };
 
     case "visita-ok": {

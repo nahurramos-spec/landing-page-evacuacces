@@ -117,7 +117,64 @@
   font-size: 0.875rem;
 }
 .system-state {
-  color: var(--muted);
+  color: var(--safe);
+  font-size: 0.9375rem;
+  line-height: 1.35;
+}
+.status-dot {
+  color: var(--safe);
+}
+.content[data-view="perfil"] .check {
+  justify-content: center;
+}
+.proto-screen {
+  position: relative;
+  background: linear-gradient(90deg, #f6fbff 0%, #e4f2f6 100%);
+  overflow: hidden;
+}
+.proto-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.proto-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: block;
+}
+.proto-trazado {
+  position: absolute;
+  top: 8px;
+  right: 24px;
+  width: 210px;
+  height: 94px;
+  pointer-events: none;
+}
+.proto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.btn.proto-btn {
+  background: linear-gradient(90deg, #16365a 0%, #1e4d71 100%);
+  border: 1px solid var(--ink);
+  border-radius: 14px;
+  min-height: 64px;
+  color: #ffffff;
+  box-shadow: 0 3px 4px rgba(13, 41, 61, 0.12);
+}
+.btn.proto-btn:hover {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+.proto-footnote {
+  font-size: 1rem;
+  color: var(--ink);
+}
+.proto-back {
+  font-size: 1rem;
 }
 @media (max-width: 600px) {
   .environment-notice {

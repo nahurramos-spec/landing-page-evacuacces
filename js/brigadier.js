@@ -19,30 +19,46 @@ export function brigadeView(view, s) {
       return {
         title: "Misiones de rescate",
         hu: "HU-34 HU-37",
-        body: `<p>${s.sos.filter((r) => r.status !== "rescued").length} solicitudes activas · ${s.alert.event}</p>${s.sos
-          .map((r) => {
+        body: `<p>${s.sos.filter((r) => r.status !== "rescued").length} misiones activas · ${s.alert.event}</p>${s.sos
+          .map((r, index) => {
             const m = s.missions.find((x) => x.requestId === r.id),
-              b = s.brigadiers.find((x) => x.id === r.assigned),
-              p = s.people.find((x) => x.id === r.personId);
-            return panel(
-              `${r.id} · ${m ? missionLabels[m.status] : "Pendiente"}`,
-              `<p>${esc(p.name)} · Edificio ${p.building} · Piso ${p.floor} · ${esc(p.location)}<br>${esc(p.needs.join(" · "))}${b ? `<br>Asignado a ${esc(b.name)}` : ""}</p>${m ? btn("openMission", m.status === "assigned" ? `Aceptar misión ${r.id}` : `Ver misión ${r.id}`, { payload: { id: r.id }, hu: "HU-37" }) : btn("queueMission", "Aceptar solicitud", { kind: "outline", payload: { id: r.id }, hu: "HU-37", disabled: r.status === "failed" || r.status === "rescued" })}`,
+              p = s.people.find((x) => x.id === r.personId),
+              floor = p.floor === 0 ? "Planta baja" : `Piso ${p.floor}`;
+            if (index === 0)
+              return panel(
+                `${r.id} · ${m ? (m.status === "assigned" ? "Asignada a ti" : missionLabels[m.status]) : "Pendiente"}`,
+                `<p>${esc(p.name)} · Usuario sordo y movilidad reducida<br>Edificio ${p.building} · ${floor} · ${esc(p.location)}<br>Comunicación: ${esc(p.channel)}.</p>${m ? btn("openMission", m.status === "assigned" ? `Aceptar misión ${r.id}` : `Ver misión ${r.id}`, { payload: { id: r.id }, hu: "HU-37" }) : btn("queueMission", `Aceptar misión ${r.id}`, { payload: { id: r.id }, hu: "HU-37" })}`,
+              );
+            return btn(
+              "queueMission",
+              `<span class="request-title">${esc(r.id)} · ${m ? missionLabels[m.status] : "Pendiente"}</span><span class="request-meta">${esc(p.needs[0] || p.name)} · Edificio ${p.building} · ${floor}${p.location && p.location !== "Sector de muestra" ? ` · ${esc(p.location)}` : ""}<br>Comunicación: ${esc(p.channel)}</span>`,
+              {
+                kind: "outline request-card",
+                hu: "HU-37",
+                payload: { id: r.id },
+                disabled: r.status === "failed" || r.status === "rescued",
+              },
             );
           })
           .join(
             "",
-          )}${go("masivo", "Selección de rescate múltiple")}${go("mapa-brigada", "Mapa operativo y sectores")}${go("sector", "Sector / Piso despejado")}${go("chat", "Chat rápido de emergencia")}`,
+          )}${go("mapa-brigada", "Mapa operativo y sectores")}${go("masivo", "Selección de rescate múltiple")}${go("sector", "Sector / Piso despejado")}`,
       };
     case "mision":
       return {
         title: `Rescate ${current?.id || "R-014"}`,
         hu: "HU-36 HU-37",
         body: current
-          ? `${panel(`${p.name} · ${current.id}`, `<p>${esc(p.needs.join(" · ") || "Necesidades no indicadas")}<br>Ubicación: Edificio ${p.building}, Piso ${p.floor}, ${esc(p.location)}<br>Destino: ${esc(s.route.destination)}, punto de encuentro.</p>${p.needCard ? `<p><strong>Necesidad comunicada:</strong> ${esc(p.needCard)}</p>` : ""}${current.status === "completed" ? '<p class="safe-text">Rescate registrado</p>' : ""}`)}${panel("Comunicación accesible", `<p>${esc(p.channel)}. No usa audio como canal principal. Evitar destellos por sensibilidad visual secundaria.</p>`, "info")}${panel("Plan de evacuación · PPE", `<p>Silla manual · Sin escaleras · Paso ≥ 90 cm<br>Requiere asistencia de movilidad.<br>Ritmo de referencia: ${String(s.ppe.pace).replace(".", ",")} m/s.</p>`)}${go("protocolo", "Consultar protocolo")}${btn("rescueDialog", "Marcar como Rescatado", { hu: "HU-37", payload: { ids: [current.id] }, disabled: current.status === "completed" })}${go("chat", "Abrir chat de emergencia")}${go("comunicar", "Mostrar tarjetas de comunicación")}`
+          ? `${panel(`${p.name} · ${current.id}`, `<p>Usuario sordo · Movilidad reducida<br>Ubicación: Edificio ${p.building}, Piso ${p.floor}, ${esc(p.location)}<br>Destino: ${esc(s.route.destination)}, punto de encuentro.</p>${p.needCard ? `<p><strong>Necesidad comunicada:</strong> ${esc(p.needCard)}</p>` : ""}${current.status === "completed" ? '<p class="safe-text">Rescate registrado</p>' : ""}`)}${panel("Comunicación accesible", `<p>${esc(p.channel)}. No usa audio como canal principal. Evitar destellos por sensibilidad visual secundaria.</p>`, "info")}${panel("PPE · Acceso autorizado", `<p>Silla manual · Sin escaleras · Paso ≥ 90 cm<br>Requiere asistencia de movilidad. Datos privados de demostración.</p>`)}${go("protocolo", "Consultar protocolo autorizado")}${btn("rescueDialog", "Marcar como Rescatado", { hu: "HU-37", payload: { ids: [current.id] }, disabled: current.status === "completed" })}${go("chat", "Abrir canal Push-To-Talk")}`
           : panel(
               "Sin misión asignada",
               `<p>Selecciona una misión para consultar sus necesidades y registrar el rescate.</p>${go("misiones", "Volver a misiones")}`,
             ),
+      };
+    case "observaciones":
+      return {
+        title: "Observaciones de brigada",
+        body: `${panel("Registro de campo", "<p>Registra incidentes, bloqueos o necesidades detectadas en el sector norte durante la evacuación.</p>")}${go("chat", "Abrir canal Push-To-Talk")}${go("misiones", "Volver a misiones")}`,
       };
 
     case "protocolo":

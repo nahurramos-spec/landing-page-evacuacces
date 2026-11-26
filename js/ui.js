@@ -19,32 +19,25 @@ export const panel = (title, body, kind = "", hu = "") =>
 export const icon = (name, alt = "", cls = "") =>
   `<img class="icon ${cls}" src="assets/icons/${name}.svg" alt="${esc(alt)}">`;
 export const note = (t) => `<p class="small-copy muted">${t}</p>`;
-export const environmentNotice = () =>
-  '<p class="environment-notice" role="note">Entorno de prueba · Servicios de emergencia no conectados</p>';
-export const controls = (id, body) =>
-  `<details class="scenario-controls" data-panel="${esc(id)}"><summary>Controles de prueba</summary><div class="stack">${body}</div></details>`;
+export const environmentNotice = () => "";
+export const controls = () => "";
 // Conserva los registros anteriores; adapta únicamente su presentación.
-export const productText = (value) =>
-  String(value ?? "")
-    .replaceAll("Preparado · Demostración", "Preparado · Sin enviar")
-    .replace(/prototipo académico/gi, "entorno de prueba")
-    .replace(/demostración/gi, "prueba")
-    .replace(/simulad[oa]s?/gi, "de prueba");
+export const productText = (value) => String(value ?? "");
 export const check = (name, label, checked = false) =>
   `<label class="check"><input type="checkbox" name="${name}" ${checked ? "checked" : ""}>${esc(label)}</label>`;
 export const entries = [
-  ["general", "Accesibilidad general", "usuario", "acceso"],
-  ["auditiva", "Discapacidad auditiva", "usuario", "alerta"],
-  ["visual", "Discapacidad visual", "usuario", "alerta"],
-  ["movilidad", "Movilidad reducida", "usuario", "ppe"],
-  ["brigadista", "Brigadista", "brigadista", "misiones"],
-  ["admin", "Administrador", "admin", "admin"],
-  ["visitante", "Visitante", "visitante", "qr"],
+  ["general", "01 Accesibilidad", "usuario", "acceso"],
+  ["auditiva", "02 Discapacidad auditiva", "usuario", "alerta"],
+  ["visual", "03 Discapacidad visual", "usuario", "alerta"],
+  ["movilidad", "04 Movilidad reducida", "usuario", "ppe"],
+  ["brigadista", "05 Brigadista", "brigadista", "misiones"],
+  ["admin", "06 Administrador", "admin", "admin"],
+  ["visitante", "07 Visitante", "visitante", "qr"],
 ];
 export const entryButtons = () =>
   entries
     .map(([entry, label, role, view]) =>
-      btn("entry", esc(label), { payload: { entry, role, view } }),
+      btn("entry", esc(label), { kind: "proto-btn", payload: { entry, role, view } }),
     )
     .join("");
 export const brigadeLabels = {
