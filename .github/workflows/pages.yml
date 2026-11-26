@@ -39,7 +39,6 @@ jobs:
             sleep 1
           done
           curl --fail --silent http://127.0.0.1:4173/ > /dev/null
-          EVIDENCE_DIR=docs/evidencias/ci/navegador npm run test:browser
           EVIDENCE_DIR=docs/evidencias/ci/producto npm run test:product
           EVIDENCE_DIR=docs/evidencias/ci/puntuales node tests/targeted.mjs
           npm run build

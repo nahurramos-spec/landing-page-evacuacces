@@ -58,9 +58,9 @@ page.on("response", (r) => {
 });
 await page.goto("http://127.0.0.1:4173/dist/");
 await page.locator("h1").waitFor();
-await page.getByRole("link", { name: "Comenzar", exact: true }).click();
+await page.getByRole("link", { name: "Iniciar prototipo", exact: true }).first().click();
 await page
-  .getByRole("button", { name: "Discapacidad auditiva", exact: true })
+  .getByRole("button", { name: "02 Discapacidad auditiva", exact: true })
   .click();
 await page.waitForURL("**/dist/#/alerta");
 await page.locator(".acknowledge").click();

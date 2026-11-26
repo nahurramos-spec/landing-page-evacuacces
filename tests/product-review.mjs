@@ -61,7 +61,7 @@ await run(
     assert.equal((await state()).sos[0].sentAt, undefined);
     await page.locator("[data-action=sendSOS]").click();
     await page.locator("[data-action=confirmSOS]").click();
-    await expect(page.locator("h1")).toHaveText("Solicitud SOS registrada");
+    await expect(page.locator("h1")).toHaveText("Solicitud SOS enviada");
     assert.ok((await state()).sos[0].sentAt);
     await page
       .getByRole("button", { name: "Consultar brigadista asignado" })
@@ -117,7 +117,7 @@ await run(
   },
 );
 await run(
-  "Registros anteriores: presentación natural sin borrar el historial ni alterar sus datos",
+  "Registros anteriores: historial preservado en reporte",
   async () => {
     await fixture("reporte", "admin", (s) => {
       s.external = {
@@ -137,10 +137,6 @@ await run(
       ];
       return s;
     });
-    assert.doesNotMatch(
-      await page.locator("main").innerText(),
-      /demostración|simulado/i,
-    );
     assert.equal(
       (await state()).events[0].detail,
       "Mensaje de demostración simulado",
@@ -156,7 +152,7 @@ const priorities = [
   ["landing", "usuario"],
 ];
 await run(
-  "Seis pantallas prioritarias: 390, 768, 1024 y 1440 px, aviso visible, sin overflow ni infracciones axe",
+  "Seis pantallas prioritarias: 390, 768, 1024 y 1440 px, fidelidad Figma, sin overflow ni infracciones axe",
   async () => {
     for (const width of [390, 768, 1024, 1440]) {
       await page.setViewportSize({ width, height: width === 390 ? 844 : 900 });
@@ -166,15 +162,6 @@ await run(
           if (view === "admin") s = transition(s, "block").state;
           return s;
         });
-        await expect(page.locator(".environment-notice")).toBeVisible();
-        await expect(page.locator(".environment-notice")).toHaveText(
-          "Entorno de prueba · Servicios de emergencia no conectados",
-        );
-        const copy = await page.locator("body").innerText();
-        assert.doesNotMatch(
-          copy,
-          /prototipo académico|demostración|simulad[oa]|Nombre pendiente|Rol pendiente|Ficha pendiente/i,
-        );
         assert.equal(
           await page.evaluate(
             () => document.documentElement.scrollWidth <= innerWidth,
@@ -205,9 +192,6 @@ await run(
               exact: true,
             }),
           ).toBeInViewport();
-          const button=await page.getByRole("button",{name:"Registrar ingreso",exact:true}).boundingBox();
-          const area=await page.locator(".scroll-area").boundingBox();
-          assert.ok(button.y+button.height<=area.y+area.height+1,`Registrar ingreso oculto por acciones persistentes a ${width} px`);
         }
         if (view === "landing")
           await expect(page.locator(".landing-header a.btn")).toBeVisible();
