@@ -17,6 +17,7 @@ import {
   environmentNotice,
 } from "./ui.js";
 import { landing } from "./landing.js";
+import { openPrototype } from "./prototype.js";
 import { userView, cards, cardIcon } from "./evacuation.js";
 import { adminView } from "./administration.js";
 import { brigadeView } from "./brigadier.js";
@@ -176,6 +177,11 @@ function render(focus = true) {
         document.getElementById(hash.slice(1))?.scrollIntoView(),
       );
     }
+    return;
+  }
+  if (view === "prototipo") {
+    document.title = "EvacuAccess · Recorridos";
+    openPrototype(root);
     return;
   }
   if (view === "recorridos") {

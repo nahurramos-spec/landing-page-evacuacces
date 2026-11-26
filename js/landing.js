@@ -1,5 +1,5 @@
 import { team } from "./team.js";
-import { entryButtons, btn, icon, esc } from "./ui.js";
+import { btn, icon, esc } from "./ui.js";
 export function landing() {
   const members = team.filter(
     (member) => member.name?.trim() && member.role?.trim(),
@@ -7,61 +7,5 @@ export function landing() {
   const teamSection = members.length
     ? `<section class="team" id="equipo"><div><h2>Nuestro equipo</h2><p>Personas comprometidas con una evacuación accesible.</p></div><div class="team-cards">${members.map((member) => `<article class="panel team-card"><h3>${esc(member.name)}</h3><p>${esc(member.role)}</p></article>`).join("")}</div></section>`
     : "";
-  return `<div class="landing"><header class="landing-header"><a class="brand brand-with-logo" href="#landing"><img class="header-logo" src="assets/icons/evacuaccess-logo.svg" alt="" width="36" height="36"><span>EvacuAccess</span></a><nav aria-label="Navegación principal"><a href="#problematica">Problemática</a><a href="#solucion">Solución</a><a href="#funcionalidades">Funcionalidades</a>${members.length ? '<a href="#equipo">Equipo</a>' : ""}<a class="btn proto-btn header-cta" href="#recorridos"><span class="desktop-text">Iniciar prototipo</span><span class="mobile-text">Ingresar</span></a></nav></header><main id="main-content"><section class="hero proto-hero"><img class="proto-trazado" src="assets/icons/marca-trazado.svg" alt="" width="210" height="94" aria-hidden="true"><div class="hero-copy"><div class="proto-brand-row"><span class="hero-kicker">Prototipo académico · Web responsive</span><img class="proto-logo" src="assets/icons/evacuaccess-logo.svg" alt="" width="48" height="48"></div><h1>Evacuar con accesibilidad</h1><p>Alertas comprensibles, rutas sin escaleras y asistencia coordinada en una misma plataforma.</p><div class="hero-actions"><a class="btn proto-btn" href="#recorridos">Iniciar prototipo</a><a class="btn outline" href="#/recorridos">Abrir pantalla de recorridos</a></div></div><div class="hero-product" data-ui><div class="product-top"><span>EvacuAccess</span><span class="product-top-context">Sede Central · Edificio B</span></div><div class="product-content"><div class="panel info"><h2>Evacuando · Sin escaleras</h2><p>Avanza 20 metros hacia la salida norte.</p></div><div class="direction"><div class="arrow-slot">${icon("imgFrame2-307")}</div><h2>De frente</h2><p class="tag">Paso 2 de 4 · Vía libre · Baliza B-204 simulada</p></div><div class="panel"><h3>Punto de encuentro</h3><p>Patio norte · a 80 m<br>Tiempo adaptado: 2 min · Dentro del margen de demostración</p></div>${btn("entry", "Ver ruta accesible", { kind: "proto-btn", payload: { entry: "movilidad", role: "usuario", view: "ruta" } })}</div></div></section><section class="problem" id="problematica"><div class="section-intro"><h2>Una alarma no llega igual a todos</h2><p>Escuchar una sirena, interpretar una indicación o desplazarse por una escalera puede ser una barrera durante una evacuación.</p></div><div class="stack"><div class="problem-card"><h3>Información que se pueda percibir</h3><p>Las personas con discapacidad auditiva necesitan indicaciones visuales y textuales. Quienes tienen baja visión necesitan contraste y una alternativa por voz.</p></div><div class="problem-card"><h3>Un trayecto que se pueda recorrer</h3><p>Las personas con movilidad reducida necesitan conocer rutas accesibles, refugios disponibles y el estado de su solicitud de asistencia.</p></div><div class="problem-card"><h3>Asistencia con contexto</h3><p>La brigada necesita saber dónde está la persona y cómo comunicarse con ella; administración necesita un censo coherente.</p></div></div></section><section class="solution" id="solucion"><div class="section-intro"><h2>Una respuesta accesible</h2><p>EvacuAccess reúne la orientación, la comunicación y la coordinación de la evacuación en un solo lugar.</p><a class="btn outline solution-cta" href="#recorridos">Elegir un recorrido</a></div><ol class="solution-steps"><li class="panel"><strong>1. Recibir y confirmar</strong><span>Una alerta estática identifica el evento y permite confirmar su recepción sin destellos.</span></li><li class="panel info"><strong>2. Orientarse y pedir ayuda</strong><span>La ruta evita escaleras y ofrece comunicación por texto, tarjetas y solicitudes SOS persistentes.</span></li><li class="panel"><strong>3. Coordinar y registrar</strong><span>Administración asigna la misión; la brigada registra el rescate y actualiza el censo en tiempo real.</span></li></ol></section><section class="features" id="funcionalidades"><div class="section-intro"><h2>De la alerta a la llegada</h2><p>Recibe información accesible, consulta tu ruta y coordina la asistencia desde la misma plataforma.</p></div><div class="feature-list">${[
-    [
-      "Alertas accesibles",
-      "Texto grande, confirmación, alto contraste y alternativas por voz o vibración sin destellos.",
-      "auditiva",
-      "usuario",
-      "alerta",
-      "Recibir una alerta",
-    ],
-    [
-      "Evacuación sin escaleras",
-      "Consulta el PPE, el plano operativo y el desvío hacia un refugio del mismo nivel cuando se bloquean los ascensores.",
-      "movilidad",
-      "usuario",
-      "ppe",
-      "Explorar una evacuación",
-    ],
-    [
-      "Comunicación y asistencia",
-      "Consulta tu solicitud SOS, muestra una tarjeta ampliada o comunícate con la brigada.",
-      "general",
-      "usuario",
-      "sos",
-      "Consultar asistencia",
-    ],
-    [
-      "Coordinación de brigadas",
-      "Acepta misiones, revisa el PPE autorizado y registra el rescate con confirmación.",
-      "brigadista",
-      "brigadista",
-      "misiones",
-      "Gestionar una misión",
-    ],
-    [
-      "Supervisión de la emergencia",
-      "Supervisa el censo, revisa las solicitudes prioritarias y coordina alertas por sector.",
-      "admin",
-      "admin",
-      "admin",
-      "Abrir el dashboard",
-    ],
-    [
-      "Reportes verificables",
-      "Revisa el historial de la evacuación y descarga el reporte de personas, misiones y acciones.",
-      "admin",
-      "admin",
-      "reporte",
-      "Consultar un reporte",
-    ],
-  ]
-    .map(
-      ([t, p, entry, role, view, label]) =>
-        `<article class="panel feature-item"><h3>${t}</h3><p>${p}</p>${btn("entry", label, { kind: "proto-btn", payload: { entry, role, view } })}</article>`,
-    )
-    .join(
-      "",
-    )}</div></section><section class="profiles" id="perfiles"><div class="section-intro"><h2>Una plataforma, cuatro roles</h2><p>Las preferencias de accesibilidad se combinan y se aplican en la misma experiencia responsive.</p></div><div class="profile-list"><article class="panel"><h3>Usuario</h3><p>Configura sus necesidades, confirma alertas y consulta su ruta o asistencia.</p></article><article class="panel"><h3>Brigadista</h3><p>Revisa misiones y necesidades, usa Push-To-Talk y registra el rescate.</p></article><article class="panel"><h3>Administrador</h3><p>Supervisa el censo, las solicitudes, las zonas de refugio y el historial.</p></article><article class="panel"><h3>Visitante</h3><p>Registra su ingreso mediante QR, indica sus necesidades y consulta la orientación del edificio.</p></article></div></section><section class="demo-section proto-screen" id="recorridos"><img class="proto-trazado" src="assets/icons/marca-trazado.svg" alt="" width="210" height="94" aria-hidden="true"><div class="proto-brand-row"><h2 class="proto-title">EvacuAccess</h2><img class="proto-logo" src="assets/icons/evacuaccess-logo.svg" alt="" width="48" height="48"></div><p class="proto-subtitle">Prototipo académico · Desktop</p><p class="proto-lead">Elige un recorrido. Todos pertenecen a la misma plataforma; no hay saltos entre dispositivos.</p><div class="proto-list">${entryButtons()}</div><p class="proto-footnote">Integraciones simuladas. Sin destellos, comunicaciones externas ni protocolos físicos no validados.</p></section>${teamSection}</main><footer class="landing-footer"><div><a class="brand brand-with-logo" href="#landing"><img class="header-logo" src="assets/icons/evacuaccess-logo.svg" alt="" width="32" height="32"><span>EvacuAccess</span></a><p>Sede Central · Edificio B | Prototipo académico</p></div><nav aria-label="Recursos"><a href="#recorridos">Iniciar prototipo</a><a href="#perfiles">Roles</a><a href="docs/limitaciones-tecnicas.md">Alcance del prototipo</a></nav><p>Orientación y asistencia accesibles</p></footer></div>`;
+  return `<div class="landing"><header class="landing-header"><a class="brand brand-with-logo" href="#landing"><img class="header-logo" src="assets/icons/evacuaccess-logo.svg" alt="" width="36" height="36"><span>EvacuAccess</span></a><nav aria-label="Navegación principal"><a href="#problematica">Problemática</a><a href="#solucion">Solución</a>${members.length ? '<a href="#equipo">Equipo</a>' : ""}<a class="btn proto-btn header-cta" href="#/prototipo">Iniciar EvacuAccess</a></nav></header><main id="main-content"><section class="hero proto-hero"><img class="proto-trazado" src="assets/icons/marca-trazado.svg" alt="" width="210" height="94" aria-hidden="true"><div class="hero-copy"><div class="proto-brand-row"><span class="hero-kicker">Prototipo académico · Web responsive</span><img class="proto-logo" src="assets/icons/evacuaccess-logo.svg" alt="" width="48" height="48"></div><h1>Evacuar con accesibilidad</h1><p>Alertas comprensibles, rutas sin escaleras y asistencia coordinada en una misma plataforma.</p><div class="hero-actions"><a class="btn proto-btn" href="#/prototipo">Iniciar EvacuAccess</a></div></div><div class="hero-product" data-ui><div class="product-top"><span>EvacuAccess</span><span class="product-top-context">Sede Central · Edificio B</span></div><div class="product-content"><div class="panel info"><h2>Evacuando · Sin escaleras</h2><p>Avanza 20 metros hacia la salida norte.</p></div><div class="direction"><div class="arrow-slot">${icon("imgFrame2-307")}</div><h2>De frente</h2><p class="tag">Paso 2 de 4 · Vía libre · Baliza B-204 simulada</p></div><div class="panel"><h3>Punto de encuentro</h3><p>Patio norte · a 80 m<br>Tiempo adaptado: 2 min · Dentro del margen de demostración</p></div>${btn("entry", "Ver ruta accesible", { kind: "proto-btn", payload: { entry: "movilidad", role: "usuario", view: "ruta" } })}</div></div></section><section class="problem" id="problematica"><div class="section-intro"><h2>Una alarma no llega igual a todos</h2><p>Escuchar una sirena, interpretar una indicación o desplazarse por una escalera puede ser una barrera durante una evacuación.</p></div><div class="stack"><div class="problem-card"><h3>Información que se pueda percibir</h3><p>Las personas con discapacidad auditiva necesitan indicaciones visuales y textuales. Quienes tienen baja visión necesitan contraste y una alternativa por voz.</p></div><div class="problem-card"><h3>Un trayecto que se pueda recorrer</h3><p>Las personas con movilidad reducida necesitan conocer rutas accesibles, refugios disponibles y el estado de su solicitud de asistencia.</p></div><div class="problem-card"><h3>Asistencia con contexto</h3><p>La brigada necesita saber dónde está la persona y cómo comunicarse con ella; administración necesita un censo coherente.</p></div></div></section><section class="solution" id="solucion"><div class="section-intro"><h2>Una respuesta accesible</h2><p>EvacuAccess reúne la orientación, la comunicación y la coordinación de la evacuación en un solo lugar.</p><a class="btn outline solution-cta" href="#/prototipo">Elegir un recorrido</a></div><ol class="solution-steps"><li class="panel"><strong>1. Recibir y confirmar</strong><span>Una alerta estática identifica el evento y permite confirmar su recepción sin destellos.</span></li><li class="panel info"><strong>2. Orientarse y pedir ayuda</strong><span>La ruta evita escaleras y ofrece comunicación por texto, tarjetas y solicitudes SOS persistentes.</span></li><li class="panel"><strong>3. Coordinar y registrar</strong><span>Administración asigna la misión; la brigada registra el rescate y actualiza el censo en tiempo real.</span></li></ol></section><section class="profiles" id="perfiles"><div class="section-intro"><h2>Una plataforma, cuatro roles</h2><p>Las preferencias de accesibilidad se combinan y se aplican en la misma experiencia responsive.</p></div><div class="profile-list"><article class="panel"><h3>Usuario</h3><p>Configura sus necesidades, confirma alertas y consulta su ruta o asistencia.</p></article><article class="panel"><h3>Brigadista</h3><p>Revisa misiones y necesidades, usa Push-To-Talk y registra el rescate.</p></article><article class="panel"><h3>Administrador</h3><p>Supervisa el censo, las solicitudes, las zonas de refugio y el historial.</p></article><article class="panel"><h3>Visitante</h3><p>Registra su ingreso mediante QR, indica sus necesidades y consulta la orientación del edificio.</p></article></div></section>${teamSection}</main><footer class="landing-footer"><div><a class="brand brand-with-logo" href="#landing"><img class="header-logo" src="assets/icons/evacuaccess-logo.svg" alt="" width="32" height="32"><span>EvacuAccess</span></a><p>Sede Central · Edificio B | Prototipo académico</p></div><nav aria-label="Recursos"><a href="#/prototipo">Iniciar EvacuAccess</a><a href="#perfiles">Roles</a><a href="docs/limitaciones-tecnicas.md">Alcance del prototipo</a></nav><p>Orientación y asistencia accesibles</p></footer></div>`;
 }

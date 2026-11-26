@@ -58,7 +58,9 @@ page.on("response", (r) => {
 });
 await page.goto("http://127.0.0.1:4173/dist/");
 await page.locator("h1").waitFor();
-await page.getByRole("link", { name: "Iniciar prototipo", exact: true }).first().click();
+await page.getByRole("link", { name: "Iniciar EvacuAccess", exact: true }).first().click();
+assert.ok((await page.locator(".prototype-view iframe").getAttribute("src")).includes("65%3A8131"));
+await page.getByRole("link", { name: "Usar la aplicación local" }).click();
 await page
   .getByRole("button", { name: "02 Discapacidad auditiva", exact: true })
   .click();

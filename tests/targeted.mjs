@@ -49,7 +49,7 @@ await page.reload();
 assert.equal(
   await page
     .locator(".landing-header")
-    .getByRole("link", { name: "Ingresar", exact: true })
+    .getByRole("link", { name: "Iniciar EvacuAccess", exact: true }).first()
     .isVisible(),
   true,
 );
