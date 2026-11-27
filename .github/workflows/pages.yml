@@ -41,6 +41,7 @@ jobs:
           curl --fail --silent http://127.0.0.1:4173/ > /dev/null
           EVIDENCE_DIR=docs/evidencias/ci/producto npm run test:product
           EVIDENCE_DIR=docs/evidencias/ci/puntuales node tests/targeted.mjs
+          node tests/native-screens.mjs
           npm run build
           EVIDENCE_DIR=docs/evidencias/ci/paquete npm run test:static
       - name: Conservar resultados de CI

@@ -17,10 +17,12 @@ import {
   environmentNotice,
 } from "./ui.js";
 import { landing } from "./landing.js";
-import { openPrototype } from "./prototype.js";
+import { secondaryView, followupActions, onLayoutChange } from "./secondary-views.js";
+
 import { userView, cards, cardIcon } from "./evacuation.js";
 import { adminView } from "./administration.js";
 import { brigadeView } from "./brigadier.js";
+let lastAction = "";
 let state = loadState(),
   view = "",
   feedback = "",
@@ -93,6 +95,7 @@ function commit(action, payload = {}, rerender = true) {
           ? ""
           : " · No se pudo guardar en este navegador; el estado se conserva en memoria."),
     );
+    lastAction = action;
     preferences();
     if (rerender) render(false);
     return true;
@@ -103,6 +106,7 @@ function commit(action, payload = {}, rerender = true) {
   }
 }
 function navigate(next) {
+  lastAction = "";
   feedback = "";
   if (location.hash === `#/${next}`) render();
   else location.hash = `/${next}`;
@@ -181,11 +185,11 @@ function render(focus = true) {
   }
   if (view === "prototipo") {
     document.title = "EvacuAccess · Recorridos";
-    openPrototype(root);
+    location.replace("#/recorridos");
     return;
   }
   if (view === "recorridos") {
-    root.innerHTML = `<main id="main-content" class="demo-list proto-screen"><img class="proto-trazado" src="assets/icons/marca-trazado.svg" alt="" width="210" height="94" aria-hidden="true"><div class="proto-brand-row"><h1 tabindex="-1">EvacuAccess</h1><img class="proto-logo" src="assets/icons/evacuaccess-logo.svg" alt="" width="48" height="48"></div><h2>Prototipo académico · Desktop</h2><p>Elige un recorrido. Todos pertenecen a la misma plataforma; no hay saltos entre dispositivos.</p><div class="proto-list">${entryButtons()}</div><p class="proto-footnote">Integraciones simuladas. Sin destellos, comunicaciones externas ni protocolos físicos no validados.</p><p class="proto-back"><a href="#landing">Volver a la landing</a></p></main>`;
+    root.innerHTML = `<main id="main-content" class="demo-list proto-screen"><img class="proto-trazado" src="assets/icons/marca-trazado.svg" alt="" width="210" height="94" aria-hidden="true"><div class="proto-brand-row"><h1 tabindex="-1"><a href="#landing" aria-label="EvacuAccess, volver a la portada">EvacuAccess</a></h1><img class="proto-logo" src="assets/icons/evacuaccess-logo.svg" alt="" width="48" height="48"></div><h2>Prototipo académico · <span class="desktop-text">Desktop</span><span class="mobile-text">Mobile</span></h2><p>Elige un recorrido. Todos pertenecen a la misma plataforma; no hay saltos entre dispositivos.</p><div class="proto-list">${entryButtons()}</div><p class="proto-footnote">Integraciones simuladas. Sin destellos, comunicaciones externas ni protocolos físicos no validados.</p></main>`;
     document.title = "EvacuAccess · Prototipo académico";
     return;
   }
@@ -199,12 +203,13 @@ function render(focus = true) {
       }
     : adminView(view, state) ||
       brigadeView(view, state) ||
-      userView(view, state);
+      userView(view, state) || secondaryView(view, state);
   if (!data)
     data = {
       title: "Vista no encontrada",
       body: go("recorridos", "Volver a los recorridos", ""),
     };
+  if (!denied) data.body += followupActions(view, lastAction);
   const noNav = ["acceso", "alerta", "qr", "visitante", "visita-ok"].includes(
       view,
     ),
@@ -217,7 +222,7 @@ function render(focus = true) {
   const side = noNav
     ? ""
     : `<nav class="sidebar" id="role-navigation" aria-label="Navegación del rol"><p class="sidebar-title">${state.role === "admin" ? "Centro de control" : state.role === "brigadista" ? "Brigada · Sector norte" : "Mi EvacuAccess"}</p>${links.map(([v, label]) => (v === view ? `<span class="btn outline current" aria-current="page">${label}</span>` : `<a class="btn outline" href="#/${v}">${label}</a>`)).join("")}<p class="system-state"><span class="status-dot" aria-hidden="true">●</span> Sistemas simulados<br>Actualización muestra</p></nav>`;
-  root.innerHTML = `<div class="app" data-ui><header class="app-header"><a class="brand" href="#landing">EvacuAccess</a><p class="context">Sede Central · Edificio B | Prototipo académico</p><p class="mobile-context">Sede Central</p>${!noNav ? '<button type="button" class="menu-toggle" data-action="menu" aria-controls="role-navigation" aria-expanded="false">Menú</button>' : ""}</header><div class="workspace">${side}<div class="work-panel"><main id="main-content" class="scroll-area"><div data-view="${view}" class="content ${data.emergency ? "alert-view" : ""}" ${data.hu ? `data-hu="${data.hu}"` : ""}><p class="breadcrumb">${data.breadcrumb || `${state.role === "admin" ? "Administrador" : state.role === "brigadista" ? "Brigadista" : state.role === "visitante" ? "Visitante" : "Usuario"} · Sede Central / Edificio B`}</p><h1 tabindex="-1">${titleHTML(data.title)}</h1>${feedback ? `<div class="feedback ${isError ? "error" : ""}" ${isError ? 'role="alert"' : ""}>${esc(feedback)}</div>` : ""}${data.body}${tools()}</div></main><footer class="persistent" aria-label="Acciones persistentes">${footer(view)}</footer></div></div></div>`;
+  root.innerHTML = `<div class="app" data-ui><header class="app-header"><a class="brand" href="#landing">EvacuAccess</a><img class="institution-logo" src="assets/icons/evacuaccess-logo.svg" width="32" height="32" alt=""><p class="context">Sede Central · Edificio B | Prototipo académico</p><p class="mobile-context">Web · Demo</p>${!noNav ? '<button type="button" class="menu-toggle" data-action="menu" aria-controls="role-navigation" aria-expanded="false">Menú</button>' : ""}</header><div class="workspace">${side}<div class="work-panel"><main id="main-content" class="scroll-area"><div data-view="${view}" class="content ${data.emergency ? "alert-view" : ""}" ${data.hu ? `data-hu="${data.hu}"` : ""}><p class="breadcrumb">${data.breadcrumb || `${state.role === "admin" ? "Administrador" : state.role === "brigadista" ? "Brigadista" : state.role === "visitante" ? "Visitante" : "Usuario"} · Sede Central / Edificio B`}</p><h1 tabindex="-1">${titleHTML(data.title)}</h1>${feedback ? `<div class="feedback ${isError ? "error" : ""}" ${isError ? 'role="alert"' : ""}>${esc(feedback)}</div>` : ""}${data.body}${tools()}</div></main><footer class="persistent" aria-label="Acciones persistentes">${footer(view)}</footer></div></div></div>`;
   document.title = `${data.title} · EvacuAccess`;
   root.querySelectorAll("details[data-panel]").forEach((node) => {
     node.open = openedPanels.includes(node.dataset.panel);
@@ -291,6 +296,34 @@ document.addEventListener("click", (e) => {
   const action = element.dataset.action,
     payload = JSON.parse(element.dataset.payload || "{}");
   switch (action) {
+    case "returnScreen":
+      navigate(({ salida:"ruta", rescate:"mision", emitir_confirm:"emitir" })[view] || "recorridos");
+      break;
+    case "screenAction": {
+      const target = payload.target;
+      if (target === "contraste" && !state.prefs.contrast) commit("contrast", {}, false);
+      if (view === "contraste" && target === "alerta" && state.prefs.contrast) commit("contrast", {}, false);
+      if (target === "texto200") commit("text", { value:200 }, false);
+      if (view === "texto200" && target === "perfil") commit("text", { value:100 }, false);
+      if (target === "bloqueo" || target === "desvio") commit("block", {}, false);
+      if (target === "lleno") commit("refugeStatus", {id:"A",status:"Lleno"}, false);
+      if (target === "reasignada" && !commit("assign", { requestId:state.selectedRequest || "R-014", brigadierId:"B2" })) break;
+      if (target === "chat_fallo" && state.online) commit("network", {}, false);
+      if (view === "chat_fallo" && target === "mensaje_ok") {
+        if (!state.online) commit("network", {}, false);
+        const pending = state.messages.find(message => message.status === "pending");
+        if (!pending) { navigate("chat"); break; }
+        if (!commit("retryMessage", {id:pending.id})) break;
+      }
+      if (view === "salida" && target === "seguro" && !commit("arrive", {}, false)) break;
+      if (view === "voz" && target === "ruta") commit("confirmAlert", {}, false);
+      if (view === "cerrar" && target === "reporte" && !commit("close", {}, false)) break;
+      if (view === "emitir_confirm" && target === "emitida") { navigate("emitir"); break; }
+      if (view === "rescate" && target === "rescatado") { navigate("mision"); break; }
+      if (target === "visita-ok" && view === "visitante_seleccion") { navigate("visitante"); break; }
+      navigate(target);
+      break;
+    }
     case "navigate":
       navigate(payload.view);
       break;
@@ -588,6 +621,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 window.addEventListener("hashchange", () => render());
+onLayoutChange(() => { if (secondaryView(view, state)) render(false); });
 window.addEventListener("storage", () => {
   state = loadState();
   render(false);

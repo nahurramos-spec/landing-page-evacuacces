@@ -176,6 +176,38 @@
 .proto-back {
   font-size: 1rem;
 }
+.screen-group { display: flex; flex-direction: column; min-width: 0; }
+.screen-group.horizontal { flex-direction: row; flex-wrap: wrap; }
+.screen-group.surface { background: var(--screen-fill); border: 1px solid var(--line); border-radius: 10px; }
+.screen-copy { white-space: pre-line; overflow-wrap: anywhere; }
+.contrast .screen-group.surface { background: black; color: #ffd600; }
+.demo-list.proto-screen {
+  padding: 40px;
+  overflow: visible;
+}
+.demo-list .proto-brand-row { min-height: 45px; }
+.demo-list .proto-brand-row a { color: inherit; text-decoration: none; }
+.demo-list .proto-logo { position: absolute; left: min(315px, 72%); top: 38px; }
+.demo-list .proto-list button { font-size: 1.125rem; }
+.app-header {
+  position: relative;
+  background: linear-gradient(90deg, #143769, #195996);
+}
+.app-header::after {
+  position: absolute;
+  content: "";
+  inset: auto 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, #44ddba, #4b9ce1);
+}
+.institution-logo { width: 32px; height: 32px; flex: none; }
+.app-header .mobile-context { font-size: 1rem; }
+.contrast .app-header::after { background: currentColor; }
+@media (max-width: 600px) {
+  .demo-list .proto-trazado { width: min(25vw, 125px); height: auto; right: 8px; }
+  .demo-list .proto-logo { left: min(52vw, 315px); }
+  .app-header { gap: 8px; }
+}
 @media (max-width: 600px) {
   .environment-notice {
     padding: 2px 16px;
@@ -499,7 +531,3 @@ html[data-text-size="200"] .persistent > * {
     border: 2px solid #ffd600;
   }
 }
-.prototype-view { display: flex; flex-direction: column; height: 100dvh; }
-.prototype-view nav { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem 1.5rem; padding: .5rem 1rem; }
-.prototype-view select { max-width: min(18rem, 68vw); font: inherit; }
-.prototype-view iframe { flex: 1; min-height: 0; width: 100%; border: 0; }
