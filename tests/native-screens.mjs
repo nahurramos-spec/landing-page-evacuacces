@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { expect } from "@playwright/test";
 import { launchBrowser } from "./browser-config.mjs";
 import { initialState, transition, STORAGE_KEY } from "../js/state.js";
 import { screenStates } from "../js/screen-states.js";
@@ -17,7 +18,7 @@ try {
     assert.match(await page.locator(".landing-footer").innerText(), /© \d{4} Grupo 3 · EvacuAccess\. Todos los derechos reservados/);
     await page.getByRole("link", { name:"Iniciar EvacuAccess", exact:true }).first().click();
     await page.waitForURL("**/#/recorridos");
-    assert.equal(await page.locator(".proto-list button").count(), 7);
+    await expect(page.locator(".proto-list button")).toHaveCount(7);
     for (const route of routes) {
       const breadcrumb = screenStates[route]?.desktop?.[0]?.text || "";
       const admin = "admin emitir solicitudes asignar zonas brigadas censo roles evento externos reporte".split(" ");
