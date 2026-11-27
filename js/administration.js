@@ -12,7 +12,7 @@ import {
 } from "./ui.js";
 import { counts, statuses, occupancy, refugeAvailable } from "./state.js";
 import { map } from "./map.js";
-export function adminView(view, s) {
+export function adminView(view, s, draft) {
   const c = counts(s);
   switch (view) {
     case "admin":
@@ -34,7 +34,7 @@ export function adminView(view, s) {
       return {
         title: "Disparo de alertas de emergencia",
         hu: "HU-33",
-        body: `<form id="alert-form" class="stack">${panel("1 Tipo de evento", `<p>Selecciona el protocolo que se activará.</p><fieldset><legend class="sr-only">Tipo de evento</legend><div class="radio-choices">${["Sismo", "Incendio", "Simulacro"].map((x) => `<label class="choice"><input type="radio" name="event" value="${x}" ${x === (s.sectors[0].hazard ? "Incendio" : s.alert.event) ? "checked" : ""}>${x}</label>`).join("")}</div></fieldset>`)}${panel("2 Alcance de la alerta", `<p>Elige todo el edificio o un piso específico. El resumen muestra el alcance actual.</p><fieldset class="stack"><legend class="sr-only">Destinatarios</legend>${["Todo el edificio", "Piso 2"].map((x) => `<label class="choice"><input type="radio" name="scope" value="${x}" ${s.alert.scope === x ? "checked" : ""}>${x} · Selección de muestra</label>`).join("")}</fieldset>`, "info")}${panel("3 Mensaje adaptativo", "<p>«Evacúa hacia la zona segura más cercana. Sigue la ruta accesible y espera indicaciones de la brigada.»<br>Texto · Voz simulada · Vibración simulada · Sin destellos</p>")}<p id="alert-preview" class="tag">Selección actual: ${s.alert.event} · ${s.alert.scope}</p><button class="btn" type="submit">Confirmar y emitir alerta</button></form>${go("externos", "Preparar información para servicios externos")}${go("admin", "Cancelar")}`,
+        body: `<form id="alert-form" class="stack">${panel("1 Tipo de evento", `<p>Selecciona el protocolo que se activará.</p><fieldset><legend class="sr-only">Tipo de evento</legend><div class="radio-choices">${["Sismo", "Incendio", "Simulacro"].map((x) => `<label class="choice"><input type="radio" name="event" value="${x}" ${x === (draft?.event || (s.sectors[0].hazard ? "Incendio" : s.alert.event)) ? "checked" : ""}>${x}</label>`).join("")}</div></fieldset>`)}${panel("2 Alcance de la alerta", `<p>Elige todo el edificio o un piso específico. El resumen muestra el alcance actual.</p><fieldset class="stack"><legend class="sr-only">Destinatarios</legend>${["Todo el edificio", "Piso 2"].map((x) => `<label class="choice"><input type="radio" name="scope" value="${x}" ${(draft?.scope || s.alert.scope) === x ? "checked" : ""}>${x} · Selección de muestra</label>`).join("")}</fieldset>`, "info")}${panel("3 Mensaje adaptativo", "<p>«Evacúa hacia la zona segura más cercana. Sigue la ruta accesible y espera indicaciones de la brigada.»<br>Texto · Voz simulada · Vibración simulada · Sin destellos</p>")}<p id="alert-preview" class="tag">Selección actual: ${esc(draft?.event || (s.sectors[0].hazard ? "Incendio" : s.alert.event))} · ${esc(draft?.scope || s.alert.scope)}</p><button class="btn" type="submit">Confirmar y emitir alerta</button></form>${go("externos", "Preparar información para servicios externos")}${go("admin", "Cancelar")}`,
       };
     case "solicitudes":
       return {

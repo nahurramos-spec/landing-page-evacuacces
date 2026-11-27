@@ -25,7 +25,7 @@ function block(node, view) {
   return `<div class="screen-group${node.row ? " horizontal" : ""}${node.bg ? " surface" : ""}" style="${surface}padding:${node.pad}px;gap:${node.gap}px">${node.kids.map(child => block(child, view)).join("")}</div>`;
 }
 
-export function secondaryView(view, state) {
+export function secondaryView(view, state, review = {}) {
   if (!Object.hasOwn(screenStates, view)) return null;
   const variants = screenStates[view];
   const nodes = (compact.matches && variants.mobile) || variants.desktop || variants.mobile;
@@ -34,15 +34,36 @@ export function secondaryView(view, state) {
   const required = { Administrador: "admin", Brigadista: "brigadista", Visitante: "visitante" }[role];
   if (required && state.role !== required)
     return { title: "Acceso restringido", body: action({label:"Seleccionar recorrido",target:"recorridos"},view) };
+  if (view === "rescate") {
+    const mission = state.missions.find(m => m.id === review.rescueReview?.ids?.[0]);
+    const person = state.people.find(p => p.id === mission?.personId);
+    return {title:heading.text, breadcrumb:esc(crumb.text), body:
+      panel("Confirmar rescate", (mission && person
+        ? "<p>" + esc(person.name) + " · " + esc(mission.id) + "</p><p>Confirma solo cuando la persona esté en una zona segura.</p>"
+        + btn("rescueConfirm", "Sí, registrar rescate", {kind:"success", disabled:mission.status === "completed"})
+        : "<p>Selecciona una misión activa para confirmar el rescate.</p>")
+        + btn("returnScreen","Cancelar · Volver a la misión",{kind:"outline"}))
+      + action({label:"Ver selección de rescate múltiple", target:"masivo"},view)};
+  }
+  if (view === "emitir_confirm") {
+    const draft = review.alertReview;
+    return {title:heading.text, breadcrumb:esc(crumb.text), body:
+      panel("Revisar antes de emitir", (draft
+        ? "<p>" + esc(draft.event) + " · " + esc(draft.scope) + "</p><p>La alerta se registrará en esta sesión. No se transmitirá a dispositivos ni a servicios reales.</p>"
+        + btn("emitConfirm","Confirmar emisión simulada")
+        : "<p>Selecciona un evento y su alcance antes de confirmar.</p>")
+        + btn("returnScreen","Volver a editar",{kind:"outline"}))};
+  }
   const recordedAction = Object.keys(confirmation).find(key => confirmation[key] === view)
     || ({ reasignada:"assign", censo_actualizado:"visitor" })[view];
   let body;
   if (recordedAction) {
     const event = state.events.findLast(item => item.action === recordedAction);
-    body = panel("Registro de esta sesión", event
+    body = panel(view === "emitida" ? "Alerta emitida · Demostración" : view === "rescatado" && event?.missions ? "Rescate registrado · " + event.missions.join(", ") : "Registro de esta sesión", event
       ? `<p>${esc(event.detail)}</p><p>${esc(new Date(event.at).toLocaleString("es-PE"))}</p>`
-      : "<p>Todavía no hay un registro de esta operación.</p>")
-      + content.filter(node => node.label).map(node => block(node, view)).join("");
+      : "<p>Todavía no hay un registro de esta operación.</p>", event && ["emitida","rescatado"].includes(view) ? "success-panel" : "")
+      + content.filter(node => node.label).map((node,index) => btn("screenAction", esc(node.label), {kind:index ? "outline" : "", payload:{target:node.target,label:node.label}})).join("");
+    if (view === "emitida" && event?.scope) body += `<strong>${esc(event.event)}</strong><p>${esc(event.scope)} · Sin confirmación de recepción en otros dispositivos.</p>`;
   } else {
     body = content.map(node => block(node, view)).join("");
   }
@@ -63,7 +84,8 @@ const confirmation = {
 export function followupActions(view, lastAction) {
   const result = confirmation[lastAction];
   const reserved = new Set([...Object.values(confirmation), "mensaje_ok", "visita_inicio"]);
-  const options = (relatedActions[view] || []).filter(item => !reserved.has(item.target));
-  if (result) options.unshift({ label: "Ver confirmación", target: result });
+  const owned = { alerta:["contraste"], ruta:["voz"], perfil:["texto200","contraste"] };
+  const options = (relatedActions[view] || []).filter(item => !reserved.has(item.target) && !owned[view]?.includes(item.target));
+  if (result && result !== view) options.unshift({ label: "Ver confirmación", target: result });
   return options.map(item => action(item, view)).join("");
 }

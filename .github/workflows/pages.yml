@@ -42,6 +42,7 @@ jobs:
           EVIDENCE_DIR=docs/evidencias/ci/producto npm run test:product
           EVIDENCE_DIR=docs/evidencias/ci/puntuales node tests/targeted.mjs
           node tests/native-screens.mjs
+          EVIDENCE_DIR=docs/evidencias/ci/aceptacion node tests/acceptance-flows.mjs
           npm run build
           EVIDENCE_DIR=docs/evidencias/ci/paquete npm run test:static
       - name: Conservar resultados de CI

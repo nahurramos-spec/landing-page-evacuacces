@@ -66,7 +66,8 @@ await page
   .click();
 await page.waitForURL("**/dist/#/alerta");
 await page.locator(".acknowledge").click();
-assert.equal(await page.locator(".acknowledge").isDisabled(), true);
+await page.waitForURL("**/#/ruta");
+await page.locator('[data-view="ruta"]').waitFor();
 assert.equal(
   await page.evaluate(() => document.activeElement !== document.body),
   true,

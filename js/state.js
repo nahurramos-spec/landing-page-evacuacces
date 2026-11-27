@@ -430,7 +430,7 @@ export function transition(current, action, payload = {}) {
     case "rescue": {
       const ids = [...new Set(payload.ids || [])];
       if (!ids.length) throw Error("Selecciona al menos una misión");
-      let done = 0;
+      const completed = [];
       for (const id of ids) {
         const m = s.missions.find((x) => x.id === id);
         if (!m) throw Error("El rescate requiere una misión asignada");
@@ -441,7 +441,7 @@ export function transition(current, action, payload = {}) {
         m.status = "completed";
         m.completedAt = Date.now();
         req(m.requestId).status = "rescued";
-        done++;
+        completed.push(`${m.id} · ${person.name} · ${s.brigadiers.find(b => b.id === m.brigadierId)?.name || m.brigadierId}`);
       }
       for (const b of s.brigadiers)
         if (
@@ -452,9 +452,8 @@ export function transition(current, action, payload = {}) {
           b.id !== "B3"
         )
           b.status = "available";
-      result = done
-        ? `Rescate registrado: ${done} persona${done === 1 ? "" : "s"}. Censo actualizado.`
-        : "Los rescates ya estaban registrados";
+      if (!completed.length) return {state:s, result:"Los rescates ya estaban registrados"};
+      result = `Rescate registrado: ${completed.join("; ")}. Censo actualizado.`;
       break;
     }
     case "sectorAssign": {
@@ -618,6 +617,8 @@ export function transition(current, action, payload = {}) {
     detail: result,
     at: Date.now(),
     actor: s.role,
+    ...(action === "emit" ? {event: payload.event, scope: payload.scope} : {}),
+    ...(action === "rescue" ? {missions: [...new Set(payload.ids)]} : {}),
   });
   return { state: s, result };
 }

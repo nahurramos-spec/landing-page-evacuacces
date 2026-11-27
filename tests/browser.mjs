@@ -98,7 +98,7 @@ await run(
     await page.locator("[name=need0]").check();
     await page.locator("[name=need2]").check();
     await page.locator("[name=contrast]").check();
-    await page.selectOption("#text-size", "200");
+    await page.locator("#text-size").press("End");
     await page
       .getByRole("button", { name: "Guardar preferencias", exact: true })
       .click();
@@ -126,7 +126,7 @@ await run(
       );
       await click("confirmAlert");
       assert.equal((await stored()).people[0].status, "evacuating");
-      assert.equal(await page.locator(".acknowledge").isDisabled(), true);
+      await expect(page.locator('[data-view="ruta"]')).toBeVisible();
     }
     await page.setViewportSize({ width: 1440, height: 900 });
   },
@@ -305,10 +305,7 @@ await run(
       (await stored()).people.filter((p) => p.status === "safe").length,
       46,
     );
-    assert.equal(
-      await page.locator("[data-action=rescueDialog]").isDisabled(),
-      true,
-    );
+    await expect(page.locator("h1")).toHaveText("Rescate registrado");
     await page.goto(base + "#/recorridos");
     await page
       .getByRole("button", { name: "Administrador", exact: true })
@@ -345,7 +342,7 @@ await run(
       .getByRole("button", { name: "Confirmar y emitir alerta", exact: true })
       .click();
     assert.match(
-      await page.locator("dialog").textContent(),
+      await page.locator('[data-view="emitir_confirm"]').textContent(),
       /Incendio · Piso 2/,
     );
     await click("emitConfirm");

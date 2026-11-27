@@ -21,6 +21,14 @@ export const cards = [
   ["Estoy atrapado", "Lock"],
 ];
 export const cardIcon = (c) => `imgMaterialSymbolsOutlined${c}2-571`;
+export const drills = [
+  "18 de noviembre · 4 min 12 s · Corredor norte",
+  "29 de septiembre · 3 min 12 s · Rampa Sur",
+  "15 de agosto · 3 min 48 s · Rampa Sur",
+  "12 de junio · 4 min 06 s · Corredor norte",
+  "20 de marzo · 4 min 21 s · Rampa Sur",
+];
+
 export function userView(view, s) {
   const p = s.people[0],
     r = s.sos[0],
@@ -53,7 +61,7 @@ export function userView(view, s) {
       return {
         title: "Perfil de accesibilidad",
         hu: "HU-05 HU-08",
-        body: `<form id="preferences" class="stack">${panel("1. Tus necesidades", `<p>Selecciona de forma independiente. Puedes combinar las opciones y editarlas después.</p>${["Discapacidad auditiva", "Discapacidad visual", "Movilidad reducida"].map((n, i) => check("need" + i, n, s.prefs.needs.includes(n))).join("")}`)}${panel("2. Cómo quieres recibir las alertas", `<p>Texto siempre disponible. Voz y vibración dependen del dispositivo y se simulan aquí.</p>${check("voice", "Instrucciones por voz", s.prefs.voice)}${check("haptic", "Vibración háptica", s.prefs.haptic)}${check("contrast", "Modo mate · Alto contraste", s.prefs.contrast)}<label class="field" for="text-size">Tamaño de texto · 100 % → 200 %<select id="text-size" name="text"><option value="100" ${s.prefs.text === 100 ? "selected" : ""}>100 %</option><option value="150" ${s.prefs.text === 150 ? "selected" : ""}>150 %</option><option value="200" ${s.prefs.text === 200 ? "selected" : ""}>200 %</option></select></label>`)}<button class="btn" type="submit">Guardar preferencias</button></form>`,
+        body: `<form id="preferences" class="stack">${panel("1. Tus necesidades", `<p>Selecciona de forma independiente. Puedes combinar las opciones y editarlas después.</p>${["Discapacidad auditiva", "Discapacidad visual", "Movilidad reducida"].map((n, i) => check("need" + i, n, s.prefs.needs.includes(n))).join("")}`)}${panel("2. Cómo quieres recibir las alertas", `<p>Texto siempre disponible. Voz y vibración dependen del dispositivo y se simulan aquí.</p>${check("voice", "Instrucciones por voz", s.prefs.voice)}${check("haptic", "Vibración háptica", s.prefs.haptic)}${check("contrast", "Modo mate · Alto contraste", s.prefs.contrast)}<label class="field" for="text-size">Tamaño de texto <output id="text-value" for="text-size">${s.prefs.text} %</output></label><input type="range" id="text-size" name="text" min="100" max="200" step="50" value="${s.prefs.text}" aria-valuetext="${s.prefs.text} %">`)}<button class="btn" type="submit">Guardar preferencias</button></form>`,
       };
     case "inicio":
       return {
@@ -64,7 +72,7 @@ export function userView(view, s) {
       return {
         title: "Plan Personalizado de Evacuación",
         hu: "HU-25",
-        body: `<form id="ppe" class="stack"><input type="hidden" name="pace" value="${s.ppe.pace}">${panel("Asistencia de movilidad", `<p>Silla de ruedas manual · No utilizar escaleras<br>Ancho de paso requerido: 90 cm o más<br>Ritmo personal de referencia: ${String(s.ppe.pace).replace(".", ",")} m/s</p><button class="btn outline" type="submit">Confirmar silla manual y ritmo</button>`)}${panel("Contactos de apoyo · 2 de 2", "<p>Lucía Ramos · +51 966 666 101<br>Diego López · +51 966 666 102<br>Datos ficticios. Avisos SMS y push simulados.</p>")}${note("Privacidad: PPE disponible solo para la brigada autorizada. El almacenamiento y la autorización del servidor no están implementados.")}<button class="btn" type="submit">Guardar PPE</button></form>`,
+        body: `<form id="ppe" class="stack"><section class="sample-actions">${btn("companionLimit", "Añadir más acompañantes", {kind:"outline"})}<p id="companion-limit">Dos acompañantes registrados.</p></section><input type="hidden" name="pace" value="${s.ppe.pace}">${panel("Asistencia de movilidad", `<p>Silla de ruedas manual · No utilizar escaleras<br>Ancho de paso requerido: 90 cm o más<br>Ritmo personal de referencia: ${String(s.ppe.pace).replace(".", ",")} m/s</p><button class="btn outline" type="submit">Confirmar silla manual y ritmo</button>`)}${panel("Contactos de apoyo · 2 de 2", "<p>Lucía Ramos · +51 966 666 101<br>Diego López · +51 966 666 102<br>Datos ficticios. Avisos SMS y push simulados.</p>")}${note("Privacidad: PPE disponible solo para la brigada autorizada. El almacenamiento y la autorización del servidor no están implementados.")}<button class="btn" type="submit">Guardar PPE</button></form>`,
       };
     case "alerta":
       return {
@@ -134,7 +142,7 @@ export function userView(view, s) {
     case "historial":
       return {
         title: "Historial de rutas y simulacros",
-        body: `${panel(
+        body: `${panel("Mis cinco simulacros · Datos de ejemplo", "<p>Selecciona un simulacro para consultar su tiempo y trayecto.</p>" + drills.map((label,index) => btn("drill", label, {kind:"outline",payload:{index}})).join("") + '<div id="drill-detail" aria-live="polite"><p>18 de noviembre · 4 min 12 s · Corredor norte</p></div>')}${panel(
           "Historial local",
           s.events.length
             ? `<ol class="stack">${

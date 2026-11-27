@@ -77,13 +77,13 @@ await run(
     await page
       .getByRole("button", { name: "Confirmar y emitir alerta", exact: true })
       .click();
-    await expect(page.locator("dialog")).toContainText(
+    await expect(page.locator("main")).toContainText(
       "No se transmitirá a dispositivos ni a servicios reales",
     );
     assert.equal((await state()).alert.event, "Sismo");
     await page.locator("[data-action=emitConfirm]").click();
     assert.equal((await state()).alert.event, "Incendio");
-    await expect(page.locator(".feedback")).toContainText(
+    await expect(page.locator('[data-view="emitida"]')).toContainText(
       "sin transmisión real",
     );
   },
