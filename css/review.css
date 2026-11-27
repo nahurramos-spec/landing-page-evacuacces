@@ -205,7 +205,8 @@
 .contrast .app-header::after { background: currentColor; }
 @media (max-width: 600px) {
   .demo-list .proto-trazado { width: min(25vw, 125px); height: auto; right: 8px; }
-  .demo-list .proto-logo { left: min(52vw, 315px); }
+  .demo-list .proto-brand-row { position: relative; flex-wrap: wrap; gap: 12px; }
+  .demo-list .proto-logo { position: static; }
   .app-header { gap: 8px; }
 }
 @media (max-width: 600px) {
